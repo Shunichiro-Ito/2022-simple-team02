@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim
+vhard_block
+Z1 !s110 1650039476
+!i10b 1
+!s100 53zlCXBTQI9i99a`fSAV=2
+IKHjUPm2^FF98CRKdEUg<i1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1650039456
+Z4 8registerFile_7_1200mv_100c_slow.vo
+Z5 FregisterFile_7_1200mv_100c_slow.vo
+L0 6698
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1650039476.000000
+Z8 !s107 registerFile_7_1200mv_100c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|registerFile_7_1200mv_100c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vregisterFile
+R1
+!i10b 1
+!s100 T5OSk4GhzP;FHingL6K_a1
+Il@9zNT0_MT9S>@@OSlSLQ3
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+nregister@file
+vregisterFile_vlg_tst
+!s110 1650039477
+!i10b 1
+!s100 _ORgUD;XlfbhXZ>Na`iZ]0
+I6:;Y7o1P9_3Q1l?n5^gW10
+R2
+R0
+w1650007655
+8C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim/registerFile.vt
+FC:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim/registerFile.vt
+L0 28
+R6
+r1
+!s85 0
+31
+!s108 1650039477.000000
+!s107 C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim/registerFile.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim|C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim/registerFile.vt|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim
+R12
+nregister@file_vlg_tst

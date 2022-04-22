@@ -1,0 +1,42 @@
+module registerFile (
+	input [15:0] instruction,
+	input clock,
+	input [2:0] Rs, Rd,
+	input regWrite,
+	input [15:0] writeData,
+	output [15:0]  AR, BR
+);
+
+
+
+	reg [15:0] r [7:0];
+
+	always @ (posedge clock) begin
+		case (Rs)
+			3'b000: assign AR = r[0]; 
+			3'b001: assign AR = r[1];
+			3'b010: assign AR = r[2];
+			3'b011: assign AR = r[3];
+			3'b100: assign AR = r[4];
+			3'b101: assign AR = r[5];
+			3'b110: assign AR = r[6];
+			3'b111: assign AR = r[7];
+		endcase
+		case (Rd)
+			3'b000: assign BR = r[0]; 
+			3'b001: assign BR = r[1];
+			3'b010: assign BR = r[2];
+			3'b011: assign BR = r[3];
+			3'b100: assign BR = r[4];
+			3'b101: assign BR = r[5];
+			3'b110: assign BR = r[6];
+			3'b111: assign BR = r[7];
+		endcase
+	end
+	
+	if(regWrite == 1'b1) begin 
+		
+	end
+
+
+end

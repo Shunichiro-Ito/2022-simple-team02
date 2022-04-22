@@ -1,0 +1,92 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/15/2022 16:11:39"
+                                                                                
+// Verilog Test Bench template for design : registerFile
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module registerFile_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [2:0] Rd;
+reg [2:0] Rs;
+reg clock;
+reg [15:0] instruction;
+reg regWrite;
+reg [15:0] writeData;
+// wires                                               
+wire [15:0]  AR;
+wire [15:0]  BR;
+
+// assign statements (if any)                          
+registerFile i1 (
+// port map - connection between master ports and signals/registers   
+	.AR(AR),
+	.BR(BR),
+	.Rd(Rd),
+	.Rs(Rs),
+	.clock(clock),
+	.instruction(instruction),
+	.regWrite(regWrite),
+	.writeData(writeData)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+clock <= 0;
+instruction <= 0;
+Rs <= 3'b000;
+Rd <= 3'b000;
+regWrite <= 1'b0;
+writeData <= 16'b0000111100001111;
+// --> end                                             
+$display("Running testbench");                       
+end
+always begin 
+#50;
+clock <= ~clock;
+end
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+#60
+regWrite <= 1;
+#10
+writeData <= 1;
+#100
+writeData <= 2;
+#100
+Rs <= 3'b001;
+Rd <= 3'b000;
+
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

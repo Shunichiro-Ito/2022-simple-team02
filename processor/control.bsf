@@ -1,0 +1,204 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 248 320)
+	(text "control" (rect 5 0 30 12)(font "Arial" ))
+	(text "inst" (rect 8 288 20 300)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clock" (rect 0 0 20 12)(font "Arial" ))
+		(text "clock" (rect 21 27 41 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "instruction[15..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "instruction[15..0]" (rect 21 43 83 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "reset" (rect 0 0 20 12)(font "Arial" ))
+		(text "reset" (rect 21 59 41 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "exec" (rect 0 0 18 12)(font "Arial" ))
+		(text "exec" (rect 21 75 39 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "p1" (rect 0 0 8 12)(font "Arial" ))
+		(text "p1" (rect 21 91 29 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "p2" (rect 0 0 9 12)(font "Arial" ))
+		(text "p2" (rect 21 107 30 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "p3" (rect 0 0 9 12)(font "Arial" ))
+		(text "p3" (rect 21 123 30 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "p4" (rect 0 0 10 12)(font "Arial" ))
+		(text "p4" (rect 21 139 31 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "p5" (rect 0 0 9 12)(font "Arial" ))
+		(text "p5" (rect 21 155 30 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "SZCV[3..0]" (rect 0 0 48 12)(font "Arial" ))
+		(text "SZCV[3..0]" (rect 21 171 69 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "updatePC" (rect 0 0 38 12)(font "Arial" ))
+		(text "updatePC" (rect 173 27 211 39)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32)(line_width 1))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "addressSrc" (rect 0 0 46 12)(font "Arial" ))
+		(text "addressSrc" (rect 165 43 211 55)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48)(line_width 1))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "updateInstruction" (rect 0 0 66 12)(font "Arial" ))
+		(text "updateInstruction" (rect 145 59 211 71)(font "Arial" ))
+		(line (pt 232 64)(pt 216 64)(line_width 1))
+	)
+	(port
+		(pt 232 80)
+		(output)
+		(text "regDst" (rect 0 0 27 12)(font "Arial" ))
+		(text "regDst" (rect 184 75 211 87)(font "Arial" ))
+		(line (pt 232 80)(pt 216 80)(line_width 1))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "updateSZCV" (rect 0 0 54 12)(font "Arial" ))
+		(text "updateSZCV" (rect 157 91 211 103)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96)(line_width 1))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "ALUSrcAR" (rect 0 0 51 12)(font "Arial" ))
+		(text "ALUSrcAR" (rect 160 107 211 119)(font "Arial" ))
+		(line (pt 232 112)(pt 216 112)(line_width 1))
+	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "ALUSrcBR" (rect 0 0 49 12)(font "Arial" ))
+		(text "ALUSrcBR" (rect 162 123 211 135)(font "Arial" ))
+		(line (pt 232 128)(pt 216 128)(line_width 1))
+	)
+	(port
+		(pt 232 144)
+		(output)
+		(text "ALUOp[3..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "ALUOp[3..0]" (rect 158 139 211 151)(font "Arial" ))
+		(line (pt 232 144)(pt 216 144)(line_width 3))
+	)
+	(port
+		(pt 232 160)
+		(output)
+		(text "DRSrc" (rect 0 0 29 12)(font "Arial" ))
+		(text "DRSrc" (rect 182 155 211 167)(font "Arial" ))
+		(line (pt 232 160)(pt 216 160)(line_width 1))
+	)
+	(port
+		(pt 232 176)
+		(output)
+		(text "outputEnable" (rect 0 0 50 12)(font "Arial" ))
+		(text "outputEnable" (rect 161 171 211 183)(font "Arial" ))
+		(line (pt 232 176)(pt 216 176)(line_width 1))
+	)
+	(port
+		(pt 232 192)
+		(output)
+		(text "inputEnable" (rect 0 0 44 12)(font "Arial" ))
+		(text "inputEnable" (rect 167 187 211 199)(font "Arial" ))
+		(line (pt 232 192)(pt 216 192)(line_width 1))
+	)
+	(port
+		(pt 232 208)
+		(output)
+		(text "memWrite" (rect 0 0 43 12)(font "Arial" ))
+		(text "memWrite" (rect 168 203 211 215)(font "Arial" ))
+		(line (pt 232 208)(pt 216 208)(line_width 1))
+	)
+	(port
+		(pt 232 224)
+		(output)
+		(text "branch" (rect 0 0 27 12)(font "Arial" ))
+		(text "branch" (rect 184 219 211 231)(font "Arial" ))
+		(line (pt 232 224)(pt 216 224)(line_width 1))
+	)
+	(port
+		(pt 232 240)
+		(output)
+		(text "regWrite" (rect 0 0 35 12)(font "Arial" ))
+		(text "regWrite" (rect 176 235 211 247)(font "Arial" ))
+		(line (pt 232 240)(pt 216 240)(line_width 1))
+	)
+	(port
+		(pt 232 256)
+		(output)
+		(text "memToReg" (rect 0 0 49 12)(font "Arial" ))
+		(text "memToReg" (rect 162 251 211 263)(font "Arial" ))
+		(line (pt 232 256)(pt 216 256)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 216 288)(line_width 1))
+	)
+)
