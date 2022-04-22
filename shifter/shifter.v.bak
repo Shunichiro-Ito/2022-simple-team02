@@ -1,0 +1,148 @@
+module shifter(input [15:0] BR,
+            input [3:0] d,
+        	input [3:0] op,
+        	output [15:0] out, 
+			output [3:0] SZCV);
+        wire [15:0] signExtendedD;
+		
+        assign signExtendedD = {12{d[3]}, d};
+		assign {SZCV,out} = OUT(BR,sidnExtendedD,op);
+
+		function [19:0] OUT;//OUT={S,Z,C,V,out}
+		   input [16:0] BR_PARAM;
+		   input [16:0] D;
+		   input [3:0] OP;
+
+		   begin
+			case (OP)
+				4'b0000:begin//ADD
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = 1'b0;
+						end
+				4'b0001:begin//SUB
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = 1'b0;
+						end
+				4'b0010:begin//AND
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = 1'b0;
+						end
+				4'b0011:begin//OR
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = 1'b0;
+						end
+				4'b0100:begin//XOR
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = 1'b0;
+						end
+				4'b0101:begin//CMP
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = 1'b0;
+						end
+				4'b0110:begin//MOV
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = 1'b0;
+						end
+				4'b0111:begin//(reserved)
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = 1'b0;
+						end
+				4'b1000:begin//SLL
+						OUT[15:0] = BR_PARAM << D;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = (OUT[15:0] == 0);//Z
+                            if(D==0) begin
+                                OUT[19] = 1'b0;
+                            end else begin
+                                OUT[19] = BR_PARAM[16-D];
+                            end
+						end
+				4'b1001:begin//SLR
+						OUT[15:0] = ({BR_PARAM, BR_PARAM} << D)[31:16];
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = (OUT[15:0] == 0);//Z
+						    if(D==0) begin
+                                OUT[19] = 1'b0;
+                            end else begin
+                                OUT[19] = BR_PARAM[16-D];//S
+                            end
+						end
+				4'b1010:begin//SRL
+						OUT[15:0] = BR_PARAM >> D;
+						OUT[16] = 1'b0;
+						OUT[18] = (OUT[15:0] == 0);//Z
+						    if(D==0) begin
+                                OUT[19] = 1'b0;
+                            end else begin
+                                OUT[19] = BR_PARAM[D-1];//S
+                            end
+						end
+				4'b1011:begin//SRA
+						OUT[15:0] = ({16{BR_PARAM[15]}, BR_PARAM} >> D)[15:0];
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = (OUT[15:0] == 0);//Z
+						    if(D==0) begin
+                                OUT[19] = 1'b0;
+                            end else begin
+                                OUT[19] = ({16{BR_PARAM[15]}, BR_PARAM} >> D)[15];//S
+                            end
+						end
+				4'b1100:begin//IN
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = OUT[15];
+						end
+				4'b1101:begin//OUT
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = OUT[15];
+						end
+				4'b1110:begin//(reserved)
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = OUT[15];
+						end
+				4'b1111:begin//halt()
+						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[16] = 1'b0;
+						OUT[17] = 1'b0;
+						OUT[18] = 1'b0;
+						OUT[19] = 1'b0;
+						end
+				endcase
+			end
+		endfunction
+endmodule

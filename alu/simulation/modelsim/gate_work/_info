@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/home/alu/simulation/modelsim
+valu
+Z1 !s110 1650590161
+!i10b 1
+!s100 nYijQ0Hb_<okRCZ_XRhUg2
+Ik[z4zNdUgKc3NZ61J_B@V0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1650590135
+Z4 8alu_7_1200mv_100c_slow.vo
+Z5 Falu_7_1200mv_100c_slow.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1650590161.000000
+Z8 !s107 alu_7_1200mv_100c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|alu_7_1200mv_100c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+valu_vlg_tst
+!s110 1650590168
+!i10b 1
+!s100 klc;@lE:[94649<4aO4VH3
+I9ckWI=O23PINoK59WJ^0L3
+R2
+R0
+w1650590083
+8C:/home/alu/simulation/modelsim/alu_test1.vt
+FC:/home/alu/simulation/modelsim/alu_test1.vt
+L0 28
+R6
+r1
+!s85 0
+31
+!s108 1650590168.000000
+!s107 C:/home/alu/simulation/modelsim/alu_test1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/home/alu/simulation/modelsim|C:/home/alu/simulation/modelsim/alu_test1.vt|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/home/alu/simulation/modelsim
+R12
+vhard_block
+R1
+!i10b 1
+!s100 A<TW`bBOg_QiZG:N2_NCJ0
+IPX]E`_L=FLH<5OoRFflDB3
+R2
+R0
+R3
+R4
+R5
+L0 4326
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
