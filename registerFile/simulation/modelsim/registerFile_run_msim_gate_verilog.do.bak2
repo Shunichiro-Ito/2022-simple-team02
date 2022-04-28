@@ -7,7 +7,7 @@ vmap work gate_work
 
 vlog -vlog01compat -work work +incdir+. {registerFile_7_1200mv_100c_slow.vo}
 
-vlog -vlog01compat -work work +incdir+C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim {C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim/registerFile.vt}
+vlog -vlog01compat -work work +incdir+C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim {C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim/registerFile.vt}
 
 vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test1
 

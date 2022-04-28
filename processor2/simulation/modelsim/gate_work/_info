@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/admin/2022-simple-team02/processor2/simulation/modelsim
+vprocessor
+Z1 !s110 1650814053
+!i10b 1
+!s100 Woz>QE<;>ZA`8:?87g<zO3
+IoZ66GN0UOXW[8]lBPZKj>0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1650814011
+8processor_7_1200mv_100c_slow.vo
+Fprocessor_7_1200mv_100c_slow.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1650814053.000000
+!s107 processor_7_1200mv_100c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|processor_7_1200mv_100c_slow.vo|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z6 tCvgOpt 0
+vprocessor_vlg_tst
+R1
+!i10b 1
+!s100 :1=X?lI:MQfOf[Hz2^O]52
+IUSoUh2M]BPAeJHN=;ANKj3
+R2
+R0
+w1650813076
+8C:/Users/admin/2022-simple-team02/processor2/simulation/modelsim/processor.vt
+FC:/Users/admin/2022-simple-team02/processor2/simulation/modelsim/processor.vt
+L0 28
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/admin/2022-simple-team02/processor2/simulation/modelsim/processor.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/admin/2022-simple-team02/processor2/simulation/modelsim|C:/Users/admin/2022-simple-team02/processor2/simulation/modelsim/processor.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/admin/2022-simple-team02/processor2/simulation/modelsim
+R6

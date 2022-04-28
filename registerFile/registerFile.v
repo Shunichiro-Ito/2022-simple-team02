@@ -1,9 +1,12 @@
 module registerFile (
-	input clock,//p1を接続
-	input [2:0] Rs, Rd,
+	input [2:0] Rs,//AR
+					Rd,//BR
 	input regWrite,
 	input [15:0] writeData,
 	input [2:0] writeRegister,
+	input clock,//p1を接続
+	input reset,
+	input changeEnable,
 	output [15:0] AR, BR
 );
 
@@ -31,17 +34,30 @@ module registerFile (
 	assign BR = READ_REG(Rd);
 		
 	always @ (posedge clock) begin
-		if(regWrite == 1'b1) begin
-			case (writeRegister)
-				3'b000: r[0] <= writeData; 
-				3'b001: r[1] <= writeData;
-				3'b010: r[2] <= writeData;
-				3'b011: r[3] <= writeData;
-				3'b100: r[4] <= writeData;
-				3'b101: r[5] <= writeData;
-				3'b110: r[6] <= writeData;
-				3'b111: r[7] <= writeData;
-			endcase
+		if (reset) begin
+			r[0] <= 16'h0000; 
+			r[1] <= 16'h0000;
+			r[2] <= 16'h0000;
+			r[3] <= 16'h0000;
+			r[4] <= 16'h0000;
+			r[5] <= 16'h0000;
+			r[6] <= 16'h0000;
+			r[7] <= 16'h0000;
+		end else begin
+			if(changeEnable) begin
+				if(regWrite) begin
+					case (writeRegister)
+						3'b000: r[0] <= writeData; 
+						3'b001: r[1] <= writeData;
+						3'b010: r[2] <= writeData;
+						3'b011: r[3] <= writeData;
+						3'b100: r[4] <= writeData;
+						3'b101: r[5] <= writeData;
+						3'b110: r[6] <= writeData;
+						3'b111: r[7] <= writeData;
+					endcase
+				end
+			end
 		end
 	end
 	

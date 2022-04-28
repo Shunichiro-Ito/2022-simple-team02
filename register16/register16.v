@@ -8,7 +8,7 @@ module register16 (
 
 	always @ (posedge clock) begin 
 		if (reset) begin
-			q <= 4'h0000;
+			q <= 16'h0000;
 		end else if ( changeEnable ) begin
 				q <= d;
 		end

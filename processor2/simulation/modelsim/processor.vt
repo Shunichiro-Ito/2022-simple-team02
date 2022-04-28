@@ -1,0 +1,131 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/25/2022 00:09:34"
+                                                                                
+// Verilog Test Bench template for design : processor
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module processor_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clock;
+reg exec;
+reg [15:0] externalInput;
+reg reset;
+// wires                                               
+wire [15:0]  AR_;
+wire [15:0]  BR_;
+wire [15:0]  DR_;
+wire [15:0]  DRSrc_;
+wire [15:0]  external_output;
+wire [15:0]  inA_;
+wire [15:0]  inB_;
+wire [15:0]  instruction_;
+wire [15:0]  MDR_;
+wire p1;
+wire p1andsysrun;
+wire p2;
+wire p2andsysrun;
+wire p3;
+wire p3anssysrun;
+wire p3to4;
+wire p4;
+wire p4andsysrun;
+wire p5;
+wire p5andsysrun;
+wire [15:0]  pc_;
+wire regWrite_;
+wire [15:0]  writeData_;
+wire [2:0]  writeRegister_;
+
+// assign statements (if any)                          
+processor i1 (
+// port map - connection between master ports and signals/registers   
+	.AR_(AR_),
+	.BR_(BR_),
+	.clock(clock),
+	.DR_(DR_),
+	.DRSrc_(DRSrc_),
+	.exec(exec),
+	.external_output(external_output),
+	.externalInput(externalInput),
+	.inA_(inA_),
+	.inB_(inB_),
+	.instruction_(instruction_),
+	.MDR_(MDR_),
+	.p1(p1),
+	.p1andsysrun(p1andsysrun),
+	.p2(p2),
+	.p2andsysrun(p2andsysrun),
+	.p3(p3),
+	.p3anssysrun(p3anssysrun),
+	.p3to4(p3to4),
+	.p4(p4),
+	.p4andsysrun(p4andsysrun),
+	.p5(p5),
+	.p5andsysrun(p5andsysrun),
+	.pc_(pc_),
+	.regWrite_(regWrite_),
+	.reset(reset),
+	.writeData_(writeData_),
+	.writeRegister_(writeRegister_)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+clock <= 0;
+reset <= 1;
+exec  <= 0;
+externalInput <= 16'hf0f0;                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+#1010
+reset <= 0;
+#1000
+exec <= 1;
+#1600  
+exec <= 0;
+#2400
+exec <= 1;
+#2000
+exec <= 0;                                                     
+@eachvec;                                              
+// --> end                                             
+end
+always begin
+#50
+clock <= ~clock;
+end
+
+endmodule
+

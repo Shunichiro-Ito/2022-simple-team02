@@ -1,5 +1,5 @@
 Analysis & Synthesis report for control
-Tue Apr 19 23:21:15 2022
+Sun Apr 24 20:24:31 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +43,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 19 23:21:15 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 24 20:24:30 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; control                                     ;
 ; Top-level Entity Name              ; control                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 23                                          ;
-;     Total combinational functions  ; 23                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 46                                          ;
+; Total logic elements               ; 68                                          ;
+;     Total combinational functions  ; 67                                          ;
+;     Dedicated logic registers      ; 18                                          ;
+; Total registers                    ; 18                                          ;
+; Total pins                         ; 45                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -154,10 +155,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -170,36 +172,36 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                         ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Estimated Total logic elements              ; 23                    ;
-;                                             ;                       ;
-; Total combinational functions               ; 23                    ;
-; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 14                    ;
-;     -- 3 input functions                    ; 8                     ;
-;     -- <=2 input functions                  ; 1                     ;
-;                                             ;                       ;
-; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 23                    ;
-;     -- arithmetic mode                      ; 0                     ;
-;                                             ;                       ;
-; Total registers                             ; 0                     ;
-;     -- Dedicated logic registers            ; 0                     ;
-;     -- I/O registers                        ; 0                     ;
-;                                             ;                       ;
-; I/O pins                                    ; 46                    ;
-;                                             ;                       ;
-; Embedded Multiplier 9-bit elements          ; 0                     ;
-;                                             ;                       ;
-; Maximum fan-out node                        ; instruction[14]~input ;
-; Maximum fan-out                             ; 15                    ;
-; Total fan-out                               ; 146                   ;
-; Average fan-out                             ; 1.27                  ;
-+---------------------------------------------+-----------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 68          ;
+;                                             ;             ;
+; Total combinational functions               ; 67          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 37          ;
+;     -- 3 input functions                    ; 7           ;
+;     -- <=2 input functions                  ; 23          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 52          ;
+;     -- arithmetic mode                      ; 15          ;
+;                                             ;             ;
+; Total registers                             ; 18          ;
+;     -- Dedicated logic registers            ; 18          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 45          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 18          ;
+; Total fan-out                               ; 327         ;
+; Average fan-out                             ; 1.87        ;
++---------------------------------------------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -207,7 +209,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |control                   ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |control            ; control     ; work         ;
+; |control                   ; 67 (67)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |control            ; control     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -217,14 +219,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 18    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 6:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |control|counter[6]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -232,15 +243,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 46                          ;
-; cycloneiii_lcell_comb ; 23                          ;
-;     normal            ; 23                          ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 14                          ;
+; boundary_port         ; 45                          ;
+; cycloneiii_ff         ; 18                          ;
+;     ENA               ; 16                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 69                          ;
+;     arith             ; 15                          ;
+;         2 data inputs ; 15                          ;
+;     normal            ; 54                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 37                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.16                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -259,37 +276,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 19 23:20:50 2022
+    Info: Processing started: Sun Apr 24 20:24:09 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off control -c control
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Warning (10229): Verilog HDL Expression warning at control.v(72): truncated literal to match 4 bits File: C:/Users/admin/2022-simple-team02/control/control.v Line: 72
+Warning (10229): Verilog HDL Expression warning at control.v(121): truncated literal to match 4 bits File: C:/Users/admin/2022-simple-team02/control/control.v Line: 121
 Info (12021): Found 1 design units, including 1 entities, in source file control.v
     Info (12023): Found entity 1: control File: C:/Users/admin/2022-simple-team02/control/control.v Line: 1
 Info (12127): Elaborating entity "control" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at control.v(28): object "C" assigned a value but never read File: C:/Users/admin/2022-simple-team02/control/control.v Line: 28
-Warning (10036): Verilog HDL or VHDL warning at control.v(31): object "cond" assigned a value but never read File: C:/Users/admin/2022-simple-team02/control/control.v Line: 31
-Warning (10036): Verilog HDL or VHDL warning at control.v(34): object "op" assigned a value but never read File: C:/Users/admin/2022-simple-team02/control/control.v Line: 34
+Warning (10036): Verilog HDL or VHDL warning at control.v(68): object "C" assigned a value but never read File: C:/Users/admin/2022-simple-team02/control/control.v Line: 68
+Warning (10036): Verilog HDL or VHDL warning at control.v(71): object "cond" assigned a value but never read File: C:/Users/admin/2022-simple-team02/control/control.v Line: 71
+Warning (10036): Verilog HDL or VHDL warning at control.v(74): object "op" assigned a value but never read File: C:/Users/admin/2022-simple-team02/control/control.v Line: 74
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 2
     Warning (15610): No output dependent on input pin "instruction[0]" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 3
     Warning (15610): No output dependent on input pin "instruction[1]" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 3
     Warning (15610): No output dependent on input pin "instruction[2]" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 3
     Warning (15610): No output dependent on input pin "instruction[3]" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 3
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 4
-    Warning (15610): No output dependent on input pin "exec" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 5
-    Warning (15610): No output dependent on input pin "SZCV[1]" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 11
-Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 28 input pins
-    Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 23 logic cells
+    Warning (15610): No output dependent on input pin "p1" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 6
+    Warning (15610): No output dependent on input pin "p2" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 7
+    Warning (15610): No output dependent on input pin "p4" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 10
+    Warning (15610): No output dependent on input pin "SZCV[1]" File: C:/Users/admin/2022-simple-team02/control/control.v Line: 12
+Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 29 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 68 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4738 megabytes
-    Info: Processing ended: Tue Apr 19 23:21:15 2022
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:48
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Sun Apr 24 20:24:31 2022
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:43
 
 

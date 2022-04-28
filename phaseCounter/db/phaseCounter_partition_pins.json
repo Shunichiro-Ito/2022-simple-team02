@@ -16,6 +16,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "p3to4",
+					"strict" : false
+				},
+				{
 					"name" : "p4",
 					"strict" : false
 				},
@@ -24,11 +28,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
 					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "clock",
+					"name" : "changeEnable",
 					"strict" : false
 				}
 			]

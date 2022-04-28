@@ -1,5 +1,5 @@
 Analysis & Synthesis report for registerFile
-Sat Apr 16 01:17:08 2022
+Fri Apr 22 17:47:30 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -43,16 +43,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 16 01:17:08 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 22 17:47:30 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; registerFile                                ;
 ; Top-level Entity Name              ; registerFile                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 296                                         ;
-;     Total combinational functions  ; 168                                         ;
+; Total logic elements               ; 298                                         ;
+;     Total combinational functions  ; 186                                         ;
 ;     Dedicated logic registers      ; 128                                         ;
 ; Total registers                    ; 128                                         ;
-; Total pins                         ; 72                                          ;
+; Total pins                         ; 61                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,13 +162,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                             ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                               ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
-; registerFile.v                   ; yes             ; User Verilog HDL File  ; C:/Users/admin/Documents/CADWS/registerFile/registerFile.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
+; registerFile.v                   ; yes             ; User Verilog HDL File  ; C:/Users/admin/2022-simple-team02/registerFile/registerFile.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -176,30 +176,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 296         ;
+; Estimated Total logic elements              ; 298         ;
 ;                                             ;             ;
-; Total combinational functions               ; 168         ;
+; Total combinational functions               ; 186         ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 136         ;
-;     -- 3 input functions                    ; 32          ;
-;     -- <=2 input functions                  ; 0           ;
+;     -- 3 input functions                    ; 34          ;
+;     -- <=2 input functions                  ; 16          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 168         ;
+;     -- normal mode                          ; 186         ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 128         ;
 ;     -- Dedicated logic registers            ; 128         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 72          ;
+; I/O pins                                    ; 61          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 128         ;
-; Total fan-out                               ; 1128        ;
-; Average fan-out                             ; 2.56        ;
+; Total fan-out                               ; 1155        ;
+; Average fan-out                             ; 2.65        ;
 +---------------------------------------------+-------------+
 
 
@@ -208,7 +208,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
-; |registerFile              ; 168 (168)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 72   ; 0            ; |registerFile       ; registerFile ; work         ;
+; |registerFile              ; 186 (186)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |registerFile       ; registerFile ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -233,8 +233,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |registerFile|Mux15        ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |registerFile|Mux31        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |registerFile|r[0][6]      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |registerFile|r[1][2]      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |registerFile|r[2][10]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |registerFile|r[3][8]      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |registerFile|r[4][14]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |registerFile|r[5][15]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |registerFile|r[6][14]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |registerFile|r[7][6]      ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |registerFile|Mux2         ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |registerFile|Mux24        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -243,16 +251,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 72                          ;
+; boundary_port         ; 61                          ;
 ; cycloneiii_ff         ; 128                         ;
 ;     ENA               ; 128                         ;
-; cycloneiii_lcell_comb ; 168                         ;
-;     normal            ; 168                         ;
-;         3 data inputs ; 32                          ;
+; cycloneiii_lcell_comb ; 186                         ;
+;     normal            ; 186                         ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 34                          ;
 ;         4 data inputs ; 136                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.57                        ;
+; Average LUT depth     ; 2.55                        ;
 +-----------------------+-----------------------------+
 
 
@@ -271,42 +280,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Apr 16 01:16:45 2022
+    Info: Processing started: Fri Apr 22 17:47:09 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off registerFile -c registerFile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file registerfile.v
-    Info (12023): Found entity 1: registerFile File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 1
+    Info (12023): Found entity 1: registerFile File: C:/Users/admin/2022-simple-team02/registerFile/registerFile.v Line: 1
 Info (12127): Elaborating entity "registerFile" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at registerFile.v(12): object "r" assigned a value but never read File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 12
+Warning (10036): Verilog HDL or VHDL warning at registerFile.v(15): object "r" assigned a value but never read File: C:/Users/admin/2022-simple-team02/registerFile/registerFile.v Line: 15
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "instruction[0]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[1]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[2]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[3]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[4]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[5]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[6]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[7]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[8]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[9]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[10]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[11]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[12]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[13]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[14]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-    Warning (15610): No output dependent on input pin "instruction[15]" File: C:/Users/admin/Documents/CADWS/registerFile/registerFile.v Line: 2
-Info (21057): Implemented 368 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 40 input pins
+Info (21057): Implemented 375 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 29 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 296 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4738 megabytes
-    Info: Processing ended: Sat Apr 16 01:17:08 2022
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:46
+    Info (21061): Implemented 314 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4739 megabytes
+    Info: Processing ended: Fri Apr 22 17:47:30 2022
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:43
 
 

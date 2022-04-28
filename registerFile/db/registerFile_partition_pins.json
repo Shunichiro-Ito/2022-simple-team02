@@ -160,11 +160,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
 					"name" : "clock",
 					"strict" : false
 				},
 				{
+					"name" : "writeRegister[0]",
+					"strict" : false
+				},
+				{
 					"name" : "regWrite",
+					"strict" : false
+				},
+				{
+					"name" : "changeEnable",
+					"strict" : false
+				},
+				{
+					"name" : "writeRegister[2]",
+					"strict" : false
+				},
+				{
+					"name" : "writeRegister[1]",
 					"strict" : false
 				},
 				{

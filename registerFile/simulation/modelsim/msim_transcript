@@ -12,43 +12,43 @@
 # 
 # vlog -vlog01compat -work work +incdir+. {registerFile_7_1200mv_100c_slow.vo}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:17:56 on Apr 16,2022
+# Start time: 17:48:12 on Apr 22,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." registerFile_7_1200mv_100c_slow.vo 
 # -- Compiling module registerFile
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	registerFile
-# End time: 01:17:56 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 17:48:12 on Apr 22,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim {C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim/registerFile.vt}
+# vlog -vlog01compat -work work +incdir+C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim {C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim/registerFile.vt}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:17:57 on Apr 16,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim" C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim/registerFile.vt 
+# Start time: 17:48:12 on Apr 22,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim" C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim/registerFile.vt 
 # -- Compiling module registerFile_vlg_tst
 # 
 # Top level modules:
 # 	registerFile_vlg_tst
-# End time: 01:17:57 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 17:48:12 on Apr 22,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test1
 # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" test1 
-# Start time: 01:17:59 on Apr 16,2022
+# Start time: 17:48:12 on Apr 22,2022
 # ** Error: (vsim-3170) Could not find 'test1'.
 #         Searched libraries:
 #             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/altera
 #             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/cycloneive
-#             C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim/gate_work
-#             C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim/gate_work
+#             C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim/gate_work
+#             C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim/gate_work
 # Error loading design
 # Error: Error loading design
 #        Pausing macro execution
 # MACRO ./registerFile_run_msim_gate_verilog.do PAUSED at line 12
 vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.registerFile_vlg_tst
 # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.registerFile_vlg_tst 
-# Start time: 01:17:59 on Apr 16,2022
+# Start time: 17:48:12 on Apr 22,2022
 # Loading work.registerFile_vlg_tst
 # Loading work.registerFile
 # Loading work.hard_block
@@ -65,16 +65,18 @@ vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cyclon
 # Loading altera_ver.PRIM_GDFF_LOW
 # Loading timing data from registerFile_7_1200mv_100c_v_slow.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /registerFile_vlg_tst File: C:/Users/admin/Documents/CADWS/registerFile/simulation/modelsim/registerFile.vt
+#    Time: 0 ps  Iteration: 0  Instance: /registerFile_vlg_tst File: C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim/registerFile.vt
 add wave -position end  sim:/registerFile_vlg_tst/Rd
 add wave -position end  sim:/registerFile_vlg_tst/Rs
+add wave -position end  sim:/registerFile_vlg_tst/changeEnable
 add wave -position end  sim:/registerFile_vlg_tst/clock
-add wave -position end  sim:/registerFile_vlg_tst/instruction
 add wave -position end  sim:/registerFile_vlg_tst/regWrite
+add wave -position end  sim:/registerFile_vlg_tst/reset
 add wave -position end  sim:/registerFile_vlg_tst/writeData
+add wave -position end  sim:/registerFile_vlg_tst/writeRegister
 add wave -position end  sim:/registerFile_vlg_tst/AR
 add wave -position end  sim:/registerFile_vlg_tst/BR
 run
 # Running testbench
-# End time: 01:20:35 on Apr 16,2022, Elapsed time: 0:02:36
+# End time: 17:50:22 on Apr 22,2022, Elapsed time: 0:02:10
 # Errors: 1, Warnings: 0

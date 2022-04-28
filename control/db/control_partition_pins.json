@@ -4,23 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "updatePC",
-					"strict" : false
-				},
-				{
 					"name" : "addressSrc",
 					"strict" : false
 				},
 				{
-					"name" : "updateInstruction",
-					"strict" : false
-				},
-				{
 					"name" : "regDst",
-					"strict" : false
-				},
-				{
-					"name" : "updateSZCV",
 					"strict" : false
 				},
 				{
@@ -76,19 +64,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "p5",
+					"name" : "systemRunning",
 					"strict" : false
 				},
 				{
-					"name" : "p4",
-					"strict" : false
-				},
-				{
-					"name" : "p1",
-					"strict" : false
-				},
-				{
-					"name" : "p2",
+					"name" : "p3to4",
 					"strict" : false
 				},
 				{
@@ -100,15 +80,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "p3",
-					"strict" : false
-				},
-				{
 					"name" : "instruction[4]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[13]",
 					"strict" : false
 				},
 				{
@@ -121,6 +93,10 @@
 				},
 				{
 					"name" : "instruction[10]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[13]",
 					"strict" : false
 				},
 				{
@@ -140,11 +116,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "instruction[9]",
+					"name" : "SZCV[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SZCV[2]",
+					"name" : "instruction[9]",
 					"strict" : false
 				},
 				{
@@ -153,6 +129,26 @@
 				},
 				{
 					"name" : "SZCV[3]",
+					"strict" : false
+				},
+				{
+					"name" : "exec",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "p5",
+					"strict" : false
+				},
+				{
+					"name" : "p3",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
 					"strict" : false
 				}
 			]

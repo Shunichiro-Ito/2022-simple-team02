@@ -4,6 +4,146 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "external_output[15]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[14]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[13]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[12]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[11]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[10]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[9]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[8]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[7]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[6]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[5]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[4]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[3]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[2]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[1]",
+					"strict" : false
+				},
+				{
+					"name" : "external_output[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "exec",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[15]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[14]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[13]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[12]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[11]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[10]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[9]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[8]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[7]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[6]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[5]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[4]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[3]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[0]",
+					"strict" : false
+				},
+				{
 					"name" : "altera_reserved_tms",
 					"strict" : false
 				},

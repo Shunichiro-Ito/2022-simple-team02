@@ -17,7 +17,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "04/15/2022 16:11:39"
+// Generated on "04/22/2022 17:00:37"
                                                                                 
 // Verilog Test Bench template for design : registerFile
 // 
@@ -32,10 +32,12 @@ reg eachvec;
 // test vector input registers
 reg [2:0] Rd;
 reg [2:0] Rs;
+reg changeEnable;
 reg clock;
-reg [15:0] instruction;
 reg regWrite;
+reg reset;
 reg [15:0] writeData;
+reg [2:0] writeRegister;
 // wires                                               
 wire [15:0]  AR;
 wire [15:0]  BR;
@@ -47,46 +49,177 @@ registerFile i1 (
 	.BR(BR),
 	.Rd(Rd),
 	.Rs(Rs),
+	.changeEnable(changeEnable),
 	.clock(clock),
-	.instruction(instruction),
 	.regWrite(regWrite),
-	.writeData(writeData)
+	.reset(reset),
+	.writeData(writeData),
+	.writeRegister(writeRegister)
 );
 initial                                                
 begin                                                  
-// code that executes only once                        
-// insert code here --> begin                          
+                     
+Rs <= 0;
+Rd <= 1;
+regWrite <= 1;
 clock <= 0;
-instruction <= 0;
-Rs <= 3'b000;
-Rd <= 3'b000;
-regWrite <= 1'b0;
-writeData <= 16'b0000111100001111;
-// --> end                                             
+reset <= 0;
+changeEnable <= 1;
+                                           
 $display("Running testbench");                       
-end
-always begin 
-#50;
+end   
+always begin
+#50
 clock <= ~clock;
 end
-always                                                 
-// optional sensitivity list                           
-// @(event1 or event2 or .... eventn)                  
-begin                                                  
-// code executes for every event on sensitivity list   
-// insert code here --> begin                          
-#60
-regWrite <= 1;
-#10
-writeData <= 1;
-#100
-writeData <= 2;
-#100
-Rs <= 3'b001;
-Rd <= 3'b000;
 
-@eachvec;                                              
-// --> end                                             
+always begin
+#100
+Rs <= Rs + 1;
+Rd <= Rd + 1;
+end
+
+always                                                 
+begin 
+writeData <= 16'b1111_1111_1111_1111;
+writeRegister <= 0;   
+#100
+writeRegister <= 1;
+writeData <= 16'b1111_1111_1111_1111;
+#100        
+writeRegister <= 2;
+writeData <= 16'b1111_1111_1111_1111;
+#100 
+writeRegister <= 3;
+writeData <= 16'b1111_1111_1111_1111;
+#100 
+writeRegister <= 4;
+writeData <= 16'b1111_1111_1111_1111;
+#100          
+writeRegister <= 5;   
+writeData <= 16'b1111_1111_1111_1111;
+#100
+writeRegister <= 6;
+writeData <= 16'b1111_1111_1111_1111;
+#100        
+writeRegister <= 7;
+writeData <= 16'b1111_1111_1111_1111;
+#100
+
+changeEnable <= 0;
+regWrite <= 0; 
+writeData <= 16'h f0f0;
+writeRegister <= 0;   
+#100
+writeRegister <= 1;
+writeData <= 16'h 0f0f;
+#100        
+writeRegister <= 2;
+writeData <= 16'h 0f00;
+#100 
+writeRegister <= 3;
+writeData <= 16'h f000;
+#100 
+writeRegister <= 4;
+writeData <= 16'h 000f;
+#100          
+writeRegister <= 5;   
+writeData <= 16'h 00f0;
+#100
+writeRegister <= 6;
+writeData <= 16'h 0f00;
+#100        
+writeRegister <= 7;
+writeData <= 16'h f000;
+#100
+reset <= 1;
+
+#500
+reset <= 0;
+regWrite <= 0; 
+writeData <= 16'h f0f0;
+writeRegister <= 0;   
+#100
+writeRegister <= 1;
+writeData <= 16'h 0f0f;
+#100        
+writeRegister <= 2;
+writeData <= 16'h 0f00;
+#100 
+writeRegister <= 3;
+writeData <= 16'h f000;
+#100 
+writeRegister <= 4;
+writeData <= 16'h 000f;
+#100          
+writeRegister <= 5;   
+writeData <= 16'h 00f0;
+#100
+writeRegister <= 6;
+writeData <= 16'h 0f00;
+#100        
+writeRegister <= 7;
+writeData <= 16'h f000;
+#100
+reset <= 1;
+
+#500
+reset <= 0;
+regWrite <= 1; 
+writeData <= 16'h f0f0;
+writeRegister <= 0;   
+#100
+writeRegister <= 1;
+writeData <= 16'h 0f0f;
+#100        
+writeRegister <= 2;
+writeData <= 16'h 0f00;
+#100 
+writeRegister <= 3;
+writeData <= 16'h f000;
+#100 
+writeRegister <= 4;
+writeData <= 16'h 000f;
+#100          
+writeRegister <= 5;   
+writeData <= 16'h 00f0;
+#100
+writeRegister <= 6;
+writeData <= 16'h 0f00;
+#100        
+writeRegister <= 7;
+writeData <= 16'h f000;
+#100
+reset <= 1;
+
+#500
+reset <= 0;
+changeEnable <= 0; 
+writeData <= 16'h 0000;
+writeRegister <= 0;   
+#100
+writeRegister <= 1;
+writeData <= 16'h 0000;
+#100        
+writeRegister <= 2;
+writeData <= 16'h 0000;
+#100 
+writeRegister <= 3;
+writeData <= 16'h 0000;
+#100 
+writeRegister <= 4;
+writeData <= 16'h 0000;
+#100          
+writeRegister <= 5;   
+writeData <= 16'h 0000;
+#100
+writeRegister <= 6;
+writeData <= 16'h 0000;
+#100        
+writeRegister <= 7;
+writeData <= 16'h 0000;                                                                                      
 end                                                    
 endmodule
+
+
 
