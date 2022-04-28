@@ -1,5 +1,5 @@
 Analysis & Synthesis report for shifter
-Fri Apr 22 11:08:24 2022
+Thu Apr 28 16:55:50 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -44,13 +44,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 22 11:08:24 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 28 16:55:50 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; shifter                                     ;
 ; Top-level Entity Name              ; shifter                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 279                                         ;
-;     Total combinational functions  ; 279                                         ;
+; Total logic elements               ; 277                                         ;
+;     Total combinational functions  ; 277                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 44                                          ;
@@ -163,13 +163,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                               ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
-; shifter.v                        ; yes             ; User Verilog HDL File  ; C:/home/shifter/shifter.v    ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; shifter.v                        ; yes             ; User Verilog HDL File  ; C:/Users/shun1/2022-simple-team02/shifter/shifter.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -177,16 +177,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 279        ;
+; Estimated Total logic elements              ; 277        ;
 ;                                             ;            ;
-; Total combinational functions               ; 279        ;
+; Total combinational functions               ; 277        ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 204        ;
-;     -- 3 input functions                    ; 59         ;
+;     -- 4 input functions                    ; 203        ;
+;     -- 3 input functions                    ; 58         ;
 ;     -- <=2 input functions                  ; 16         ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 279        ;
+;     -- normal mode                          ; 277        ;
 ;     -- arithmetic mode                      ; 0          ;
 ;                                             ;            ;
 ; Total registers                             ; 0          ;
@@ -198,8 +198,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; d[1]~input ;
-; Maximum fan-out                             ; 74         ;
-; Total fan-out                               ; 1087       ;
+; Maximum fan-out                             ; 73         ;
+; Total fan-out                               ; 1081       ;
 ; Average fan-out                             ; 2.96       ;
 +---------------------------------------------+------------+
 
@@ -209,7 +209,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |shifter                   ; 279 (279)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |shifter            ; shifter     ; work         ;
+; |shifter                   ; 277 (277)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |shifter            ; shifter     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -245,15 +245,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 44                          ;
-; cycloneiii_lcell_comb ; 280                         ;
-;     normal            ; 280                         ;
+; cycloneiii_lcell_comb ; 278                         ;
+;     normal            ; 278                         ;
 ;         0 data inputs ; 1                           ;
 ;         2 data inputs ; 16                          ;
-;         3 data inputs ; 59                          ;
-;         4 data inputs ; 204                         ;
+;         3 data inputs ; 58                          ;
+;         4 data inputs ; 203                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 8.13                        ;
+; Average LUT depth     ; 8.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -272,38 +272,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Apr 22 11:08:08 2022
+    Info: Processing started: Thu Apr 28 16:55:36 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off shifter -c shifter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (10229): Verilog HDL Expression warning at shifter.v(14): truncated literal to match 16 bits File: C:/home/shifter/shifter.v Line: 14
+Warning (10229): Verilog HDL Expression warning at shifter.v(14): truncated literal to match 16 bits File: C:/Users/shun1/2022-simple-team02/shifter/shifter.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
-    Info (12023): Found entity 1: shifter File: C:/home/shifter/shifter.v Line: 1
+    Info (12023): Found entity 1: shifter File: C:/Users/shun1/2022-simple-team02/shifter/shifter.v Line: 1
 Info (12127): Elaborating entity "shifter" for the top level hierarchy
-Warning (10776): Verilog HDL warning at shifter.v(22): variable OUT in static task or function OUT may have unintended latch behavior File: C:/home/shifter/shifter.v Line: 22
-Warning (10241): Verilog HDL Function Declaration warning at shifter.v(22): function "OUT" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function File: C:/home/shifter/shifter.v Line: 22
-Warning (10030): Net "OUT[17]" at shifter.v(22) has no driver or initial value, using a default initial value '0' File: C:/home/shifter/shifter.v Line: 22
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SZCV[0]" is stuck at GND File: C:/home/shifter/shifter.v Line: 5
-    Warning (13410): Pin "SZCV[1]" is stuck at GND File: C:/home/shifter/shifter.v Line: 5
+    Warning (13410): Pin "SZCV[0]" is stuck at GND File: C:/Users/shun1/2022-simple-team02/shifter/shifter.v Line: 5
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/home/shifter/output_files/shifter.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/shun1/2022-simple-team02/shifter/output_files/shifter.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 323 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 321 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
     Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 279 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info (21061): Implemented 277 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4748 megabytes
-    Info: Processing ended: Fri Apr 22 11:08:24 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Processing ended: Thu Apr 28 16:55:50 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:29
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/home/shifter/output_files/shifter.map.smsg.
+The suppressed messages can be found in C:/Users/shun1/2022-simple-team02/shifter/output_files/shifter.map.smsg.
 
 

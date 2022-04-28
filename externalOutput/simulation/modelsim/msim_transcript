@@ -1,0 +1,143 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do externalOutput_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {externalOutput_7_1200mv_100c_slow.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:46:20 on Apr 28,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." externalOutput_7_1200mv_100c_slow.vo 
+# -- Compiling module externalOutput
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	externalOutput
+# End time: 13:46:20 on Apr 28,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/home/externalOutput/simulation/modelsim {C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:46:20 on Apr 28,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/home/externalOutput/simulation/modelsim" C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt 
+# -- Compiling module externalOutput_vlg_tst
+# 
+# Top level modules:
+# 	externalOutput_vlg_tst
+# End time: 13:46:21 on Apr 28,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test1
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" test1 
+# Start time: 13:46:21 on Apr 28,2022
+# ** Error: (vsim-3170) Could not find 'test1'.
+#         Searched libraries:
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/home/externalOutput/simulation/modelsim/gate_work
+#             C:/home/externalOutput/simulation/modelsim/gate_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./externalOutput_run_msim_gate_verilog.do PAUSED at line 12
+vlog -vlog01compat -work work +incdir+C:/home/externalOutput/simulation/modelsim C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:46:26 on Apr 28,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/home/externalOutput/simulation/modelsim" C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt 
+# -- Compiling module externalOutput_vlg_tst
+# 
+# Top level modules:
+# 	externalOutput_vlg_tst
+# End time: 13:46:26 on Apr 28,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.externalOutput_vlg_tst
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.externalOutput_vlg_tst 
+# Start time: 13:46:21 on Apr 28,2022
+# Loading work.externalOutput_vlg_tst
+# Loading work.externalOutput
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# 
+# Loading instances from externalOutput_7_1200mv_100c_v_slow.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from externalOutput_7_1200mv_100c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /externalOutput_vlg_tst File: C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt
+add wave -position end  sim:/externalOutput_vlg_tst/AR
+add wave -position end  sim:/externalOutput_vlg_tst/changeEnable
+add wave -position end  sim:/externalOutput_vlg_tst/outputEnable
+add wave -position end  sim:/externalOutput_vlg_tst/reset
+add wave -position end  sim:/externalOutput_vlg_tst/clock
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_A
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_B
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_C
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_D
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_E
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_F
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_G
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_H
+add wave -position end  sim:/externalOutput_vlg_tst/select
+run -all
+# Running testbench
+run -all
+vlog -vlog01compat -work work +incdir+C:/home/externalOutput/simulation/modelsim C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:54:02 on Apr 28,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/home/externalOutput/simulation/modelsim" C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt 
+# -- Compiling module externalOutput_vlg_tst
+# 
+# Top level modules:
+# 	externalOutput_vlg_tst
+# End time: 13:54:02 on Apr 28,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.externalOutput_vlg_tst
+# End time: 13:54:15 on Apr 28,2022, Elapsed time: 0:07:54
+# Errors: 1, Warnings: 0
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.externalOutput_vlg_tst 
+# Start time: 13:54:15 on Apr 28,2022
+# Loading gate_work.externalOutput_vlg_tst
+# Loading gate_work.externalOutput
+# Loading gate_work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading instances from externalOutput_7_1200mv_100c_v_slow.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from externalOutput_7_1200mv_100c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /externalOutput_vlg_tst File: C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt
+add wave -position end  sim:/externalOutput_vlg_tst/AR
+add wave -position end  sim:/externalOutput_vlg_tst/changeEnable
+add wave -position end  sim:/externalOutput_vlg_tst/outputEnable
+add wave -position end  sim:/externalOutput_vlg_tst/reset
+add wave -position end  sim:/externalOutput_vlg_tst/clock
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_A
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_B
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_C
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_D
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_E
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_F
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_G
+add wave -position end  sim:/externalOutput_vlg_tst/SEG_H
+add wave -position end  sim:/externalOutput_vlg_tst/select
+run -all
+# Running testbench
+# End time: 14:46:38 on Apr 28,2022, Elapsed time: 0:52:23
+# Errors: 0, Warnings: 0

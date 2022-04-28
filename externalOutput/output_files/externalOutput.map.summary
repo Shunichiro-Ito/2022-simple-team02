@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Apr 28 14:13:53 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : externalOutput
+Top-level Entity Name : externalOutput
+Family : Cyclone IV E
+Total logic elements : 996
+    Total combinational functions : 996
+    Dedicated logic registers : 323
+Total registers : 323
+Total pins : 92
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

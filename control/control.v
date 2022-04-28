@@ -108,7 +108,7 @@ module control (
 	assign branch =  (({instruction[15:14],instruction[13:11]} == 5'b10_100) //B
 						|(({instruction[15:14],instruction[13:11],instruction[10:8]} == 8'b10_111_000)& Z) //BE
 						|(({instruction[15:14],instruction[13:11],instruction[10:8]} == 8'b10_111_001)& (S^V)) //BLT
-						|(({instruction[15:14],instruction[13:11],instruction[10:8]} == 8'b10_111_010)& (Z|S^V)) //BLE
+						|(({instruction[15:14],instruction[13:11],instruction[10:8]} == 8'b10_111_010)& (Z|(S^V))) //BLE
 						|(({instruction[15:14],instruction[13:11],instruction[10:8]} == 8'b10_111_011)& ~Z) //BNE
 						//| ({instruction[15:14], instruction[7:4]} == 6'b11_1111) //HALT
 	);

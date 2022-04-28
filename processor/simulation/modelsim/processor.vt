@@ -17,7 +17,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "04/28/2022 10:26:30"
+// Generated on "04/28/2022 15:10:54"
                                                                                 
 // Verilog Test Bench template for design : processor
 // 
@@ -35,16 +35,32 @@ reg exec;
 reg [15:0] externalInput;
 reg reset;
 // wires                                               
-wire [15:0]  external_output;
+wire [7:0]  SEG_A;
+wire [7:0]  SEG_B;
+wire [7:0]  SEG_C;
+wire [7:0]  SEG_D;
+wire [7:0]  SEG_E;
+wire [7:0]  SEG_F;
+wire [7:0]  SEG_G;
+wire [7:0]  SEG_H;
+wire [7:0]  select;
 
 // assign statements (if any)                          
 processor i1 (
 // port map - connection between master ports and signals/registers   
 	.clock(clock),
 	.exec(exec),
-	.external_output(external_output),
 	.externalInput(externalInput),
-	.reset(reset)
+	.reset(reset),
+	.SEG_A(SEG_A),
+	.SEG_B(SEG_B),
+	.SEG_C(SEG_C),
+	.SEG_D(SEG_D),
+	.SEG_E(SEG_E),
+	.SEG_F(SEG_F),
+	.SEG_G(SEG_G),
+	.SEG_H(SEG_H),
+	.select(select)
 );
 initial                                                
 begin                                                  
@@ -69,10 +85,10 @@ reset <= 0;
 exec <= 1;
 #1600  
 exec <= 0;
-//#2400
-//exec <= 1;
-//#2000
-//exec <= 0;                                                     
+#2400
+exec <= 1;
+#2000
+exec <= 0;                                                     
 @eachvec;                                              
 // --> end                                             
 end
@@ -82,6 +98,4 @@ clock <= ~clock;
 end
 
 endmodule
-
-
 

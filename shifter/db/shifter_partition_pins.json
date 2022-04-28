@@ -68,6 +68,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "SZCV[1]",
+					"strict" : false
+				},
+				{
 					"name" : "SZCV[2]",
 					"strict" : false
 				},

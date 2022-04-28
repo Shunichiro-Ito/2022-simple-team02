@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/home/externalOutput/simulation/modelsim
+vexternalOutput
+Z1 !s110 1651121180
+!i10b 1
+!s100 HPW;>;`;8kdAQ80A`=T`<1
+II?ALHzEHSe`[]GOfB`z:o1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1651120325
+Z4 8externalOutput_7_1200mv_100c_slow.vo
+Z5 FexternalOutput_7_1200mv_100c_slow.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1651121180.000000
+Z8 !s107 externalOutput_7_1200mv_100c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|externalOutput_7_1200mv_100c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+nexternal@output
+vexternalOutput_vlg_tst
+!s110 1651121642
+!i10b 1
+!s100 BVieSCPWgP1HYeoKgRe]W2
+IbRoIKDo:YPl8J5<1hYb6V3
+R2
+R0
+w1651121627
+8C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt
+FC:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt
+L0 28
+R6
+r1
+!s85 0
+31
+!s108 1651121642.000000
+!s107 C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/home/externalOutput/simulation/modelsim|C:/home/externalOutput/simulation/modelsim/externalOutput_test1.vt|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/home/externalOutput/simulation/modelsim
+R12
+nexternal@output_vlg_tst
+vhard_block
+R1
+!i10b 1
+!s100 ehmL_<IM]?iHT35eZn[lg1
+IVHaJ;AX>jZL9mmCgoKK3h1
+R2
+R0
+R3
+R4
+R5
+L0 25802
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12

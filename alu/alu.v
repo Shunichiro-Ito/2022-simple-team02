@@ -8,7 +8,7 @@ module alu(input [15:0] inA,inB,
 	   
 	    assign signExtendedInA = {inA [15], inA};
         assign signExtendedInB = {inB [15], inB};
-		assign negativeInB = ((~signExtendedInB) + 1);
+		assign negativeInB = ((~signExtendedInB) + 17'b0_0000_0000_0000_0001);
 		
 		assign {SZCV,out} = OUT(signExtendedInA,signExtendedInB,op,negativeInB);
 
@@ -22,13 +22,13 @@ module alu(input [15:0] inA,inB,
 			case (OP)
 				4'b0000:begin//ADD
 						{OUT[17],OUT[15:0]} = IN_A + IN_B;
-				      OUT[16] = (IN_A[15]&IN_B[15]&~OUT[15])|(~IN_A[15]&~IN_B[15]&OUT[15]);
+				      OUT[16] = (IN_A[15]&IN_B[15]&~OUT[15])|(~IN_A[15]&~IN_B[15]&OUT[15]);//V
 						OUT[18] = (OUT[15:0] == 0);//Z
 						OUT[19] = OUT[15];//S
 						end
 				4'b0001:begin//SUB
 						{OUT[17],OUT[15:0]} = IN_A + NEGATIVE_IN_B;
-					   OUT[16] = (IN_A[15]&NEGATIVE_IN_B[15]&~OUT[15])|(~IN_A[15]&~NEGATIVE_IN_B[15]&OUT[15]);
+					   OUT[16] = (IN_A[15]&NEGATIVE_IN_B[15]&~OUT[15])|(~IN_A[15]&~NEGATIVE_IN_B[15]&OUT[15]);//V
 						OUT[18] = (OUT[15:0] == 0);//Z
 						OUT[19] = OUT[15];//S
 						end
@@ -60,11 +60,11 @@ module alu(input [15:0] inA,inB,
 						OUT[19] = OUT[15];//S       
 						end
 				4'b0110:begin//MOV
-						OUT[15:0] = 16'b0000_0000_0000_0000;
+						OUT[15:0] = IN_B [15:0];
 						OUT[16] = 1'b0;
 						OUT[17] = 1'b0;
-						OUT[18] = 1'b0;
-						OUT[19] = 1'b0;
+						OUT[18] = (OUT[15:0] == 0);//Z
+						OUT[19] = OUT[15];//S
 						end
 				4'b0111:begin//(reserved)
 						OUT[15:0] = 16'b0000_0000_0000_0000;
