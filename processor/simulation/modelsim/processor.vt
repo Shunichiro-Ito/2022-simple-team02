@@ -67,9 +67,9 @@ begin
 // code that executes only once                        
 // insert code here --> begin                          
 clock <= 0;
-reset <= 1;
-exec  <= 0;
-externalInput <= 16'hf0f0;                                                       
+reset <= 0;
+exec  <= 1;
+externalInput <= 16'hffef;                                                       
 // --> end                                             
 $display("Running testbench");                       
 end                                                    
@@ -80,15 +80,15 @@ begin
 // code executes for every event on sensitivity list   
 // insert code here --> begin                          
 #1010
-reset <= 0;
+reset <= 1;
 #1000
-exec <= 1;
-#1600  
 exec <= 0;
-#2400
+#1600  
 exec <= 1;
+#3000
+exec <= 0;
 #2000
-exec <= 0;                                                     
+exec <= 1;                                                     
 @eachvec;                                              
 // --> end                                             
 end

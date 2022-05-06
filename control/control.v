@@ -109,14 +109,15 @@ module control (
 						|(({instruction[15:14],instruction[13:11],instruction[10:8]} == 8'b10_111_000)& Z) //BE
 						|(({instruction[15:14],instruction[13:11],instruction[10:8]} == 8'b10_111_001)& (S^V)) //BLT
 						|(({instruction[15:14],instruction[13:11],instruction[10:8]} == 8'b10_111_010)& (Z|(S^V))) //BLE
-						|(({instruction[15:14],instruction[13:11],instruction[10:8]} == 8'b10_111_011)& ~Z) //BNE
+						|(({instruction[15:14],instruction[13:11],instruction[10:8]} == 8'b10_111_011)& (~Z)) //BNE
 						//| ({instruction[15:14], instruction[7:4]} == 6'b11_1111) //HALT
 	);
 
 	//p5
 	assign regWrite =  
 					(
-						({instruction[15:14],instruction[7]} == 3'b11_0)//演算
+						({instruction[15:14],instruction[7:6]} == 4'b11_00)//ADD,SUB,AND,OR
+						| ({instruction[15:14],instruction[7:6],instruction[4]} == 5'b11_01_0)//XOR,MOV
 						| ({instruction[15:14],instruction[7:6]} == 4'b11_10)//シフト
 						| ({instruction[15:14],instruction[7:4]} == 6'b11_1100)//IN
 						| (instruction[15:14] == 2'b00) //LD

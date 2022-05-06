@@ -12,42 +12,42 @@
 # 
 # vlog -vlog01compat -work work +incdir+. {processor_7_1200mv_100c_slow.vo}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:17:05 on Apr 28,2022
+# Start time: 10:36:10 on May 06,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." processor_7_1200mv_100c_slow.vo 
 # -- Compiling module processor
 # 
 # Top level modules:
 # 	processor
-# End time: 15:17:06 on Apr 28,2022, Elapsed time: 0:00:01
+# End time: 10:36:11 on May 06,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim {C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim/processor.vt}
+# vlog -vlog01compat -work work +incdir+C:/Users/admin/2022-simple-team02/processor/simulation/modelsim {C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:17:06 on Apr 28,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim" C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim/processor.vt 
+# Start time: 10:36:11 on May 06,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/admin/2022-simple-team02/processor/simulation/modelsim" C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt 
 # -- Compiling module processor_vlg_tst
 # 
 # Top level modules:
 # 	processor_vlg_tst
-# End time: 15:17:06 on Apr 28,2022, Elapsed time: 0:00:00
+# End time: 10:36:11 on May 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test1
 # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" test1 
-# Start time: 15:17:06 on Apr 28,2022
+# Start time: 10:36:11 on May 06,2022
 # ** Error: (vsim-3170) Could not find 'test1'.
 #         Searched libraries:
 #             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/altera
 #             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/cycloneive
-#             C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim/gate_work
-#             C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim/gate_work
+#             C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/gate_work
+#             C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/gate_work
 # Error loading design
 # Error: Error loading design
 #        Pausing macro execution
 # MACRO ./processor_run_msim_gate_verilog.do PAUSED at line 12
 vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.processor_vlg_tst
 # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.processor_vlg_tst 
-# Start time: 15:17:06 on Apr 28,2022
+# Start time: 10:36:11 on May 06,2022
 # Loading work.processor_vlg_tst
 # Loading work.processor
 # Loading cycloneive_ver.cycloneive_lcell_comb
@@ -56,24 +56,53 @@ vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cyclon
 # Loading cycloneive_ver.cycloneive_clkctrl
 # Loading cycloneive_ver.cycloneive_mux41
 # Loading cycloneive_ver.cycloneive_ena_reg
-# Loading cycloneive_ver.cycloneive_jtag
 # Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_jtag
 # Loading cycloneive_ver.cycloneive_ram_block
 # Loading cycloneive_ver.cycloneive_ram_register
 # Loading cycloneive_ver.cycloneive_ram_pulse_generator
 # SDF 10.5b Compiler 2016.10 Oct  5 2016
 # 
 # Loading instances from processor_7_1200mv_100c_v_slow.sdo
-# ** Warning: (vsim-3017) C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Too few port connections. Expected 17, found 13.
+# ** Warning: (vsim-3017) C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Too few port connections. Expected 17, found 13.
 #    Time: 0 ps  Iteration: 0  Instance: /processor_vlg_tst/i1 File: processor_7_1200mv_100c_slow.vo
-# ** Warning: (vsim-3722) C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
-# ** Warning: (vsim-3722) C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
-# ** Warning: (vsim-3722) C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
-# ** Warning: (vsim-3722) C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
 # Loading altera_ver.PRIM_GDFF_LOW
 # Loading timing data from processor_7_1200mv_100c_v_slow.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_vlg_tst File: C:/Users/shun1/2022-simple-team02/processor/simulation/modelsim/processor.vt
+#    Time: 0 ps  Iteration: 0  Instance: /processor_vlg_tst File: C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt
+vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.processor_vlg_tst
+# End time: 10:36:39 on May 06,2022, Elapsed time: 0:00:28
+# Errors: 1, Warnings: 5
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.processor_vlg_tst 
+# Start time: 10:36:39 on May 06,2022
+# Loading gate_work.processor_vlg_tst
+# Loading gate_work.processor
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_jtag
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading instances from processor_7_1200mv_100c_v_slow.sdo
+# ** Warning: (vsim-3017) C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Too few port connections. Expected 17, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /processor_vlg_tst/i1 File: processor_7_1200mv_100c_slow.vo
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt(49): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from processor_7_1200mv_100c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /processor_vlg_tst File: C:/Users/admin/2022-simple-team02/processor/simulation/modelsim/processor.vt
 add wave -position end  sim:/processor_vlg_tst/eachvec
 add wave -position end  sim:/processor_vlg_tst/clock
 add wave -position end  sim:/processor_vlg_tst/exec
@@ -90,24 +119,19 @@ add wave -position end  sim:/processor_vlg_tst/SEG_H
 add wave -position end  sim:/processor_vlg_tst/select
 run
 # Running testbench
-# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2398 ps, d:2541 ps, 223 ps );
-#    Time: 2541 ps  Iteration: 1  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a9 /addr_a_register
-# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2412 ps, d:2541 ps, 223 ps );
-#    Time: 2541 ps  Iteration: 1  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /addr_a_register
-# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2412 ps, d:2560 ps, 223 ps );
-#    Time: 2560 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /addr_a_register
-# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2397 ps, d:2567 ps, 223 ps );
-#    Time: 2567 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a6 /addr_a_register
-# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2413 ps, d:2571 ps, 223 ps );
-#    Time: 2571 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register
-# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2412 ps, d:2584 ps, 223 ps );
-#    Time: 2584 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /addr_a_register
-# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2413 ps, d:2587 ps, 223 ps );
-#    Time: 2587 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register
-# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2399 ps, d:2606 ps, 223 ps );
-#    Time: 2606 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a12 /addr_a_register
-# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2399 ps, d:2615 ps, 223 ps );
-#    Time: 2615 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a14 /addr_a_register
-run
-# End time: 17:57:57 on Apr 28,2022, Elapsed time: 2:40:51
-# Errors: 10, Warnings: 5
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2386 ps, d:2386 ps, 223 ps );
+#    Time: 2386 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a2 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2398 ps, d:2421 ps, 223 ps );
+#    Time: 2421 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2387 ps, d:2463 ps, 223 ps );
+#    Time: 2463 ps  Iteration: 1  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a12 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2399 ps, d:2501 ps, 223 ps );
+#    Time: 2501 ps  Iteration: 1  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a14 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2401 ps, d:2511 ps, 223 ps );
+#    Time: 2511 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a9 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2387 ps, d:2542 ps, 223 ps );
+#    Time: 2542 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a6 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2398 ps, d:2547 ps, 223 ps );
+#    Time: 2547 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2398 ps, d:2587 ps, 223 ps );
+#    Time: 2587 ps  Iteration: 1  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register

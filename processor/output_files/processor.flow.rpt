@@ -1,5 +1,5 @@
 Flow report for processor
-Thu Apr 28 18:01:28 2022
+Fri May 06 11:08:00 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 28 18:01:28 2022       ;
+; Flow Status                        ; Successful - Fri May 06 11:08:00 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; processor                                   ;
 ; Top-level Entity Name              ; processor                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE30F23I7                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,110 / 28,848 ( 7 % )                      ;
-;     Total combinational functions  ; 2,069 / 28,848 ( 7 % )                      ;
-;     Dedicated logic registers      ; 721 / 28,848 ( 2 % )                        ;
-; Total registers                    ; 721                                         ;
+; Total logic elements               ; 2,135 / 28,848 ( 7 % )                      ;
+;     Total combinational functions  ; 2,094 / 28,848 ( 7 % )                      ;
+;     Dedicated logic registers      ; 723 / 28,848 ( 3 % )                        ;
+; Total registers                    ; 723                                         ;
 ; Total pins                         ; 91 / 329 ( 28 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 65,536 / 608,256 ( 11 % )                   ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/28/2022 18:00:31 ;
+; Start date & time ; 05/06/2022 11:06:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processor           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 91758732266.165113643110704            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 231453550865816.165180279110612        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; test1          ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; test1                                  ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -105,12 +105,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:32     ; 1.0                     ; 4817 MB             ; 00:00:59                           ;
-; Fitter                    ; 00:00:10     ; 1.1                     ; 5573 MB             ; 00:00:13                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4679 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.1                     ; 4803 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 4670 MB             ; 00:00:04                           ;
-; Total                     ; 00:00:52     ; --                      ; --                  ; 00:01:21                           ;
+; Analysis & Synthesis      ; 00:00:51     ; 1.0                     ; 4834 MB             ; 00:01:34                           ;
+; Fitter                    ; 00:00:15     ; 1.0                     ; 5300 MB             ; 00:00:19                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4683 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.1                     ; 4782 MB             ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:07     ; 1.0                     ; 4672 MB             ; 00:00:07                           ;
+; Total                     ; 00:01:21     ; --                      ; --                  ; 00:02:08                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -119,11 +119,11 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-45IIB8A  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DESKTOP-45IIB8A  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DESKTOP-45IIB8A  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-45IIB8A  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-45IIB8A  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; PC-B069          ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; PC-B069          ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; PC-B069          ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; PC-B069          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; PC-B069          ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

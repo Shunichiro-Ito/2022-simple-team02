@@ -11,7 +11,7 @@ module shifter(input [15:0] BR,
 		wire [31:0] shiftedBR_SRA;
 		
         assign signExtendedD = {{12{1'b0}}, d};
-		assign d_SLL_S = 16'd0000_0000_0001_0000 - d;
+		assign d_SLL_S = 16'b0000_0000_0001_0000 - d;
 		assign doubleBR = {BR,BR};
 		assign shiftedBR_SLR = doubleBR << d;
 		assign extendedBR = {{16{BR[15]}}, BR};
