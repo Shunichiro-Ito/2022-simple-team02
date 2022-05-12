@@ -3,7 +3,7 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
                     output reg [7:0] SEG_A,SEG_B,SEG_C,SEG_D,SEG_E,SEG_F,SEG_G,SEG_H,select);
 
     reg [15:0] regA,regB,regC,regD,regE,regF,regG,regH,regI,regJ,regK,regL,regM,regN,regO,regP;
-    reg [4:0] patern;
+    reg [4:0] pattern;
 
     initial begin 
         regP <= 16'b0000_0000_0000_0000;
@@ -22,7 +22,7 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
         regC <= 16'b0000_0000_0000_0000;
         regB <= 16'b0000_0000_0000_0000;
         regA <= 16'b0000_0000_0000_0000;
-        patern = 3'b000;
+        pattern = 3'b000;
     end
     
     function [7:0] outFunc;
@@ -76,7 +76,7 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
 	endfunction	
 
     always@(posedge clock) begin
-        if(patern == 5'b00000) begin
+        if(pattern == 5'b00000) begin
             SEG_A <= outFunc(regA[15:12]);
             SEG_B <= outFunc(regA[11:8]);
             SEG_C <= outFunc(regA[7:4]);
@@ -85,11 +85,11 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
             SEG_F <= outFunc(regE[11:8]);
             SEG_G <= outFunc(regE[7:4]);
             SEG_H <= outFinalFunc(regE[3:0]);
-        end else if(patern == 5'b00001) begin 
+        end else if(pattern == 5'b00001) begin 
             select <= 8'b1000_0000;
-        end else if(patern == 5'b00011) begin 
+        end else if(pattern == 5'b00011) begin 
             select <= 8'b0000_0000;
-        end else if(patern == 5'b00100) begin
+        end else if(pattern == 5'b00100) begin
             SEG_A <= outFunc(regB[15:12]);
             SEG_B <= outFunc(regB[11:8]);
             SEG_C <= outFunc(regB[7:4]);
@@ -98,11 +98,11 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
             SEG_F <= outFunc(regF[11:8]);
             SEG_G <= outFunc(regF[7:4]);
             SEG_H <= outFinalFunc(regF[3:0]);
-        end else if(patern == 5'b00101) begin 
+        end else if(pattern == 5'b00101) begin 
             select <= 8'b0100_0000;
-        end else if(patern == 5'b00111) begin 
+        end else if(pattern == 5'b00111) begin 
             select <= 8'b0000_0000;
-        end else if(patern == 5'b01000) begin
+        end else if(pattern == 5'b01000) begin
             SEG_A <= outFunc(regC[15:12]);
             SEG_B <= outFunc(regC[11:8]);
             SEG_C <= outFunc(regC[7:4]);
@@ -111,11 +111,11 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
             SEG_F <= outFunc(regG[11:8]);
             SEG_G <= outFunc(regG[7:4]);
             SEG_H <= outFinalFunc(regG[3:0]);
-        end else if(patern == 5'b01001) begin 
+        end else if(pattern == 5'b01001) begin 
             select <= 8'b0010_0000;
-        end else if(patern == 5'b01011) begin 
+        end else if(pattern == 5'b01011) begin 
             select <= 8'b0000_0000;
-        end else if(patern == 5'b01100) begin
+        end else if(pattern == 5'b01100) begin
             SEG_A <= outFunc(regD[15:12]);
             SEG_B <= outFunc(regD[11:8]);
             SEG_C <= outFunc(regD[7:4]);
@@ -124,11 +124,11 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
             SEG_F <= outFunc(regH[11:8]);
             SEG_G <= outFunc(regH[7:4]);
             SEG_H <= outFinalFunc(regH[3:0]);
-        end else if(patern == 5'b01101) begin 
+        end else if(pattern == 5'b01101) begin 
             select <= 8'b0001_0000;
-        end else if(patern == 5'b01111) begin 
+        end else if(pattern == 5'b01111) begin 
             select <= 8'b0000_0000;
-        end else if(patern == 5'b10000) begin
+        end else if(pattern == 5'b10000) begin
             SEG_A <= outFunc(regI[15:12]);
             SEG_B <= outFunc(regI[11:8]);
             SEG_C <= outFunc(regI[7:4]);
@@ -137,11 +137,11 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
             SEG_F <= outFunc(regM[11:8]);
             SEG_G <= outFunc(regM[7:4]);
             SEG_H <= outFinalFunc(regM[3:0]);
-        end else if(patern == 5'b10001) begin 
+        end else if(pattern == 5'b10001) begin 
             select <= 8'b0000_1000;
-        end else if(patern == 5'b10011) begin 
+        end else if(pattern == 5'b10011) begin 
             select <= 8'b0000_0000;
-        end else if(patern == 5'b10100) begin
+        end else if(pattern == 5'b10100) begin
             SEG_A <= outFunc(regJ[15:12]);
             SEG_B <= outFunc(regJ[11:8]);
             SEG_C <= outFunc(regJ[7:4]);
@@ -150,11 +150,11 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
             SEG_F <= outFunc(regN[11:8]);
             SEG_G <= outFunc(regN[7:4]);
             SEG_H <= outFinalFunc(regN[3:0]);
-        end else if(patern == 5'b10101) begin 
+        end else if(pattern == 5'b10101) begin 
             select <= 8'b0000_0100;
-        end else if(patern == 5'b10111) begin 
+        end else if(pattern == 5'b10111) begin 
             select <= 8'b0000_0000;
-        end else if(patern == 5'b11000) begin
+        end else if(pattern == 5'b11000) begin
             SEG_A <= outFunc(regK[15:12]);
             SEG_B <= outFunc(regK[11:8]);
             SEG_C <= outFunc(regK[7:4]);
@@ -163,11 +163,11 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
             SEG_F <= outFunc(regO[11:8]);
             SEG_G <= outFunc(regO[7:4]);
             SEG_H <= outFinalFunc(regO[3:0]);
-        end else if(patern == 5'b11001) begin 
+        end else if(pattern == 5'b11001) begin 
             select <= 8'b0000_0010;
-        end else if(patern == 5'b11011) begin 
+        end else if(pattern == 5'b11011) begin 
             select <= 8'b0000_0000;
-        end else if(patern == 5'b11100) begin
+        end else if(pattern == 5'b11100) begin
             SEG_A <= outFunc(regL[15:12]);
             SEG_B <= outFunc(regL[11:8]);
             SEG_C <= outFunc(regL[7:4]);
@@ -176,13 +176,13 @@ module externalOutput(input outputEnable,clock,reset,changeEnable,
             SEG_F <= outFunc(regP[11:8]);
             SEG_G <= outFunc(regP[7:4]);
             SEG_H <= outFinalFunc(regP[3:0]);
-        end else if(patern == 5'b11101) begin 
+        end else if(pattern == 5'b11101) begin 
             select <= 8'b0000_0001;
-        end else if(patern == 5'b11111) begin 
+        end else if(pattern == 5'b11111) begin 
             select <= 8'b0000_0000;
         end 
         
-        patern <= patern + 1;
+        pattern <= pattern + 1;
                     
         if(reset) begin
             regP <= 16'b0000_0000_0000_0000;

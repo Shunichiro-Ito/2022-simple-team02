@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.4.8)  6 MAY 2022 11:27
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.4.8)  12 MAY 2022 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -229,18 +229,21 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 File: instructionSet.jpg Graphic file (type bmp)
 <instructionSet.jpg>
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 35.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 41.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 35.
- [1] [2]
-(./system_design_spec.aux) ) 
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 41.
+ [1]
+File: structure0506.jpg Graphic file (type bmp)
+<structure0506.jpg>
+ [2] [3]
+[4] (./system_design_spec.aux) ) 
 Here is how much of TeX's memory you used:
- 1868 strings out of 478724
- 28787 string characters out of 5861577
- 326102 words of memory out of 5000000
- 20321 multiletter control sequences out of 15000+600000
- 479195 words of font info for 70 fonts, out of 8000000 for 9000
+ 1878 strings out of 478724
+ 28988 string characters out of 5861577
+ 329102 words of memory out of 5000000
+ 20328 multiletter control sequences out of 15000+600000
+ 479530 words of font info for 71 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  55i,6n,62p,214b,328s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on system_design_spec.dvi (3 pages, 5312 bytes).
+Output written on system_design_spec.dvi (5 pages, 11452 bytes).

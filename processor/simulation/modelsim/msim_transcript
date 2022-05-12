@@ -135,3 +135,5 @@ run
 #    Time: 2547 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register
 # ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2398 ps, d:2587 ps, 223 ps );
 #    Time: 2587 ps  Iteration: 1  Instance: /processor_vlg_tst/i1/\memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register
+# End time: 15:23:37 on May 07,2022, Elapsed time: 28:46:58
+# Errors: 8, Warnings: 5

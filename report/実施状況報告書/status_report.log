@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.4.8)  6 MAY 2022 11:45
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.4.8)  6 MAY 2022 16:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -183,7 +183,7 @@ File: l3backend-dvips.def 2022-02-07 L3 backend support: dvips
 \g__pdf_backend_link_int=\count275
 \g__pdf_backend_link_sf_int=\count276
 )
-No file status_report.aux.
+(./status_report.aux)
 \openout1 = `status_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -210,7 +210,7 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 19.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
 
-(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
@@ -225,52 +225,23 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 22.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 25.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 25.
+File: moduleSplit0506.jpg Graphic file (type bmp)
+<moduleSplit0506.jpg>
+File: rolesDivision0506.png Graphic file (type bmp)
+<rolesDivision0506.png>
 
-
-LaTeX Warning: Reference `moduleSplit0422' on page 1 undefined on input line 25
-.
-
-
-LaTeX Warning: Reference `rolesDivision0422' on page 1 undefined on input line 
-25.
-
-File: moduleSplit0422.jpg Graphic file (type bmp)
-<moduleSplit0422.jpg>
-
-Overfull \hbox (48.38498pt too wide) in paragraph at lines 30--31
+Overfull \hbox (11.44711pt too wide) in paragraph at lines 46--47
  [] 
  []
 
-
-LaTeX Warning: Reference `rolesDivision0422' on page 1 undefined on input line 
-38.
-
-File: rolesDivision0422.png Graphic file (type bmp)
-<rolesDivision0422.png>
-
-Overfull \hbox (211.85312pt too wide) in paragraph at lines 45--46
- [] 
- []
-
-[1] [2] (./status_report.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[1] [2] (./status_report.aux) ) 
 Here is how much of TeX's memory you used:
- 1875 strings out of 478724
- 28906 string characters out of 5861577
+ 1873 strings out of 478724
+ 28893 string characters out of 5861577
  325092 words of memory out of 5000000
- 20326 multiletter control sequences out of 15000+600000
- 479196 words of font info for 70 fonts, out of 8000000 for 9000
+ 20323 multiletter control sequences out of 15000+600000
+ 478888 words of font info for 69 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 55i,6n,62p,213b,328s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,6n,62p,441b,328s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on status_report.dvi (3 pages, 2556 bytes).
+Output written on status_report.dvi (3 pages, 4164 bytes).

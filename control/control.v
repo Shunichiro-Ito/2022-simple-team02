@@ -87,13 +87,13 @@ module control (
 	assign regDst =  (instruction[15:14] == 2'b00);//LD
 
 	//p3
-	assign ALUSrcAR =  (instruction[15:14]==2'b11);//演算,シフト,IN,OUT,HALTで1
+	assign ALUSrcAR =  (instruction[15:14]==2'b11);//演算,シフト,IN,OUT,NOP,HALTで1
 
 	//p3
-	assign ALUSrcBR =  (instruction[15:14] != 2'b10);//演算、シフト、IO,HALT,LD,STで1
+	assign ALUSrcBR =  (instruction[15:14] != 2'b10);//演算、シフト、IN,OUT,NOP,HALT,LD,STで1
 
 	//p3
-	assign DRSrc =  ({instruction[15:14], instruction[7]}== 3'b11_1);//シフト,IN,OOT,HALTのとき1に設定
+	assign DRSrc =  ({instruction[15:14], instruction[7]}== 3'b11_1);//シフト,IN,OUT,NOP,HALTのとき1に設定
 
 	//p3
 	assign outputEnable =  ({instruction[15:14], instruction[7:4]} == 6'b11_1101);//OUT

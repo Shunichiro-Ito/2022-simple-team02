@@ -1,14 +1,119 @@
 \relax 
-\@writefile{toc}{\contentsline {section}{\numberline {1}実験環境}{1}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}全体のコンポーネント分割方法}{1}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces モジュール分割の方法の図}}{2}{}\protected@file@percent }
-\newlabel{moduleSplit0422}{{1}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 役割分担（4月22日時点）}}{3}{}\protected@file@percent }
-\newlabel{rolesDivision0422}{{2}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}設計を担当したコンポーネント}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}レジスタファイル(registerFile.v)}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}回路の外部仕様}{4}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces aの表す16進数の数字とaとoutの論理関係}}{4}{}\protected@file@percent }
-\newlabel{aとoutの論理関係}{{1}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}回路の内部仕様}{4}{}\protected@file@percent }
-\gdef \@abspage@last{5}
+\@writefile{toc}{\contentsline {section}{\numberline {1}全体のコンポーネント分割方法}{1}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces コンポーネント分割の方法の図}}{1}{}\protected@file@percent }
+\newlabel{moduleSplit0422}{{1}{1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 役割分担（4月22日時点）}}{2}{}\protected@file@percent }
+\newlabel{rolesDivision0422}{{2}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}設計を担当したコンポーネント}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}プログラムカウンタ(PC.v)}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}外部仕様　入力}{3}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces プログラムカウンタ(PC.v)の入力(=input)}}{3}{}\protected@file@percent }
+\newlabel{ProgramCounterI}{{1}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}外部仕様　出力}{3}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces プログラムカウンタ(PC.v)の出力(=output)}}{3}{}\protected@file@percent }
+\newlabel{ProgramCounterO}{{2}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}内部仕様}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}インストラクションレジスタ(IR.v)}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}外部仕様　入力}{4}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces インストラクションレジスタ(IR.v)の入力(=input)}}{4}{}\protected@file@percent }
+\newlabel{aaaI}{{3}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}外部仕様　出力}{4}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces インストラクションレジスタ(IR.v)の出力(=output)}}{4}{}\protected@file@percent }
+\newlabel{aaaO}{{4}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}内部仕様}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}レジスタファイル(registerFile.v)}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}外部仕様　入力}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces レジスタファイル(registerFile.v)の入力(=input)}}{5}{}\protected@file@percent }
+\newlabel{registerFileI}{{5}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}外部仕様　出力}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces レジスタファイル(registerFile.v)の出力(=output)}}{5}{}\protected@file@percent }
+\newlabel{registerFileO}{{6}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}内部仕様}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}フェーズカウンタ(phaseCounter.v)}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.1}外部仕様　入力}{7}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces フェーズカウンタ(phaseCounter.v)の入力(=input)}}{7}{}\protected@file@percent }
+\newlabel{phaseCounterI}{{7}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.2}外部仕様　出力}{7}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces フェーズカウンタ(phaseCounter.v)の出力(=output)}}{7}{}\protected@file@percent }
+\newlabel{phaseCounterO}{{8}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.3}内部仕様}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces フェーズカウンタの各信号の時間変化}}{8}{}\protected@file@percent }
+\newlabel{phaseCounterWaveShape}{{3}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}制御部(control.v)}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}外部仕様　入力}{9}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces 制御部(control.v)の入力(=input)}}{9}{}\protected@file@percent }
+\newlabel{controlI}{{9}{9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}外部仕様　出力}{9}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces 制御部(control.v)の出力(=output)}}{10}{}\protected@file@percent }
+\newlabel{controlO}{{10}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.3}内部仕様}{10}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces execとexec\_preとcnt(=counter)の値に応じて、更新するcnt(=counter)とsystemRunningの値}}{11}{}\protected@file@percent }
+\newlabel{execexecprecntsystemRunningRelation}{{11}{11}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces 制御信号の仕様}}{12}{}\protected@file@percent }
+\newlabel{controlsignal}{{12}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}PCをインクリメントする組み合わせ回路(incrementer.v)}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}外部仕様　入力}{13}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces PCをインクリメントする組み合わせ回路(incrementer.v)の入力(=input)}}{13}{}\protected@file@percent }
+\newlabel{incrementerI}{{13}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2}外部仕様　出力}{13}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces PCをインクリメントする組み合わせ回路(incrementer.v)の出力(=output)}}{13}{}\protected@file@percent }
+\newlabel{incrementerO}{{14}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.3}内部仕様}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}主記憶(mainMemory.v)}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.1}外部仕様　入力}{14}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces 主記憶(mainMemory.v)の入力(=input)}}{14}{}\protected@file@percent }
+\newlabel{mainMemoryI}{{15}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.2}外部仕様　出力}{14}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces 主記憶(mainMemory.v)の出力(=output)}}{14}{}\protected@file@percent }
+\newlabel{mainMemoryO}{{16}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.3}内部仕様}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8}SZCV選択回路(SZCVJudge16.v)}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.8.1}外部仕様　入力}{15}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces SZCV選択回路(SZCVJudge16.v)の入力(=input)}}{15}{}\protected@file@percent }
+\newlabel{szcvjudgeI}{{17}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.8.2}外部仕様　出力}{15}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces SZCV選択回路(SZCVJudge16.v)の出力(=output)}}{15}{}\protected@file@percent }
+\newlabel{szcvjudgeO}{{18}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.8.3}内部仕様}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.9}SZCV選択回路(SZCVControl.v)}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.9.1}外部仕様　入力}{16}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {19}{\ignorespaces SZCV選択回路(SZCVControl.v)の入力(=input)}}{16}{}\protected@file@percent }
+\newlabel{szcvcontrolI}{{19}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.9.2}外部仕様　出力}{16}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces SZCV選択回路(SZCVControl.v)の出力(=output)}}{16}{}\protected@file@percent }
+\newlabel{szcvcontrolO}{{20}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.9.3}内部仕様}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.10}符号拡張(signExtend.v)}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.10.1}外部仕様　入力}{17}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {21}{\ignorespaces 符号拡張(signExtend.v)の入力(=input)}}{17}{}\protected@file@percent }
+\newlabel{signExtendI}{{21}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.10.2}外部仕様　出力}{17}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {22}{\ignorespaces 符号拡張(signExtend.v)の出力(=output)}}{17}{}\protected@file@percent }
+\newlabel{signExtendO}{{22}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.10.3}内部仕様}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.11}各マルチプレクサー(multiplexer16.v,multiplexer4.v,multiplexer3.v)}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.11.1}外部仕様　入力}{18}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {23}{\ignorespaces 各マルチプレクサー(multiplexer16.v,multiplexer4.v,multiplexer3.v)の入力(=input)}}{18}{}\protected@file@percent }
+\newlabel{eachmultiplexerI}{{23}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.11.2}外部仕様　出力}{18}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {24}{\ignorespaces 各マルチプレクサー(multiplexer16.v,multiplexer4.v,multiplexer3.v)の出力(=output)}}{18}{}\protected@file@percent }
+\newlabel{eachmultiplexerO}{{24}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.11.3}内部仕様}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.12}各レジスタ(register16.v,register4.v,register3.v)}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.12.1}外部仕様　入力}{19}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {25}{\ignorespaces 各レジスタ(register16.v,register4.v,register3.v)の入力(=input)}}{19}{}\protected@file@percent }
+\newlabel{eachregisterI}{{25}{19}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.12.2}外部仕様　出力}{19}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {26}{\ignorespaces 各レジスタ(register16.v,register4.v,register3.v)の出力(=output)}}{19}{}\protected@file@percent }
+\newlabel{eachregisterO}{{26}{19}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.12.3}内部仕様}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.13}全体(processor.bdf)}{20}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.13.1}外部仕様　入力}{20}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {27}{\ignorespaces 全体(processor.bdf)の入力(=input)}}{20}{}\protected@file@percent }
+\newlabel{zentaiprocessorI}{{27}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.13.2}外部仕様　出力}{20}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {28}{\ignorespaces 全体(processor.bdf)の出力(=output)}}{20}{}\protected@file@percent }
+\newlabel{zentaiprocessorO}{{28}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.13.3}内部仕様}{20}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}実験環境}{21}{}\protected@file@percent }
+\gdef \@abspage@last{22}
