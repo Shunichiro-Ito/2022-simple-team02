@@ -1,0 +1,309 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
+
+// DATE "05/13/2022 10:16:46"
+
+// 
+// Device: Altera EP4CE30F23I7 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module MEMWBRegister (
+	regWrite_MEM,
+	memToReg_MEM,
+	changeEnable,
+	reset,
+	clock,
+	regWrite_WB,
+	memToReg_WB);
+input 	regWrite_MEM;
+input 	memToReg_MEM;
+input 	changeEnable;
+input 	reset;
+input 	clock;
+output 	regWrite_WB;
+output 	memToReg_WB;
+
+// Design Ports Information
+// regWrite_WB	=>  Location: PIN_D2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// memToReg_WB	=>  Location: PIN_H7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// regWrite_MEM	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// reset	=>  Location: PIN_J6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clock	=>  Location: PIN_G1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// changeEnable	=>  Location: PIN_F2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// memToReg_MEM	=>  Location: PIN_F1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("MEMWBRegister_7_1200mv_-40c_v_slow.sdo");
+// synopsys translate_on
+
+wire \regWrite_WB~output_o ;
+wire \memToReg_WB~output_o ;
+wire \clock~input_o ;
+wire \clock~inputclkctrl_outclk ;
+wire \reset~input_o ;
+wire \regWrite_MEM~input_o ;
+wire \regWrite_WB~0_combout ;
+wire \changeEnable~input_o ;
+wire \regWrite_WB~1_combout ;
+wire \regWrite_WB~reg0_q ;
+wire \memToReg_MEM~input_o ;
+wire \memToReg_WB~0_combout ;
+wire \memToReg_WB~reg0_q ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: IOOBUF_X0_Y37_N2
+cycloneive_io_obuf \regWrite_WB~output (
+	.i(\regWrite_WB~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\regWrite_WB~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \regWrite_WB~output .bus_hold = "false";
+defparam \regWrite_WB~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y37_N16
+cycloneive_io_obuf \memToReg_WB~output (
+	.i(\memToReg_WB~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memToReg_WB~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memToReg_WB~output .bus_hold = "false";
+defparam \memToReg_WB~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y21_N8
+cycloneive_io_ibuf \clock~input (
+	.i(clock),
+	.ibar(gnd),
+	.o(\clock~input_o ));
+// synopsys translate_off
+defparam \clock~input .bus_hold = "false";
+defparam \clock~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G2
+cycloneive_clkctrl \clock~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\clock~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\clock~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \clock~inputclkctrl .clock_type = "global clock";
+defparam \clock~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y36_N1
+cycloneive_io_ibuf \reset~input (
+	.i(reset),
+	.ibar(gnd),
+	.o(\reset~input_o ));
+// synopsys translate_off
+defparam \reset~input .bus_hold = "false";
+defparam \reset~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y36_N15
+cycloneive_io_ibuf \regWrite_MEM~input (
+	.i(regWrite_MEM),
+	.ibar(gnd),
+	.o(\regWrite_MEM~input_o ));
+// synopsys translate_off
+defparam \regWrite_MEM~input .bus_hold = "false";
+defparam \regWrite_MEM~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y36_N0
+cycloneive_lcell_comb \regWrite_WB~0 (
+// Equation(s):
+// \regWrite_WB~0_combout  = (!\reset~input_o  & \regWrite_MEM~input_o )
+
+	.dataa(gnd),
+	.datab(\reset~input_o ),
+	.datac(gnd),
+	.datad(\regWrite_MEM~input_o ),
+	.cin(gnd),
+	.combout(\regWrite_WB~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \regWrite_WB~0 .lut_mask = 16'h3300;
+defparam \regWrite_WB~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y35_N8
+cycloneive_io_ibuf \changeEnable~input (
+	.i(changeEnable),
+	.ibar(gnd),
+	.o(\changeEnable~input_o ));
+// synopsys translate_off
+defparam \changeEnable~input .bus_hold = "false";
+defparam \changeEnable~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y36_N12
+cycloneive_lcell_comb \regWrite_WB~1 (
+// Equation(s):
+// \regWrite_WB~1_combout  = (\changeEnable~input_o ) # (\reset~input_o )
+
+	.dataa(gnd),
+	.datab(\changeEnable~input_o ),
+	.datac(gnd),
+	.datad(\reset~input_o ),
+	.cin(gnd),
+	.combout(\regWrite_WB~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \regWrite_WB~1 .lut_mask = 16'hFFCC;
+defparam \regWrite_WB~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y36_N1
+dffeas \regWrite_WB~reg0 (
+	.clk(\clock~inputclkctrl_outclk ),
+	.d(\regWrite_WB~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\regWrite_WB~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\regWrite_WB~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \regWrite_WB~reg0 .is_wysiwyg = "true";
+defparam \regWrite_WB~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y35_N15
+cycloneive_io_ibuf \memToReg_MEM~input (
+	.i(memToReg_MEM),
+	.ibar(gnd),
+	.o(\memToReg_MEM~input_o ));
+// synopsys translate_off
+defparam \memToReg_MEM~input .bus_hold = "false";
+defparam \memToReg_MEM~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y36_N18
+cycloneive_lcell_comb \memToReg_WB~0 (
+// Equation(s):
+// \memToReg_WB~0_combout  = (\memToReg_MEM~input_o  & !\reset~input_o )
+
+	.dataa(gnd),
+	.datab(\memToReg_MEM~input_o ),
+	.datac(gnd),
+	.datad(\reset~input_o ),
+	.cin(gnd),
+	.combout(\memToReg_WB~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \memToReg_WB~0 .lut_mask = 16'h00CC;
+defparam \memToReg_WB~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y36_N19
+dffeas \memToReg_WB~reg0 (
+	.clk(\clock~inputclkctrl_outclk ),
+	.d(\memToReg_WB~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\regWrite_WB~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\memToReg_WB~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \memToReg_WB~reg0 .is_wysiwyg = "true";
+defparam \memToReg_WB~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign regWrite_WB = \regWrite_WB~output_o ;
+
+assign memToReg_WB = \memToReg_WB~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_D1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_E2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_K2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_K1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_K22,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_ASDO_DATA1~~padout ;
+wire \~ALTERA_FLASH_nCE_nCSO~~padout ;
+wire \~ALTERA_DATA0~~padout ;
+wire \~ALTERA_ASDO_DATA1~~ibuf_o ;
+wire \~ALTERA_FLASH_nCE_nCSO~~ibuf_o ;
+wire \~ALTERA_DATA0~~ibuf_o ;
+
+
+endmodule

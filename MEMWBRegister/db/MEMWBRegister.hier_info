@@ -1,0 +1,13 @@
+|MEMWBRegister
+regWrite_MEM => regWrite_WB.DATAB
+memToReg_MEM => memToReg_WB.DATAB
+changeEnable => regWrite_WB.OUTPUTSELECT
+changeEnable => memToReg_WB.OUTPUTSELECT
+reset => regWrite_WB.OUTPUTSELECT
+reset => memToReg_WB.OUTPUTSELECT
+clock => memToReg_WB~reg0.CLK
+clock => regWrite_WB~reg0.CLK
+regWrite_WB <= regWrite_WB~reg0.DB_MAX_OUTPUT_PORT_TYPE
+memToReg_WB <= memToReg_WB~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

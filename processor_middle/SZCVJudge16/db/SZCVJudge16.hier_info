@@ -1,0 +1,24 @@
+|SZCVJudge16
+data[0] => Equal0.IN15
+data[1] => Equal0.IN14
+data[2] => Equal0.IN13
+data[3] => Equal0.IN12
+data[4] => Equal0.IN11
+data[5] => Equal0.IN10
+data[6] => Equal0.IN9
+data[7] => Equal0.IN8
+data[8] => Equal0.IN7
+data[9] => Equal0.IN6
+data[10] => Equal0.IN5
+data[11] => Equal0.IN4
+data[12] => Equal0.IN3
+data[13] => Equal0.IN2
+data[14] => Equal0.IN1
+data[15] => SZCV[3].DATAIN
+data[15] => Equal0.IN0
+SZCV[0] <= <GND>
+SZCV[1] <= <GND>
+SZCV[2] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+SZCV[3] <= data[15].DB_MAX_OUTPUT_PORT_TYPE
+
+

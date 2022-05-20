@@ -132,6 +132,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "writeData[0]",
+					"strict" : false
+				},
+				{
 					"name" : "Rs[0]",
 					"strict" : false
 				},
@@ -140,31 +144,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rs[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Rd[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Rd[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Rd[2]",
-					"strict" : false
-				},
-				{
-					"name" : "writeData[0]",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
+					"name" : "writeRegister[1]",
 					"strict" : false
 				},
 				{
@@ -172,19 +152,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "regWrite",
-					"strict" : false
-				},
-				{
-					"name" : "changeEnable",
+					"name" : "Rs[2]",
 					"strict" : false
 				},
 				{
 					"name" : "writeRegister[2]",
-					"strict" : false
-				},
-				{
-					"name" : "writeRegister[1]",
 					"strict" : false
 				},
 				{
@@ -245,6 +217,34 @@
 				},
 				{
 					"name" : "writeData[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Rd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "regWrite",
+					"strict" : false
+				},
+				{
+					"name" : "changeEnable",
 					"strict" : false
 				}
 			]

@@ -264,39 +264,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "externalInput[12]",
 					"strict" : false
 				},
 				{
-					"name" : "externalInput[0]",
+					"name" : "externalInput[13]",
 					"strict" : false
 				},
 				{
-					"name" : "externalInput[1]",
+					"name" : "externalInput[14]",
 					"strict" : false
 				},
 				{
-					"name" : "externalInput[2]",
-					"strict" : false
-				},
-				{
-					"name" : "externalInput[3]",
-					"strict" : false
-				},
-				{
-					"name" : "externalInput[4]",
-					"strict" : false
-				},
-				{
-					"name" : "externalInput[5]",
-					"strict" : false
-				},
-				{
-					"name" : "externalInput[6]",
-					"strict" : false
-				},
-				{
-					"name" : "externalInput[7]",
+					"name" : "externalInput[15]",
 					"strict" : false
 				},
 				{
@@ -316,23 +296,43 @@
 					"strict" : false
 				},
 				{
+					"name" : "externalInput[4]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[5]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[6]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[7]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[0]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "externalInput[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
 					"name" : "exec",
-					"strict" : false
-				},
-				{
-					"name" : "externalInput[12]",
-					"strict" : false
-				},
-				{
-					"name" : "externalInput[13]",
-					"strict" : false
-				},
-				{
-					"name" : "externalInput[14]",
-					"strict" : false
-				},
-				{
-					"name" : "externalInput[15]",
 					"strict" : false
 				},
 				{

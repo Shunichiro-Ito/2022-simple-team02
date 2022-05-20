@@ -15,9 +15,14 @@ module registerFile (
 	reg [15:0] r [7:0];
 
 	function [15:0] READ_REG;
-	input [2:0] REG_NUM;
-		begin
-			case (REG_NUM)
+	input [2:0] READ_REG_NUM;
+	input REG_WRITE;
+	input [2:0] WRITE_REG_NUM;
+	input [15:0] WRITE_DATA;
+		if (REG_WRITE & (READ_REG_NUM == WRITE_REG_NUM)) begin
+			READ_REG = WRITE_DATA;
+		end else begin
+			case (READ_REG_NUM)
 				3'b000: READ_REG = r[0]; 
 				3'b001: READ_REG = r[1];
 				3'b010: READ_REG = r[2];
@@ -30,8 +35,8 @@ module registerFile (
 		end
 	endfunction
 	
-	assign AR = READ_REG(Rs);
-	assign BR = READ_REG(Rd);
+	assign AR = READ_REG(Rs, regWrite, writeRegister, writeData);
+	assign BR = READ_REG(Rd, regWrite, writeRegister, writeData);
 		
 	always @ (posedge clock) begin
 		if (reset) begin

@@ -1,0 +1,81 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "FwdA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FwdA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FwdB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FwdB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "EXMEM_RegRd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EXMEM_RegRd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_RegRs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_RegRs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EXMEM_RegWrite",
+					"strict" : false
+				},
+				{
+					"name" : "EXMEM_RegRd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_RegRs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IDEX_RegRd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IDEX_RegRd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IDEX_RegWrite",
+					"strict" : false
+				},
+				{
+					"name" : "IDEX_RegRd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_RegRd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_RegRd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_RegRd[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

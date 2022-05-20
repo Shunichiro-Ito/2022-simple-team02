@@ -1,0 +1,69 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "memRead_MEM",
+					"strict" : false
+				},
+				{
+					"name" : "inputEnable_MEM",
+					"strict" : false
+				},
+				{
+					"name" : "memWrite_MEM",
+					"strict" : false
+				},
+				{
+					"name" : "branch_MEM",
+					"strict" : false
+				},
+				{
+					"name" : "regWrite_MEM",
+					"strict" : false
+				},
+				{
+					"name" : "memToReg_MEM",
+					"strict" : false
+				},
+				{
+					"name" : "memRead_EX",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "changeEnable",
+					"strict" : false
+				},
+				{
+					"name" : "inputEnable_EX",
+					"strict" : false
+				},
+				{
+					"name" : "memWrite_EX",
+					"strict" : false
+				},
+				{
+					"name" : "branch_EX",
+					"strict" : false
+				},
+				{
+					"name" : "regWrite_EX",
+					"strict" : false
+				},
+				{
+					"name" : "memToReg_EX",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

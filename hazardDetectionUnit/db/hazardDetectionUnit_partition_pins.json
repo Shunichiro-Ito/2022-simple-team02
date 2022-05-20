@@ -1,0 +1,73 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PCWrite",
+					"strict" : false
+				},
+				{
+					"name" : "IFIDWrite",
+					"strict" : false
+				},
+				{
+					"name" : "IFFlush",
+					"strict" : false
+				},
+				{
+					"name" : "IDFlush",
+					"strict" : false
+				},
+				{
+					"name" : "IDEX_RegRd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IDEX_RegRd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_Rs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_Rs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_Rd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_Rd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IDEX_memRead",
+					"strict" : false
+				},
+				{
+					"name" : "IDEX_RegRd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_Rd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "notReadRsRd",
+					"strict" : false
+				},
+				{
+					"name" : "IFID_Rs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "branch",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

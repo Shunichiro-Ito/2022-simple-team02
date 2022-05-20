@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/admin/2022-simple-team02/phaseCounter/simulation/modelsim
+vhard_block
+Z1 !s110 1650725024
+!i10b 1
+!s100 M_Qnfh<m4bOG:I0JX4a941
+Iz;fn4e4ADZoUkR4jMO9Td3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1650724797
+Z4 8phaseCounter_7_1200mv_100c_slow.vo
+Z5 FphaseCounter_7_1200mv_100c_slow.vo
+L0 628
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1650725024.000000
+Z8 !s107 phaseCounter_7_1200mv_100c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|phaseCounter_7_1200mv_100c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vphaseCounter
+R1
+!i10b 1
+!s100 JC^@7fiY>Dc>ka=6f:Uco0
+I;aP=JQ5W]BP^YoTZ>=U>g3
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+nphase@counter
+vphaseCounter_vlg_tst
+R1
+!i10b 1
+!s100 1<VCHZm9F5UUPmJ5MJ[_W2
+IR[ZFCW51DUFoK_b5X9H_93
+R2
+R0
+w1650724987
+8C:/Users/admin/2022-simple-team02/phaseCounter/simulation/modelsim/phaseCounter.vt
+FC:/Users/admin/2022-simple-team02/phaseCounter/simulation/modelsim/phaseCounter.vt
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/admin/2022-simple-team02/phaseCounter/simulation/modelsim/phaseCounter.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/admin/2022-simple-team02/phaseCounter/simulation/modelsim|C:/Users/admin/2022-simple-team02/phaseCounter/simulation/modelsim/phaseCounter.vt|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/admin/2022-simple-team02/phaseCounter/simulation/modelsim
+R12
+nphase@counter_vlg_tst

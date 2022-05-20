@@ -1,0 +1,82 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do alu_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {alu_7_1200mv_100c_slow.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:33:16 on Apr 28,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." alu_7_1200mv_100c_slow.vo 
+# -- Compiling module alu
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	alu
+# End time: 17:33:16 on Apr 28,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim {C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim/alu_test1.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:33:16 on Apr 28,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim" C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim/alu_test1.vt 
+# -- Compiling module alu_vlg_tst
+# 
+# Top level modules:
+# 	alu_vlg_tst
+# End time: 17:33:16 on Apr 28,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test1
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" test1 
+# Start time: 17:33:16 on Apr 28,2022
+# ** Error: (vsim-3170) Could not find 'test1'.
+#         Searched libraries:
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim/gate_work
+#             C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim/gate_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./alu_run_msim_gate_verilog.do PAUSED at line 12
+vlog -vlog01compat -work work +incdir+C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim/alu_test1.vt
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:33:39 on Apr 28,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim" C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim/alu_test1.vt 
+# -- Compiling module alu_vlg_tst
+# 
+# Top level modules:
+# 	alu_vlg_tst
+# End time: 17:33:40 on Apr 28,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.alu_vlg_tst
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.alu_vlg_tst 
+# Start time: 17:33:16 on Apr 28,2022
+# Loading work.alu_vlg_tst
+# Loading work.alu
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading instances from alu_7_1200mv_100c_v_slow.sdo
+# Loading timing data from alu_7_1200mv_100c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /alu_vlg_tst File: C:/Users/shun1/2022-simple-team02/alu/simulation/modelsim/alu_test1.vt
+add wave -position end  sim:/alu_vlg_tst/eachvec
+add wave -position end  sim:/alu_vlg_tst/inA
+add wave -position end  sim:/alu_vlg_tst/inB
+add wave -position end  sim:/alu_vlg_tst/op
+add wave -position end  sim:/alu_vlg_tst/SZCV
+add wave -position end  sim:/alu_vlg_tst/out
+run -all
+# Running testbench
+run -all
+# End time: 17:58:05 on Apr 28,2022, Elapsed time: 0:24:49
+# Errors: 1, Warnings: 0

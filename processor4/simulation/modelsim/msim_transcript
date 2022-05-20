@@ -1,0 +1,197 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do processor_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {processor_7_1200mv_100c_slow.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:27:41 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." processor_7_1200mv_100c_slow.vo 
+# -- Compiling module processor
+# 
+# Top level modules:
+# 	processor
+# End time: 21:27:41 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim {C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim/processor.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:27:41 on May 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim" C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim/processor.vt 
+# -- Compiling module processor_vlg_tst
+# 
+# Top level modules:
+# 	processor_vlg_tst
+# End time: 21:27:41 on May 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test1
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" test1 
+# Start time: 21:27:42 on May 19,2022
+# ** Error: (vsim-3170) Could not find 'test1'.
+#         Searched libraries:
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim/gate_work
+#             C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim/gate_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./processor_run_msim_gate_verilog.do PAUSED at line 12
+vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" gate_work.processor_vlg_tst
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" gate_work.processor_vlg_tst 
+# Start time: 21:27:42 on May 19,2022
+# Loading work.processor_vlg_tst
+# Loading work.processor
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_jtag
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading instances from processor_7_1200mv_100c_v_slow.sdo
+# ** Warning: (vsim-3017) C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim/processor.vt(108): [TFMPC] - Too few port connections. Expected 76, found 72.
+#    Time: 0 ps  Iteration: 0  Instance: /processor_vlg_tst/i1 File: processor_7_1200mv_100c_slow.vo
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim/processor.vt(108): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim/processor.vt(108): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim/processor.vt(108): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim/processor.vt(108): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from processor_7_1200mv_100c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /processor_vlg_tst File: C:/Users/admin/2022-simple-team02/processor4/simulation/modelsim/processor.vt
+add wave -position end  sim:/processor_vlg_tst/eachvec
+add wave -position end  sim:/processor_vlg_tst/clock
+add wave -position end  sim:/processor_vlg_tst/exec
+add wave -position end  sim:/processor_vlg_tst/externalInput
+add wave -position end  sim:/processor_vlg_tst/reset
+add wave -position end  sim:/processor_vlg_tst/ALUOp_control
+add wave -position end  sim:/processor_vlg_tst/ALUOp_EX
+add wave -position end  sim:/processor_vlg_tst/ALUResult
+add wave -position end  sim:/processor_vlg_tst/ALUSrcAR_control
+add wave -position end  sim:/processor_vlg_tst/ALUSrcAR_EX
+add wave -position end  sim:/processor_vlg_tst/AR_data
+add wave -position end  sim:/processor_vlg_tst/AR_forwarded
+add wave -position end  sim:/processor_vlg_tst/BR_data
+add wave -position end  sim:/processor_vlg_tst/BR_forwarded
+add wave -position end  sim:/processor_vlg_tst/branch_control_ID
+add wave -position end  sim:/processor_vlg_tst/branch_hazDU
+add wave -position end  sim:/processor_vlg_tst/d_data_EX
+add wave -position end  sim:/processor_vlg_tst/DR_data_addressMem
+add wave -position end  sim:/processor_vlg_tst/DRSrc_control
+add wave -position end  sim:/processor_vlg_tst/DRSrc_EX
+add wave -position end  sim:/processor_vlg_tst/EX_memRead_
+add wave -position end  sim:/processor_vlg_tst/EX_memRead_hazDU
+add wave -position end  sim:/processor_vlg_tst/EX_regWrite_
+add wave -position end  sim:/processor_vlg_tst/EX_RegWrite_fwdU
+add wave -position end  sim:/processor_vlg_tst/EXMEM_RegRd_fwdU
+add wave -position end  sim:/processor_vlg_tst/externalOutput
+add wave -position end  sim:/processor_vlg_tst/fwdA0
+add wave -position end  sim:/processor_vlg_tst/fwdA1
+add wave -position end  sim:/processor_vlg_tst/FwdA_fwdU
+add wave -position end  sim:/processor_vlg_tst/fwdB0
+add wave -position end  sim:/processor_vlg_tst/fwdB1
+add wave -position end  sim:/processor_vlg_tst/FwdB_fwdU
+add wave -position end  sim:/processor_vlg_tst/IDEX_RegRd_fwdU
+add wave -position end  sim:/processor_vlg_tst/IDEX_RegRd_hazDU
+add wave -position end  sim:/processor_vlg_tst/IDFlush_hazDU
+add wave -position end  sim:/processor_vlg_tst/IFFlush_control
+add wave -position end  sim:/processor_vlg_tst/IFFlush_hazDU
+add wave -position end  sim:/processor_vlg_tst/IFID_Rd_hazDU
+add wave -position end  sim:/processor_vlg_tst/IFID_Rs_hazDU
+add wave -position end  sim:/processor_vlg_tst/IFIDRegRd
+add wave -position end  sim:/processor_vlg_tst/IFIDWrite_hazDU
+add wave -position end  sim:/processor_vlg_tst/IFIF_RegRd
+add wave -position end  sim:/processor_vlg_tst/inputEnable_control
+add wave -position end  sim:/processor_vlg_tst/inputEnable_MEM
+add wave -position end  sim:/processor_vlg_tst/IR_changeEnable
+add wave -position end  sim:/processor_vlg_tst/IR_data
+add wave -position end  sim:/processor_vlg_tst/IR_reset
+add wave -position end  sim:/processor_vlg_tst/MDR
+add wave -position end  sim:/processor_vlg_tst/MEM_regWrite_fwdU
+add wave -position end  sim:/processor_vlg_tst/MEM_regWrite_MEM
+add wave -position end  sim:/processor_vlg_tst/memRead_control
+add wave -position end  sim:/processor_vlg_tst/memRead_MEM
+add wave -position end  sim:/processor_vlg_tst/memToReg
+add wave -position end  sim:/processor_vlg_tst/memToReg_control
+add wave -position end  sim:/processor_vlg_tst/memWrite_control
+add wave -position end  sim:/processor_vlg_tst/memWrite_MEM
+add wave -position end  sim:/processor_vlg_tst/notReadRsRd_control
+add wave -position end  sim:/processor_vlg_tst/notReadRsRd_hazDU
+add wave -position end  sim:/processor_vlg_tst/outputEnable_control
+add wave -position end  sim:/processor_vlg_tst/outputEnable_EX
+add wave -position end  sim:/processor_vlg_tst/PC_changeEnable
+add wave -position end  sim:/processor_vlg_tst/PC_data
+add wave -position end  sim:/processor_vlg_tst/PCWrite_control
+add wave -position end  sim:/processor_vlg_tst/PCWrite_hazDU
+add wave -position end  sim:/processor_vlg_tst/RaRsfieldALU
+add wave -position end  sim:/processor_vlg_tst/RbRdfieldALU
+add wave -position end  sim:/processor_vlg_tst/regDst_control_ID
+add wave -position end  sim:/processor_vlg_tst/regWrite_control
+add wave -position end  sim:/processor_vlg_tst/regWrite_WB
+add wave -position end  sim:/processor_vlg_tst/systemRunning_control
+add wave -position end  sim:/processor_vlg_tst/SZCVSrc_control
+add wave -position end  sim:/processor_vlg_tst/SZCVSrc_EX
+add wave -position end  sim:/processor_vlg_tst/wrenMem
+run
+# Running testbench
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2373 ps, d:2395 ps, 223 ps );
+#    Time: 2395 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2365 ps, d:2398 ps, 223 ps );
+#    Time: 2398 ps  Iteration: 1  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2369 ps, d:2413 ps, 223 ps );
+#    Time: 2413 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a7 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2375 ps, d:2415 ps, 223 ps );
+#    Time: 2415 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a11 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2371 ps, d:2422 ps, 223 ps );
+#    Time: 2422 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a14 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2365 ps, d:2425 ps, 223 ps );
+#    Time: 2425 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2369 ps, d:2434 ps, 223 ps );
+#    Time: 2434 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a7 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2387 ps, d:2446 ps, 223 ps );
+#    Time: 2446 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\instruction_memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a14 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2365 ps, d:2449 ps, 223 ps );
+#    Time: 2449 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2365 ps, d:2450 ps, 223 ps );
+#    Time: 2450 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2371 ps, d:2451 ps, 223 ps );
+#    Time: 2451 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a14 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2375 ps, d:2452 ps, 223 ps );
+#    Time: 2452 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a9 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2369 ps, d:2463 ps, 223 ps );
+#    Time: 2463 ps  Iteration: 1  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a7 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2373 ps, d:2470 ps, 223 ps );
+#    Time: 2470 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2371 ps, d:2470 ps, 223 ps );
+#    Time: 2470 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a14 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2373 ps, d:2471 ps, 223 ps );
+#    Time: 2471 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2369 ps, d:2478 ps, 223 ps );
+#    Time: 2478 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a7 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2362 ps, d:2481 ps, 223 ps );
+#    Time: 2481 ps  Iteration: 1  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a5 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2371 ps, d:2513 ps, 223 ps );
+#    Time: 2513 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a14 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2373 ps, d:2515 ps, 223 ps );
+#    Time: 2515 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a3 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2369 ps, d:2523 ps, 223 ps );
+#    Time: 2523 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a7 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2371 ps, d:2528 ps, 223 ps );
+#    Time: 2528 ps  Iteration: 0  Instance: /processor_vlg_tst/i1/\dataMemory|altsyncram_component|auto_generated|altsyncram1|ram_block3a14 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2389 ps, d:2561 ps, 223 ps );
+#    Time: 2561 ps  Iteration: 1  Instance: /processor_vlg_tst/i1/\instruction_memory|altsyncram_component|auto_generated|altsyncram1|ram_block3a5 /addr_a_register
+# End time: 21:40:55 on May 19,2022, Elapsed time: 0:13:13
+# Errors: 24, Warnings: 5

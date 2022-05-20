@@ -1,0 +1,19 @@
+module register16 (
+	input [15:0] d,
+	input changeEnabe,     //Change Enable
+	input reset,  //同期リセット
+	input clock,    //クロック
+	output reg [15:0] q,
+);
+
+	always @ (posedge clock) begin 
+		if (reset) begin
+			q <= 4'x0000;
+		end else begin
+			if ( changeEnable ) begin
+				q <= d;
+			end
+		end
+	end
+	
+endmodule

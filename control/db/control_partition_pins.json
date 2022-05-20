@@ -4,19 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "addressSrc",
-					"strict" : false
-				},
-				{
 					"name" : "regDst",
 					"strict" : false
 				},
 				{
 					"name" : "ALUSrcAR",
-					"strict" : false
-				},
-				{
-					"name" : "ALUSrcBR",
 					"strict" : false
 				},
 				{
@@ -44,6 +36,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "SZCVSrc",
+					"strict" : false
+				},
+				{
+					"name" : "memRead",
+					"strict" : false
+				},
+				{
 					"name" : "inputEnable",
 					"strict" : false
 				},
@@ -64,11 +64,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "systemRunning",
+					"name" : "notReadRsRd",
 					"strict" : false
 				},
 				{
-					"name" : "p3to4",
+					"name" : "systemRunning",
 					"strict" : false
 				},
 				{
@@ -84,7 +84,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "instruction[11]",
+					"name" : "instruction[5]",
 					"strict" : false
 				},
 				{
@@ -92,15 +92,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "instruction[10]",
-					"strict" : false
-				},
-				{
 					"name" : "instruction[13]",
 					"strict" : false
 				},
 				{
-					"name" : "instruction[5]",
+					"name" : "instruction[11]",
 					"strict" : false
 				},
 				{
@@ -112,15 +108,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "instruction[10]",
+					"strict" : false
+				},
+				{
 					"name" : "instruction[8]",
 					"strict" : false
 				},
 				{
-					"name" : "SZCV[2]",
+					"name" : "instruction[9]",
 					"strict" : false
 				},
 				{
-					"name" : "instruction[9]",
+					"name" : "SZCV[2]",
 					"strict" : false
 				},
 				{
@@ -137,14 +137,6 @@
 				},
 				{
 					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "p5",
-					"strict" : false
-				},
-				{
-					"name" : "p3",
 					"strict" : false
 				},
 				{

@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "regWrite_WB",
+					"strict" : false
+				},
+				{
+					"name" : "memToReg_WB",
+					"strict" : false
+				},
+				{
+					"name" : "regWrite_MEM",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "changeEnable",
+					"strict" : false
+				},
+				{
+					"name" : "memToReg_MEM",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

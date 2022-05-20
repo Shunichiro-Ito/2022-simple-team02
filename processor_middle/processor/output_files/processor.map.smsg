@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at shifter.v(4): object "out" differs only in case from object "OUT" in the same scope File: C:/Users/admin/2022-simple-team02/processor_middle/shifter/shifter.v Line: 4
+Info (10281): Verilog HDL Declaration information at alu.v(3): object "out" differs only in case from object "OUT" in the same scope File: C:/Users/admin/2022-simple-team02/processor_middle/alu/alu.v Line: 3

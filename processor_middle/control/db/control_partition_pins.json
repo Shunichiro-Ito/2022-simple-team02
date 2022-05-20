@@ -1,0 +1,157 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "addressSrc",
+					"strict" : false
+				},
+				{
+					"name" : "regDst",
+					"strict" : false
+				},
+				{
+					"name" : "ALUSrcAR",
+					"strict" : false
+				},
+				{
+					"name" : "ALUSrcBR",
+					"strict" : false
+				},
+				{
+					"name" : "ALUOp[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUOp[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUOp[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUOp[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DRSrc",
+					"strict" : false
+				},
+				{
+					"name" : "outputEnable",
+					"strict" : false
+				},
+				{
+					"name" : "inputEnable",
+					"strict" : false
+				},
+				{
+					"name" : "memWrite",
+					"strict" : false
+				},
+				{
+					"name" : "branch",
+					"strict" : false
+				},
+				{
+					"name" : "regWrite",
+					"strict" : false
+				},
+				{
+					"name" : "memToReg",
+					"strict" : false
+				},
+				{
+					"name" : "systemRunning",
+					"strict" : false
+				},
+				{
+					"name" : "p3to4",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[14]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[15]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[11]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[12]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[10]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[13]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[7]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SZCV[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SZCV[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SZCV[3]",
+					"strict" : false
+				},
+				{
+					"name" : "exec",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "p5",
+					"strict" : false
+				},
+				{
+					"name" : "p3",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

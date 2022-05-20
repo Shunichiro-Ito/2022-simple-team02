@@ -1,0 +1,593 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
+
+// DATE "05/13/2022 10:08:34"
+
+// 
+// Device: Altera EP4CE30F23I7 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module EXMEMRegister (
+	memRead_EX,
+	inputEnable_EX,
+	memWrite_EX,
+	branch_EX,
+	regWrite_EX,
+	memToReg_EX,
+	changeEnable,
+	reset,
+	clock,
+	memRead_MEM,
+	inputEnable_MEM,
+	memWrite_MEM,
+	branch_MEM,
+	regWrite_MEM,
+	memToReg_MEM);
+input 	memRead_EX;
+input 	inputEnable_EX;
+input 	memWrite_EX;
+input 	branch_EX;
+input 	regWrite_EX;
+input 	memToReg_EX;
+input 	changeEnable;
+input 	reset;
+input 	clock;
+output 	memRead_MEM;
+output 	inputEnable_MEM;
+output 	memWrite_MEM;
+output 	branch_MEM;
+output 	regWrite_MEM;
+output 	memToReg_MEM;
+
+// Design Ports Information
+// memRead_MEM	=>  Location: PIN_N7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// inputEnable_MEM	=>  Location: PIN_V2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// memWrite_MEM	=>  Location: PIN_Y2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// branch_MEM	=>  Location: PIN_U1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// regWrite_MEM	=>  Location: PIN_T3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// memToReg_MEM	=>  Location: PIN_V1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// memRead_EX	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// reset	=>  Location: PIN_N6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clock	=>  Location: PIN_G1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// changeEnable	=>  Location: PIN_P5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// inputEnable_EX	=>  Location: PIN_W1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// memWrite_EX	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// branch_EX	=>  Location: PIN_W2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// regWrite_EX	=>  Location: PIN_Y1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// memToReg_EX	=>  Location: PIN_N8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("EXMEMRegister_v.sdo");
+// synopsys translate_on
+
+wire \memRead_MEM~output_o ;
+wire \inputEnable_MEM~output_o ;
+wire \memWrite_MEM~output_o ;
+wire \branch_MEM~output_o ;
+wire \regWrite_MEM~output_o ;
+wire \memToReg_MEM~output_o ;
+wire \clock~input_o ;
+wire \clock~inputclkctrl_outclk ;
+wire \reset~input_o ;
+wire \memRead_EX~input_o ;
+wire \memRead_MEM~0_combout ;
+wire \changeEnable~input_o ;
+wire \memRead_MEM~1_combout ;
+wire \memRead_MEM~reg0_q ;
+wire \inputEnable_EX~input_o ;
+wire \inputEnable_MEM~0_combout ;
+wire \inputEnable_MEM~reg0_q ;
+wire \memWrite_EX~input_o ;
+wire \memWrite_MEM~0_combout ;
+wire \memWrite_MEM~reg0_q ;
+wire \branch_EX~input_o ;
+wire \branch_MEM~0_combout ;
+wire \branch_MEM~reg0_q ;
+wire \regWrite_EX~input_o ;
+wire \regWrite_MEM~0_combout ;
+wire \regWrite_MEM~reg0_q ;
+wire \memToReg_EX~input_o ;
+wire \memToReg_MEM~0_combout ;
+wire \memToReg_MEM~reg0_q ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: IOOBUF_X0_Y7_N9
+cycloneive_io_obuf \memRead_MEM~output (
+	.i(\memRead_MEM~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memRead_MEM~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memRead_MEM~output .bus_hold = "false";
+defparam \memRead_MEM~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y13_N2
+cycloneive_io_obuf \inputEnable_MEM~output (
+	.i(\inputEnable_MEM~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\inputEnable_MEM~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \inputEnable_MEM~output .bus_hold = "false";
+defparam \inputEnable_MEM~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y10_N23
+cycloneive_io_obuf \memWrite_MEM~output (
+	.i(\memWrite_MEM~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memWrite_MEM~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memWrite_MEM~output .bus_hold = "false";
+defparam \memWrite_MEM~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y15_N23
+cycloneive_io_obuf \branch_MEM~output (
+	.i(\branch_MEM~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\branch_MEM~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \branch_MEM~output .bus_hold = "false";
+defparam \branch_MEM~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y7_N2
+cycloneive_io_obuf \regWrite_MEM~output (
+	.i(\regWrite_MEM~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\regWrite_MEM~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \regWrite_MEM~output .bus_hold = "false";
+defparam \regWrite_MEM~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y13_N9
+cycloneive_io_obuf \memToReg_MEM~output (
+	.i(\memToReg_MEM~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memToReg_MEM~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memToReg_MEM~output .bus_hold = "false";
+defparam \memToReg_MEM~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y21_N8
+cycloneive_io_ibuf \clock~input (
+	.i(clock),
+	.ibar(gnd),
+	.o(\clock~input_o ));
+// synopsys translate_off
+defparam \clock~input .bus_hold = "false";
+defparam \clock~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G2
+cycloneive_clkctrl \clock~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\clock~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\clock~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \clock~inputclkctrl .clock_type = "global clock";
+defparam \clock~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y12_N22
+cycloneive_io_ibuf \reset~input (
+	.i(reset),
+	.ibar(gnd),
+	.o(\reset~input_o ));
+// synopsys translate_off
+defparam \reset~input .bus_hold = "false";
+defparam \reset~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y11_N1
+cycloneive_io_ibuf \memRead_EX~input (
+	.i(memRead_EX),
+	.ibar(gnd),
+	.o(\memRead_EX~input_o ));
+// synopsys translate_off
+defparam \memRead_EX~input .bus_hold = "false";
+defparam \memRead_EX~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y11_N0
+cycloneive_lcell_comb \memRead_MEM~0 (
+// Equation(s):
+// \memRead_MEM~0_combout  = (!\reset~input_o  & \memRead_EX~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\reset~input_o ),
+	.datad(\memRead_EX~input_o ),
+	.cin(gnd),
+	.combout(\memRead_MEM~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \memRead_MEM~0 .lut_mask = 16'h0F00;
+defparam \memRead_MEM~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y12_N15
+cycloneive_io_ibuf \changeEnable~input (
+	.i(changeEnable),
+	.ibar(gnd),
+	.o(\changeEnable~input_o ));
+// synopsys translate_off
+defparam \changeEnable~input .bus_hold = "false";
+defparam \changeEnable~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y11_N12
+cycloneive_lcell_comb \memRead_MEM~1 (
+// Equation(s):
+// \memRead_MEM~1_combout  = (\changeEnable~input_o ) # (\reset~input_o )
+
+	.dataa(\changeEnable~input_o ),
+	.datab(gnd),
+	.datac(\reset~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\memRead_MEM~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \memRead_MEM~1 .lut_mask = 16'hFAFA;
+defparam \memRead_MEM~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y11_N1
+dffeas \memRead_MEM~reg0 (
+	.clk(\clock~inputclkctrl_outclk ),
+	.d(\memRead_MEM~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\memRead_MEM~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\memRead_MEM~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \memRead_MEM~reg0 .is_wysiwyg = "true";
+defparam \memRead_MEM~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y10_N15
+cycloneive_io_ibuf \inputEnable_EX~input (
+	.i(inputEnable_EX),
+	.ibar(gnd),
+	.o(\inputEnable_EX~input_o ));
+// synopsys translate_off
+defparam \inputEnable_EX~input .bus_hold = "false";
+defparam \inputEnable_EX~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y11_N18
+cycloneive_lcell_comb \inputEnable_MEM~0 (
+// Equation(s):
+// \inputEnable_MEM~0_combout  = (!\reset~input_o  & \inputEnable_EX~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\reset~input_o ),
+	.datad(\inputEnable_EX~input_o ),
+	.cin(gnd),
+	.combout(\inputEnable_MEM~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \inputEnable_MEM~0 .lut_mask = 16'h0F00;
+defparam \inputEnable_MEM~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y11_N19
+dffeas \inputEnable_MEM~reg0 (
+	.clk(\clock~inputclkctrl_outclk ),
+	.d(\inputEnable_MEM~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\memRead_MEM~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inputEnable_MEM~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inputEnable_MEM~reg0 .is_wysiwyg = "true";
+defparam \inputEnable_MEM~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y11_N8
+cycloneive_io_ibuf \memWrite_EX~input (
+	.i(memWrite_EX),
+	.ibar(gnd),
+	.o(\memWrite_EX~input_o ));
+// synopsys translate_off
+defparam \memWrite_EX~input .bus_hold = "false";
+defparam \memWrite_EX~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y11_N28
+cycloneive_lcell_comb \memWrite_MEM~0 (
+// Equation(s):
+// \memWrite_MEM~0_combout  = (!\reset~input_o  & \memWrite_EX~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\reset~input_o ),
+	.datad(\memWrite_EX~input_o ),
+	.cin(gnd),
+	.combout(\memWrite_MEM~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \memWrite_MEM~0 .lut_mask = 16'h0F00;
+defparam \memWrite_MEM~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y11_N29
+dffeas \memWrite_MEM~reg0 (
+	.clk(\clock~inputclkctrl_outclk ),
+	.d(\memWrite_MEM~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\memRead_MEM~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\memWrite_MEM~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \memWrite_MEM~reg0 .is_wysiwyg = "true";
+defparam \memWrite_MEM~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y10_N8
+cycloneive_io_ibuf \branch_EX~input (
+	.i(branch_EX),
+	.ibar(gnd),
+	.o(\branch_EX~input_o ));
+// synopsys translate_off
+defparam \branch_EX~input .bus_hold = "false";
+defparam \branch_EX~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y11_N22
+cycloneive_lcell_comb \branch_MEM~0 (
+// Equation(s):
+// \branch_MEM~0_combout  = (!\reset~input_o  & \branch_EX~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\reset~input_o ),
+	.datad(\branch_EX~input_o ),
+	.cin(gnd),
+	.combout(\branch_MEM~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \branch_MEM~0 .lut_mask = 16'h0F00;
+defparam \branch_MEM~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y11_N23
+dffeas \branch_MEM~reg0 (
+	.clk(\clock~inputclkctrl_outclk ),
+	.d(\branch_MEM~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\memRead_MEM~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\branch_MEM~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \branch_MEM~reg0 .is_wysiwyg = "true";
+defparam \branch_MEM~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y9_N1
+cycloneive_io_ibuf \regWrite_EX~input (
+	.i(regWrite_EX),
+	.ibar(gnd),
+	.o(\regWrite_EX~input_o ));
+// synopsys translate_off
+defparam \regWrite_EX~input .bus_hold = "false";
+defparam \regWrite_EX~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y11_N16
+cycloneive_lcell_comb \regWrite_MEM~0 (
+// Equation(s):
+// \regWrite_MEM~0_combout  = (!\reset~input_o  & \regWrite_EX~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\reset~input_o ),
+	.datad(\regWrite_EX~input_o ),
+	.cin(gnd),
+	.combout(\regWrite_MEM~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \regWrite_MEM~0 .lut_mask = 16'h0F00;
+defparam \regWrite_MEM~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y11_N17
+dffeas \regWrite_MEM~reg0 (
+	.clk(\clock~inputclkctrl_outclk ),
+	.d(\regWrite_MEM~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\memRead_MEM~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\regWrite_MEM~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \regWrite_MEM~reg0 .is_wysiwyg = "true";
+defparam \regWrite_MEM~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y11_N15
+cycloneive_io_ibuf \memToReg_EX~input (
+	.i(memToReg_EX),
+	.ibar(gnd),
+	.o(\memToReg_EX~input_o ));
+// synopsys translate_off
+defparam \memToReg_EX~input .bus_hold = "false";
+defparam \memToReg_EX~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y11_N10
+cycloneive_lcell_comb \memToReg_MEM~0 (
+// Equation(s):
+// \memToReg_MEM~0_combout  = (!\reset~input_o  & \memToReg_EX~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\reset~input_o ),
+	.datad(\memToReg_EX~input_o ),
+	.cin(gnd),
+	.combout(\memToReg_MEM~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \memToReg_MEM~0 .lut_mask = 16'h0F00;
+defparam \memToReg_MEM~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y11_N11
+dffeas \memToReg_MEM~reg0 (
+	.clk(\clock~inputclkctrl_outclk ),
+	.d(\memToReg_MEM~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\memRead_MEM~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\memToReg_MEM~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \memToReg_MEM~reg0 .is_wysiwyg = "true";
+defparam \memToReg_MEM~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign memRead_MEM = \memRead_MEM~output_o ;
+
+assign inputEnable_MEM = \inputEnable_MEM~output_o ;
+
+assign memWrite_MEM = \memWrite_MEM~output_o ;
+
+assign branch_MEM = \branch_MEM~output_o ;
+
+assign regWrite_MEM = \regWrite_MEM~output_o ;
+
+assign memToReg_MEM = \memToReg_MEM~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_D1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_E2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_K2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_K1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_K22,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_ASDO_DATA1~~padout ;
+wire \~ALTERA_FLASH_nCE_nCSO~~padout ;
+wire \~ALTERA_DATA0~~padout ;
+wire \~ALTERA_ASDO_DATA1~~ibuf_o ;
+wire \~ALTERA_FLASH_nCE_nCSO~~ibuf_o ;
+wire \~ALTERA_DATA0~~ibuf_o ;
+
+
+endmodule

@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim
+vhard_block
+Z1 !s110 1650617292
+!i10b 1
+!s100 _@7F]Gg_UHTBSC9Ub0n2:3
+I_R91Nd]gLe1T>F]Z7QK020
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1650617275
+Z4 8registerFile_7_1200mv_100c_slow.vo
+Z5 FregisterFile_7_1200mv_100c_slow.vo
+L0 6894
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1650617292.000000
+Z8 !s107 registerFile_7_1200mv_100c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|registerFile_7_1200mv_100c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vregisterFile
+R1
+!i10b 1
+!s100 N]Q?n3Ti2;F]CU]J@6OA10
+I=nIX75ZMM;hb=1gR:37A^1
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+nregister@file
+vregisterFile_vlg_tst
+R1
+!i10b 1
+!s100 HO@3OW0ceFXQ]68CE<>Ho2
+IZ:nkhMnhMUcWWboVd8oS]3
+R2
+R0
+w1650616641
+8C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim/registerFile.vt
+FC:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim/registerFile.vt
+L0 28
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim/registerFile.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim|C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim/registerFile.vt|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/admin/2022-simple-team02/registerFile/simulation/modelsim
+R12
+nregister@file_vlg_tst

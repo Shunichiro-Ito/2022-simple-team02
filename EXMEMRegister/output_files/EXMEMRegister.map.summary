@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri May 13 10:07:58 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : EXMEMRegister
+Top-level Entity Name : EXMEMRegister
+Family : Cyclone IV E
+Total logic elements : 7
+    Total combinational functions : 7
+    Dedicated logic registers : 6
+Total registers : 6
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

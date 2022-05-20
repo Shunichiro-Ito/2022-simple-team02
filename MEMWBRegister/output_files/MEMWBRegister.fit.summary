@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri May 13 10:16:33 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : MEMWBRegister
+Top-level Entity Name : MEMWBRegister
+Family : Cyclone IV E
+Device : EP4CE30F23I7
+Timing Models : Final
+Total logic elements : 3 / 28,848 ( < 1 % )
+    Total combinational functions : 3 / 28,848 ( < 1 % )
+    Dedicated logic registers : 2 / 28,848 ( < 1 % )
+Total registers : 2
+Total pins : 7 / 329 ( 2 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

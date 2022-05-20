@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Apr 23 23:39:43 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : phaseCounter
+Top-level Entity Name : phaseCounter
+Family : Cyclone IV E
+Device : EP4CE30F23I7
+Timing Models : Final
+Total logic elements : 11 / 28,848 ( < 1 % )
+    Total combinational functions : 6 / 28,848 ( < 1 % )
+    Dedicated logic registers : 10 / 28,848 ( < 1 % )
+Total registers : 10
+Total pins : 9 / 329 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

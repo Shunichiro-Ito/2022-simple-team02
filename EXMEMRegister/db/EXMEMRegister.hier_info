@@ -1,0 +1,33 @@
+|EXMEMRegister
+memRead_EX => memRead_MEM.DATAB
+inputEnable_EX => inputEnable_MEM.DATAB
+memWrite_EX => memWrite_MEM.DATAB
+branch_EX => branch_MEM.DATAB
+regWrite_EX => regWrite_MEM.DATAB
+memToReg_EX => memToReg_MEM.DATAB
+changeEnable => memRead_MEM.OUTPUTSELECT
+changeEnable => inputEnable_MEM.OUTPUTSELECT
+changeEnable => memWrite_MEM.OUTPUTSELECT
+changeEnable => branch_MEM.OUTPUTSELECT
+changeEnable => regWrite_MEM.OUTPUTSELECT
+changeEnable => memToReg_MEM.OUTPUTSELECT
+reset => memRead_MEM.OUTPUTSELECT
+reset => inputEnable_MEM.OUTPUTSELECT
+reset => memWrite_MEM.OUTPUTSELECT
+reset => branch_MEM.OUTPUTSELECT
+reset => regWrite_MEM.OUTPUTSELECT
+reset => memToReg_MEM.OUTPUTSELECT
+clock => memToReg_MEM~reg0.CLK
+clock => regWrite_MEM~reg0.CLK
+clock => branch_MEM~reg0.CLK
+clock => memWrite_MEM~reg0.CLK
+clock => inputEnable_MEM~reg0.CLK
+clock => memRead_MEM~reg0.CLK
+memRead_MEM <= memRead_MEM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inputEnable_MEM <= inputEnable_MEM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+memWrite_MEM <= memWrite_MEM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+branch_MEM <= branch_MEM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regWrite_MEM <= regWrite_MEM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+memToReg_MEM <= memToReg_MEM~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

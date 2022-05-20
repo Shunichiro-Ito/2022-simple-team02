@@ -1,0 +1,29 @@
+|phaseCounter
+clock => p5_master.CLK
+clock => p4_master.CLK
+clock => p3_master.CLK
+clock => p2_master.CLK
+clock => p1_master.CLK
+clock => p5_slave.CLK
+clock => p4_slave.CLK
+clock => p3_slave.CLK
+clock => p2_slave.CLK
+clock => p1_slave.CLK
+reset => p1_master.OUTPUTSELECT
+reset => p2_master.OUTPUTSELECT
+reset => p3_master.OUTPUTSELECT
+reset => p4_master.OUTPUTSELECT
+reset => p5_master.OUTPUTSELECT
+changeEnable => p1_master.OUTPUTSELECT
+changeEnable => p2_master.OUTPUTSELECT
+changeEnable => p3_master.OUTPUTSELECT
+changeEnable => p4_master.OUTPUTSELECT
+changeEnable => p5_master.OUTPUTSELECT
+p1 <= p1_slave.DB_MAX_OUTPUT_PORT_TYPE
+p2 <= p2_slave.DB_MAX_OUTPUT_PORT_TYPE
+p3 <= p3_slave.DB_MAX_OUTPUT_PORT_TYPE
+p3to4 <= p4_master.DB_MAX_OUTPUT_PORT_TYPE
+p4 <= p4_slave.DB_MAX_OUTPUT_PORT_TYPE
+p5 <= p5_slave.DB_MAX_OUTPUT_PORT_TYPE
+
+

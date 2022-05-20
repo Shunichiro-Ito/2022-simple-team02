@@ -3,29 +3,23 @@ module control (
 	input [15:0] instruction,//ほんとは命令の必要な個所のみでよい
 	input reset,
 	input exec,
-	input p1,
-	input p2,
-	input p3,
-	input p3to4,
-	input p4,
-	input p5,
 	input [3:0] SZCV,
-	//output updatePC,
-	output addressSrc,
-	//output updateInstruction, //単一サイクル方式のみ使用
 	output regDst,
-	//output updateSZCV, //単一サイクル方式のみ使用
 	output ALUSrcAR,
-	output ALUSrcBR,
 	output [3:0] ALUOp,
 	output DRSrc,
 	output outputEnable,
+	output SZCVSrc,
+	output memRead,//IN,LDのときpipelineストールを起こすために1
 	output inputEnable,
 	output memWrite,
 	output branch,
 	output regWrite, // 1 when p5
 	output memToReg ,
-	output reg systemRunning );
+	output notReadRsRd,
+	output reg systemRunning, 
+	output IFFlush,
+	output PCWrite);
 
 
 	reg [15:0] counter;
@@ -36,7 +30,7 @@ module control (
 			systemRunning <= 1'b 0;
 			exec_pre <= exec;
 		end else begin
-			if ((inputEnable & p3 & systemRunning)|(halt & p5 & systemRunning)) begin 
+			if ((inputEnable_IDEX & systemRunning/*p3*/)|(halt_MEMWB & systemRunning/*p5*/)) begin 
 				systemRunning <= 1'b 0;
 			end else begin
 				exec_pre <= exec;
@@ -59,8 +53,31 @@ module control (
 					end
 				end
 			end
-		end		
+		end	
+
+
+		if(reset) begin
+			halt_IDEX <= 1'b 0;
+			halt_EXMEM <= 1'b 0;
+			halt_MEMWB <= 1'b 0;
+			inputEnable_IDEX <= 1'b 0;
+		end	else begin
+			if(systemRunning) begin
+				halt_IDEX <= halt;
+				halt_EXMEM <= halt_IDEX;
+				halt_MEMWB <= halt_EXMEM;
+				inputEnable_IDEX <= inputEnable;
+			end
+		end
 	end
+
+	reg halt_IDEX;
+	reg halt_EXMEM;
+	reg halt_MEMWB;
+	assign IFFlush = halt | halt_IDEX | halt_EXMEM | halt_MEMWB ;
+	assign PCWrite = ~( halt | halt_IDEX | halt_EXMEM | halt_MEMWB );
+	reg inputEnable_IDEX;
+
 
 	wire halt;
 	assign halt = ({instruction[15:14], instruction[7:4]} == 6'b11_1111);//HALT
@@ -74,14 +91,11 @@ module control (
 	wire [3:0] op;
 	assign op = instruction[7:4];
 
-	//assign updateInstruction = p1; //単一サイクル方式のみ使用
-
-	//assign updateSZCV = p3; //単一サイクル方式のみ使用
-
-	//assign updatePC = p5; //単一サイクル方式のみ使用
-	
-
-	assign addressSrc = p3to4;//p1で0,p4で1が必要//主記憶を二つにすれば不要
+	//p2
+	assign notReadRsRd = (({instruction[15:14], instruction[7:5]} == 5'b 11_111)//NOP,HLT
+						|({instruction[15:14],instruction[13:11]} == 5'b10_100) //B
+						|({instruction[15:14],instruction[13:11],instruction[10]} == 6'b10_111_0) //BE,BLT,BLE,BNE
+	);
 
 	//p2
 	assign regDst =  (instruction[15:14] == 2'b00);//LD
@@ -90,19 +104,27 @@ module control (
 	assign ALUSrcAR =  (instruction[15:14]==2'b11);//演算,シフト,IN,OUT,NOP,HALTで1
 
 	//p3
-	assign ALUSrcBR =  (instruction[15:14] != 2'b10);//演算、シフト、IN,OUT,NOP,HALT,LD,STで1
-
+	assign ALUOp = ALU_OP(instruction[15:0]);
+	
 	//p3
 	assign DRSrc =  ({instruction[15:14], instruction[7]}== 3'b11_1);//シフト,IN,OUT,NOP,HALTのとき1に設定
 
 	//p3
 	assign outputEnable =  ({instruction[15:14], instruction[7:4]} == 6'b11_1101);//OUT
 
+	//p3
+	assign SZCVSrc = ({instruction[15:14], instruction[7:4]} == 6'b11_1101) //OUT
+					|(instruction[15:14] == 2'b01); //ST
+
+	//p4
+	assign memRead = (instruction[15:14] == 2'b 00) //LD
+					|({instruction[15:14], instruction[7:4]} == 6'b11_1100); //IN
+
 	//p4
 	assign inputEnable =  ({instruction[15:14], instruction[7:4]} == 6'b11_1100);//IN
 
-	//p3to4
-	assign memWrite =  p3to4 & (instruction[15:14] == 2'b01); // ST
+	//p4
+	assign memWrite =  (instruction[15:14] == 2'b01); // ST
 
 	//p4
 	assign branch =  (({instruction[15:14],instruction[13:11]} == 5'b10_100) //B
@@ -121,7 +143,7 @@ module control (
 						| ({instruction[15:14],instruction[7:6]} == 4'b11_10)//シフト
 						| ({instruction[15:14],instruction[7:4]} == 6'b11_1100)//IN
 						| (instruction[15:14] == 2'b00) //LD
-						| ({instruction[15:14],instruction[13:11]} == 5'b10_000)  //LI 
+						| ({instruction[15:14],instruction[13:12]} == 4'b10_00)  //LI,ADDI 
 					);
 
 	//p5
@@ -136,12 +158,10 @@ module control (
 		end else if({INSTRUCTION[15:14], INSTRUCTION[13:11]} == 5'b10_000) begin
 			ALU_OP = 4'b0110; //LIのためのMOV命令
 		end else begin 
-			ALU_OP = 4'b0000; //アドレス計算のための足し算
+			ALU_OP = 4'b0000; //アドレス計算,ADDIのための足し算
 		end
 	endfunction
 
-	//p3
-	assign ALUOp = ALU_OP(instruction[15:0]);
 
 
 endmodule

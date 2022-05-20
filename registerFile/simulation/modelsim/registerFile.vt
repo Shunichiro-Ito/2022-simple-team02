@@ -59,7 +59,7 @@ registerFile i1 (
 initial                                                
 begin                                                  
                      
-Rs <= 0;
+Rs <= 3;
 Rd <= 1;
 regWrite <= 1;
 clock <= 0;
@@ -73,14 +73,20 @@ always begin
 clock <= ~clock;
 end
 
-always begin
+/*always begin
 #100
 Rs <= Rs + 1;
 Rd <= Rd + 1;
-end
+end*/
 
 always                                                 
 begin 
+writeData <= 16'hffff;
+writeRegister <= 3;
+#300
+writeData <= 16'h f0f0;
+writeRegister <= 3;
+#300
 writeData <= 16'b1111_1111_1111_1111;
 writeRegister <= 0;   
 #100

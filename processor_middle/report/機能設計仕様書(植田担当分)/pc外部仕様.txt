@@ -1,0 +1,35 @@
+
+\subsection{プログラムカウンタ(PC.v)}
+
+\subsubsection{外部仕様　入力}
+ファイルの入力は以下の表\ref{ProgramCounterI}のようになる。
+\begin{table}[H]
+    \caption{プログラムカウンタ(PC.v)の入力(=input)}
+    \label{ProgramCounterI}
+    \begin{center}
+    \begin {tabularx}{150mm}{|c|X|} \hline
+         input & inputの説明 \\ \hline \hline
+	 d[15:0] & \\ \hline
+     clock & クロック信号。clock立ち上がりで、レジスタ書きこみが可能な場合、書きこみが行われる。\\ \hline %%%%%
+     changeEnable &  \\ \hline
+     reset & \\ \hline
+    \end{tabularx}
+    \end{center}
+\end{table}
+
+\subsubsection{外部仕様　出力}
+ファイルの出力は以下の表\ref{ProgramCounterO}のようになる。
+\begin{table}[H]
+    \caption{プログラムカウンタ(PC.v)の出力(=output)}
+    \label{ProgramCounterO}
+    \begin{center}
+    \begin {tabularx}{150mm}{|c|X|} \hline
+     output & outputの説明 \\ \hline \hline
+	 q[15:0] & プログラムカウンタに格納されている値で、命令を読みだすアドレスである。\\ \hline %%%%%
+\end {tabularx}
+    \end{center}
+\end{table}
+
+\subsubsection{内部仕様}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
