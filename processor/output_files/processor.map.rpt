@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processor
-Fri May 20 09:16:00 2022
+Fri May 20 14:33:05 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -19,8 +19,8 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|altsyncram_14b2:altsyncram1
- 15. Source assignments for mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|altsyncram_14b2:altsyncram1
+ 14. Source assignments for instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|altsyncram_n3b2:altsyncram1
+ 15. Source assignments for mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|altsyncram_n3b2:altsyncram1
  16. Parameter Settings for User Entity Instance: instructionMemory:instruction_memory|altsyncram:altsyncram_component
  17. Parameter Settings for User Entity Instance: mainMemory:dataMemory|altsyncram:altsyncram_component
  18. altsyncram Parameter Settings by Entity Instance
@@ -55,16 +55,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 20 09:16:00 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 20 14:33:05 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; processor                                   ;
 ; Top-level Entity Name              ; processor                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,470                                       ;
-;     Total combinational functions  ; 2,308                                       ;
-;     Dedicated logic registers      ; 870                                         ;
-; Total registers                    ; 870                                         ;
-; Total pins                         ; 91                                          ;
+; Total logic elements               ; 2,666                                       ;
+;     Total combinational functions  ; 2,504                                       ;
+;     Dedicated logic registers      ; 925                                         ;
+; Total registers                    ; 925                                         ;
+; Total pins                         ; 115                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 131,072                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -163,15 +163,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -180,31 +182,31 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                   ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------+-------------+
-; ../hazardDetectionUnit/hazardDetectionUnit.v                       ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/hazardDetectionUnit/hazardDetectionUnit.v                                    ;             ;
-; ../forwardingUnit/forwardingUnit.v                                 ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/forwardingUnit/forwardingUnit.v                                              ;             ;
-; ../EXMEMRegister/EXMEMRegister.v                                   ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/EXMEMRegister/EXMEMRegister.v                                                ;             ;
-; ../register3/register3.v                                           ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/register3/register3.v                                                        ;             ;
-; ../MEMWBRegister/MEMWBRegister.v                                   ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/MEMWBRegister/MEMWBRegister.v                                                ;             ;
-; ../IDEXRegister/IDEXRegister.v                                     ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/IDEXRegister/IDEXRegister.v                                                  ;             ;
-; ../SZCVJudge16/SZCVJudge16.v                                       ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/SZCVJudge16/SZCVJudge16.v                                                    ;             ;
-; ../externalOutput/externalOutput.v                                 ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/externalOutput/externalOutput.v                                              ;             ;
-; ../signExtend/signExtend.v                                         ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/signExtend/signExtend.v                                                      ;             ;
-; ../shifter/shifter.v                                               ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/shifter/shifter.v                                                            ;             ;
-; ../register16/register16.v                                         ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/register16/register16.v                                                      ;             ;
-; ../register4/register4.v                                           ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/register4/register4.v                                                        ;             ;
-; ../PC/PC.v                                                         ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/PC/PC.v                                                                      ;             ;
-; ../multiplexer4/multiplexer4.v                                     ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/multiplexer4/multiplexer4.v                                                  ;             ;
-; ../multiplexer16/multiplexer16.v                                   ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/multiplexer16/multiplexer16.v                                                ;             ;
-; ../multiplexer3/multiplexer3.v                                     ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/multiplexer3/multiplexer3.v                                                  ;             ;
-; ../IR/IR.v                                                         ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/IR/IR.v                                                                      ;             ;
-; ../alu/alu.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/alu/alu.v                                                                    ;             ;
-; ../control/control.v                                               ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/control/control.v                                                            ;             ;
-; ../registerFile/registerFile.v                                     ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/registerFile/registerFile.v                                                  ;             ;
-; processor.bdf                                                      ; yes             ; User Block Diagram/Schematic File            ; C:/Users/admin/2022-simple-team02/processor/processor.bdf                                                      ;             ;
-; incrementer.v                                                      ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/processor/incrementer.v                                                      ;             ;
-; mainMemory.v                                                       ; yes             ; User Wizard-Generated File                   ; C:/Users/admin/2022-simple-team02/processor/mainMemory.v                                                       ;             ;
-; instructionMemory.v                                                ; yes             ; User Wizard-Generated File                   ; C:/Users/admin/2022-simple-team02/processor/instructionMemory.v                                                ;             ;
-; adder16.v                                                          ; yes             ; User Verilog HDL File                        ; C:/Users/admin/2022-simple-team02/processor/adder16.v                                                          ;             ;
+; ../hazardDetectionUnit/hazardDetectionUnit.v                       ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/hazardDetectionUnit/hazardDetectionUnit.v                                    ;             ;
+; ../forwardingUnit/forwardingUnit.v                                 ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/forwardingUnit/forwardingUnit.v                                              ;             ;
+; ../EXMEMRegister/EXMEMRegister.v                                   ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/EXMEMRegister/EXMEMRegister.v                                                ;             ;
+; ../register3/register3.v                                           ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/register3/register3.v                                                        ;             ;
+; ../MEMWBRegister/MEMWBRegister.v                                   ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/MEMWBRegister/MEMWBRegister.v                                                ;             ;
+; ../IDEXRegister/IDEXRegister.v                                     ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/IDEXRegister/IDEXRegister.v                                                  ;             ;
+; ../SZCVJudge16/SZCVJudge16.v                                       ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/SZCVJudge16/SZCVJudge16.v                                                    ;             ;
+; ../externalOutput/externalOutput.v                                 ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/externalOutput/externalOutput.v                                              ;             ;
+; ../signExtend/signExtend.v                                         ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/signExtend/signExtend.v                                                      ;             ;
+; ../shifter/shifter.v                                               ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/shifter/shifter.v                                                            ;             ;
+; ../register16/register16.v                                         ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/register16/register16.v                                                      ;             ;
+; ../register4/register4.v                                           ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/register4/register4.v                                                        ;             ;
+; ../PC/PC.v                                                         ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/PC/PC.v                                                                      ;             ;
+; ../multiplexer4/multiplexer4.v                                     ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/multiplexer4/multiplexer4.v                                                  ;             ;
+; ../multiplexer16/multiplexer16.v                                   ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/multiplexer16/multiplexer16.v                                                ;             ;
+; ../multiplexer3/multiplexer3.v                                     ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/multiplexer3/multiplexer3.v                                                  ;             ;
+; ../IR/IR.v                                                         ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/IR/IR.v                                                                      ;             ;
+; ../alu/alu.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/alu/alu.v                                                                    ;             ;
+; ../control/control.v                                               ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/control/control.v                                                            ;             ;
+; ../registerFile/registerFile.v                                     ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/registerFile/registerFile.v                                                  ;             ;
+; processor.bdf                                                      ; yes             ; User Block Diagram/Schematic File            ; C:/Users/shun1/2022-simple-team02/processor/processor.bdf                                                      ;             ;
+; incrementer.v                                                      ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/processor/incrementer.v                                                      ;             ;
+; mainMemory.v                                                       ; yes             ; User Wizard-Generated File                   ; C:/Users/shun1/2022-simple-team02/processor/mainMemory.v                                                       ;             ;
+; instructionMemory.v                                                ; yes             ; User Wizard-Generated File                   ; C:/Users/shun1/2022-simple-team02/processor/instructionMemory.v                                                ;             ;
+; adder16.v                                                          ; yes             ; User Verilog HDL File                        ; C:/Users/shun1/2022-simple-team02/processor/adder16.v                                                          ;             ;
 ; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                          ;             ;
 ; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                   ;             ;
 ; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                             ;             ;
@@ -214,21 +216,22 @@ refer to the applicable agreement for further details.
 ; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                                              ;             ;
 ; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                              ;             ;
 ; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                            ;             ;
-; db/altsyncram_hqk1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/admin/2022-simple-team02/processor/db/altsyncram_hqk1.tdf                                             ;             ;
-; db/altsyncram_14b2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/admin/2022-simple-team02/processor/db/altsyncram_14b2.tdf                                             ;             ;
-; BubbleSort.mif                                                     ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/admin/2022-simple-team02/processor/BubbleSort.mif                                                     ;             ;
+; db/altsyncram_7qk1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_7qk1.tdf                                             ;             ;
+; db/altsyncram_n3b2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_n3b2.tdf                                             ;             ;
+; kisuuprot4.mif                                                     ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/shun1/2022-simple-team02/processor/kisuuprot4.mif                                                     ;             ;
 ; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                     ;             ;
 ; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                           ;             ;
 ; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                       ;             ;
 ; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                          ;             ;
-; db/altsyncram_opk1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/admin/2022-simple-team02/processor/db/altsyncram_opk1.tdf                                             ;             ;
+; db/altsyncram_epk1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_epk1.tdf                                             ;             ;
+; clockcounter.v                                                     ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/shun1/2022-simple-team02/processor/clockcounter.v                                                     ;             ;
 ; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_hub.vhd                                             ; altera_sld  ;
-; db/ip/sldcbc818cf/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; db/ip/sldcbc818cf/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                        ;             ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------+-------------+
 
@@ -238,31 +241,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 2,470       ;
+; Estimated Total logic elements              ; 2,666       ;
 ;                                             ;             ;
-; Total combinational functions               ; 2308        ;
+; Total combinational functions               ; 2504        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 1486        ;
-;     -- 3 input functions                    ; 330         ;
-;     -- <=2 input functions                  ; 492         ;
+;     -- 4 input functions                    ; 1582        ;
+;     -- 3 input functions                    ; 359         ;
+;     -- <=2 input functions                  ; 563         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 2177        ;
-;     -- arithmetic mode                      ; 131         ;
+;     -- normal mode                          ; 2313        ;
+;     -- arithmetic mode                      ; 191         ;
 ;                                             ;             ;
-; Total registers                             ; 870         ;
-;     -- Dedicated logic registers            ; 870         ;
+; Total registers                             ; 925         ;
+;     -- Dedicated logic registers            ; 925         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 91          ;
+; I/O pins                                    ; 115         ;
 ; Total memory bits                           ; 131072      ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 686         ;
-; Total fan-out                               ; 11867       ;
-; Average fan-out                             ; 3.49        ;
+; Maximum fan-out                             ; 741         ;
+; Total fan-out                               ; 12717       ;
+; Average fan-out                             ; 3.44        ;
 +---------------------------------------------+-------------+
 
 
@@ -271,32 +274,33 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |processor                                                                                                                              ; 2308 (6)            ; 870 (4)                   ; 131072      ; 0            ; 0       ; 0         ; 91   ; 0            ; |processor                                                                                                                                                                                                                                                                                                                                            ; processor                         ; work         ;
+; |processor                                                                                                                              ; 2504 (5)            ; 925 (4)                   ; 131072      ; 0            ; 0       ; 0         ; 115  ; 0            ; |processor                                                                                                                                                                                                                                                                                                                                            ; processor                         ; work         ;
 ;    |EXMEMRegister:inst22|                                                                                                               ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|EXMEMRegister:inst22                                                                                                                                                                                                                                                                                                                       ; EXMEMRegister                     ; work         ;
 ;    |IDEXRegister:inst20|                                                                                                                ; 19 (19)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|IDEXRegister:inst20                                                                                                                                                                                                                                                                                                                        ; IDEXRegister                      ; work         ;
 ;    |IR:IR|                                                                                                                              ; 34 (34)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|IR:IR                                                                                                                                                                                                                                                                                                                                      ; IR                                ; work         ;
 ;    |MEMWBRegister:inst21|                                                                                                               ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|MEMWBRegister:inst21                                                                                                                                                                                                                                                                                                                       ; MEMWBRegister                     ; work         ;
 ;    |PC:PC|                                                                                                                              ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|PC:PC                                                                                                                                                                                                                                                                                                                                      ; PC                                ; work         ;
-;    |alu:inst19|                                                                                                                         ; 132 (132)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|alu:inst19                                                                                                                                                                                                                                                                                                                                 ; alu                               ; work         ;
-;    |control:inst114|                                                                                                                    ; 63 (63)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|control:inst114                                                                                                                                                                                                                                                                                                                            ; control                           ; work         ;
+;    |alu:inst19|                                                                                                                         ; 135 (135)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|alu:inst19                                                                                                                                                                                                                                                                                                                                 ; alu                               ; work         ;
+;    |clockCounter:inst10|                                                                                                                ; 197 (197)           ; 55 (55)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|clockCounter:inst10                                                                                                                                                                                                                                                                                                                        ; clockCounter                      ; work         ;
+;    |control:inst114|                                                                                                                    ; 61 (61)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|control:inst114                                                                                                                                                                                                                                                                                                                            ; control                           ; work         ;
 ;    |externalOutput:exOUT|                                                                                                               ; 999 (999)           ; 325 (325)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|externalOutput:exOUT                                                                                                                                                                                                                                                                                                                       ; externalOutput                    ; work         ;
 ;    |forwardingUnit:inst2|                                                                                                               ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|forwardingUnit:inst2                                                                                                                                                                                                                                                                                                                       ; forwardingUnit                    ; work         ;
-;    |hazardDetectionUnit:inst25|                                                                                                         ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|hazardDetectionUnit:inst25                                                                                                                                                                                                                                                                                                                 ; hazardDetectionUnit               ; work         ;
+;    |hazardDetectionUnit:inst25|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|hazardDetectionUnit:inst25                                                                                                                                                                                                                                                                                                                 ; hazardDetectionUnit               ; work         ;
 ;    |incrementer:incrementer_inst|                                                                                                       ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|incrementer:incrementer_inst                                                                                                                                                                                                                                                                                                               ; incrementer                       ; work         ;
 ;    |instructionMemory:instruction_memory|                                                                                               ; 79 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|instructionMemory:instruction_memory                                                                                                                                                                                                                                                                                                       ; instructionMemory                 ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 79 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                       ; altsyncram                        ; work         ;
-;          |altsyncram_hqk1:auto_generated|                                                                                               ; 79 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated                                                                                                                                                                                                                                        ; altsyncram_hqk1                   ; work         ;
-;             |altsyncram_14b2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|altsyncram_14b2:altsyncram1                                                                                                                                                                                                            ; altsyncram_14b2                   ; work         ;
-;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 79 (57)             ; 51 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                              ; sld_mod_ram_rom                   ; work         ;
-;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 22 (22)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                           ; sld_rom_sr                        ; work         ;
+;          |altsyncram_7qk1:auto_generated|                                                                                               ; 79 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated                                                                                                                                                                                                                                        ; altsyncram_7qk1                   ; work         ;
+;             |altsyncram_n3b2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|altsyncram_n3b2:altsyncram1                                                                                                                                                                                                            ; altsyncram_n3b2                   ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 79 (57)             ; 51 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                              ; sld_mod_ram_rom                   ; work         ;
+;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 22 (22)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                           ; sld_rom_sr                        ; work         ;
 ;    |mainMemory:dataMemory|                                                                                                              ; 80 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mainMemory:dataMemory                                                                                                                                                                                                                                                                                                                      ; mainMemory                        ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 80 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                      ; altsyncram                        ; work         ;
-;          |altsyncram_opk1:auto_generated|                                                                                               ; 80 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated                                                                                                                                                                                                                                                       ; altsyncram_opk1                   ; work         ;
-;             |altsyncram_14b2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|altsyncram_14b2:altsyncram1                                                                                                                                                                                                                           ; altsyncram_14b2                   ; work         ;
-;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 80 (57)             ; 51 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                             ; sld_mod_ram_rom                   ; work         ;
-;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 23 (23)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |multiplexer16:multiplexer_ALUSrcAR|                                                                                                 ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|multiplexer16:multiplexer_ALUSrcAR                                                                                                                                                                                                                                                                                                         ; multiplexer16                     ; work         ;
-;    |multiplexer16:multiplexer_DRSrc|                                                                                                    ; 101 (101)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|multiplexer16:multiplexer_DRSrc                                                                                                                                                                                                                                                                                                            ; multiplexer16                     ; work         ;
+;          |altsyncram_epk1:auto_generated|                                                                                               ; 80 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated                                                                                                                                                                                                                                                       ; altsyncram_epk1                   ; work         ;
+;             |altsyncram_n3b2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|altsyncram_n3b2:altsyncram1                                                                                                                                                                                                                           ; altsyncram_n3b2                   ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 80 (57)             ; 51 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                             ; sld_mod_ram_rom                   ; work         ;
+;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 23 (23)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
+;    |multiplexer16:multiplexer_ALUSrcAR|                                                                                                 ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|multiplexer16:multiplexer_ALUSrcAR                                                                                                                                                                                                                                                                                                         ; multiplexer16                     ; work         ;
+;    |multiplexer16:multiplexer_DRSrc|                                                                                                    ; 100 (100)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|multiplexer16:multiplexer_DRSrc                                                                                                                                                                                                                                                                                                            ; multiplexer16                     ; work         ;
 ;    |multiplexer16:multiplexer_fwda10_11|                                                                                                ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|multiplexer16:multiplexer_fwda10_11                                                                                                                                                                                                                                                                                                        ; multiplexer16                     ; work         ;
 ;    |multiplexer16:multiplexer_fwdb10_11|                                                                                                ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|multiplexer16:multiplexer_fwdb10_11                                                                                                                                                                                                                                                                                                        ; multiplexer16                     ; work         ;
 ;    |multiplexer16:multiplexer_memToReg|                                                                                                 ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|multiplexer16:multiplexer_memToReg                                                                                                                                                                                                                                                                                                         ; multiplexer16                     ; work         ;
@@ -315,13 +319,13 @@ refer to the applicable agreement for further details.
 ;    |register3:inst18|                                                                                                                   ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|register3:inst18                                                                                                                                                                                                                                                                                                                           ; register3                         ; work         ;
 ;    |register4:FwdAFwdB_IDEX|                                                                                                            ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|register4:FwdAFwdB_IDEX                                                                                                                                                                                                                                                                                                                    ; register4                         ; work         ;
 ;    |registerFile:inst13|                                                                                                                ; 158 (158)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|registerFile:inst13                                                                                                                                                                                                                                                                                                                        ; registerFile                      ; work         ;
-;    |shifter:shifter_inst|                                                                                                               ; 225 (225)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|shifter:shifter_inst                                                                                                                                                                                                                                                                                                                       ; shifter                           ; work         ;
-;    |sld_hub:auto_hub|                                                                                                                   ; 174 (1)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
-;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 173 (0)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
-;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 173 (0)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
-;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 173 (1)             ; 114 (6)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
-;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 172 (0)             ; 108 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
-;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 172 (134)           ; 108 (80)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
+;    |shifter:shifter_inst|                                                                                                               ; 226 (226)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|shifter:shifter_inst                                                                                                                                                                                                                                                                                                                       ; shifter                           ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 173 (1)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 172 (0)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 172 (0)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 172 (1)             ; 114 (6)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 171 (0)             ; 108 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 171 (133)           ; 108 (80)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 20 (20)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
@@ -333,8 +337,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------+
 ; Name                                                                                                                                       ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF            ;
 +--------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------+
-; instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|altsyncram_14b2:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 4096         ; 16           ; 4096         ; 16           ; 65536 ; BubbleSort.mif ;
-; mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|altsyncram_14b2:altsyncram1|ALTSYNCRAM                ; AUTO ; True Dual Port ; 4096         ; 16           ; 4096         ; 16           ; 65536 ; BubbleSort.mif ;
+; instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|altsyncram_n3b2:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 4096         ; 16           ; 4096         ; 16           ; 65536 ; kisuuprot4.mif ;
+; mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|altsyncram_n3b2:altsyncram1|ALTSYNCRAM                ; AUTO ; True Dual Port ; 4096         ; 16           ; 4096         ; 16           ; 65536 ; kisuuprot4.mif ;
 +--------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------+
 
 
@@ -366,10 +370,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; externalOutput:exOUT|SEG_F[0]          ; Merged with externalOutput:exOUT|SEG_A[0]      ;
 ; externalOutput:exOUT|SEG_G[0]          ; Merged with externalOutput:exOUT|SEG_A[0]      ;
 ; externalOutput:exOUT|SEG_H[0]          ; Merged with externalOutput:exOUT|SEG_D[0]      ;
+; clockCounter:inst10|SEG_Y[0]           ; Merged with clockCounter:inst10|SEG_X[0]       ;
+; clockCounter:inst10|selectY[3]         ; Merged with clockCounter:inst10|selectX[3]     ;
+; clockCounter:inst10|selectY[2]         ; Merged with clockCounter:inst10|selectX[2]     ;
+; clockCounter:inst10|selectY[1]         ; Merged with clockCounter:inst10|selectX[1]     ;
+; clockCounter:inst10|selectY[0]         ; Merged with clockCounter:inst10|selectX[0]     ;
+; clockCounter:inst10|pattern2[2]        ; Merged with clockCounter:inst10|pattern1[2]    ;
+; clockCounter:inst10|pattern2[1]        ; Merged with clockCounter:inst10|pattern1[1]    ;
+; clockCounter:inst10|pattern2[0]        ; Merged with clockCounter:inst10|pattern1[0]    ;
+; clockCounter:inst10|SEG_X[0]           ; Stuck at GND due to stuck port data_in         ;
 ; externalOutput:exOUT|SEG_A[0]          ; Stuck at GND due to stuck port data_in         ;
 ; externalOutput:exOUT|SEG_D[0]          ; Stuck at VCC due to stuck port data_in         ;
 ; register16:PC_IFID|q[12..15]           ; Lost fanout                                    ;
-; Total Number of Removed Registers = 21 ;                                                ;
+; Total Number of Removed Registers = 30 ;                                                ;
 +----------------------------------------+------------------------------------------------+
 
 
@@ -378,12 +391,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 870   ;
-; Number of registers using Synchronous Clear  ; 56    ;
+; Total registers                              ; 925   ;
+; Number of registers using Synchronous Clear  ; 94    ;
 ; Number of registers using Synchronous Load   ; 84    ;
 ; Number of registers using Asynchronous Clear ; 113   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 804   ;
+; Number of registers using Clock Enable       ; 850   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -404,40 +417,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                                                                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                                                                                                                                                                             ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[5]                                                                                                                                                                                                        ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                                                                                                                                                                                            ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[13]                                                                                                                                                                                                                      ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |processor|register16:DR_MEMWB|q[11]                                                                                                                                                                                                                                                                                                                                ;
-; 3:1                ; 256 bits  ; 512 LEs       ; 256 LEs              ; 256 LEs                ; Yes        ; |processor|externalOutput:exOUT|regB[13]                                                                                                                                                                                                                                                                                                                            ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[6]                                                                                                                                                                                                        ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[9]                                                                                                                                                                                                                       ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|IR:IR|q[7]                                                                                                                                                                                                                                                                                                                                               ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[0][14]                                                                                                                                                                                                                                                                                                                             ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[1][10]                                                                                                                                                                                                                                                                                                                             ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[2][12]                                                                                                                                                                                                                                                                                                                             ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[3][10]                                                                                                                                                                                                                                                                                                                             ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[4][2]                                                                                                                                                                                                                                                                                                                              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[5][1]                                                                                                                                                                                                                                                                                                                              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[6][1]                                                                                                                                                                                                                                                                                                                              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[7][0]                                                                                                                                                                                                                                                                                                                              ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |processor|IDEXRegister:inst20|inputEnable_EX                                                                                                                                                                                                                                                                                                                       ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3]                                                                                                                                                         ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1]                                                                                                                                                                        ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |processor|register16:MDR|q[13]                                                                                                                                                                                                                                                                                                                                     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                                                                                                                                                                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                                                                                                                                                                        ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                                                                                                                                                                                            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                                                                                                                                                                                       ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |processor|register16:DR_MEMWB|q[10]                                                                                                                                                                                                                                                                                                                                ;
+; 3:1                ; 256 bits  ; 512 LEs       ; 256 LEs              ; 256 LEs                ; Yes        ; |processor|externalOutput:exOUT|regA[10]                                                                                                                                                                                                                                                                                                                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |processor|clockCounter:inst10|counter[1]                                                                                                                                                                                                                                                                                                                           ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[8]                                                                                                                                                                                                        ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[3]                                                                                                                                                                                                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|IR:IR|q[15]                                                                                                                                                                                                                                                                                                                                              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[0][6]                                                                                                                                                                                                                                                                                                                              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[1][8]                                                                                                                                                                                                                                                                                                                              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[2][0]                                                                                                                                                                                                                                                                                                                              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[3][14]                                                                                                                                                                                                                                                                                                                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[4][14]                                                                                                                                                                                                                                                                                                                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[5][14]                                                                                                                                                                                                                                                                                                                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[6][12]                                                                                                                                                                                                                                                                                                                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|registerFile:inst13|r[7][8]                                                                                                                                                                                                                                                                                                                              ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |processor|IDEXRegister:inst20|regWrite_EX                                                                                                                                                                                                                                                                                                                          ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0]                                                                                                                                                         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2]                                                                                                                                                                        ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |processor|register16:MDR|q[1]                                                                                                                                                                                                                                                                                                                                      ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |processor|PC:PC|q[2]                                                                                                                                                                                                                                                                                                                                               ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |processor|register16:AR|q[6]                                                                                                                                                                                                                                                                                                                                       ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |processor|register16:BR|q[8]                                                                                                                                                                                                                                                                                                                                       ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |processor|IDEXRegister:inst20|ALUOp_EX[3]                                                                                                                                                                                                                                                                                                                          ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |processor|IDEXRegister:inst20|ALUOp_EX[1]                                                                                                                                                                                                                                                                                                                          ;
-; 32:1               ; 56 bits   ; 1176 LEs      ; 280 LEs              ; 896 LEs                ; Yes        ; |processor|externalOutput:exOUT|SEG_A[2]                                                                                                                                                                                                                                                                                                                            ;
-; 32:1               ; 8 bits    ; 168 LEs       ; 48 LEs               ; 120 LEs                ; Yes        ; |processor|externalOutput:exOUT|select[1]                                                                                                                                                                                                                                                                                                                           ;
-; 6:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |processor|control:inst114|counter[3]                                                                                                                                                                                                                                                                                                                               ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]                                                                                                                                                              ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]                                                                                                                                                                             ;
-; 32:1               ; 14 bits   ; 294 LEs       ; 98 LEs               ; 196 LEs                ; Yes        ; |processor|register16:DR_EXMEM|q[6]                                                                                                                                                                                                                                                                                                                                 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |processor|multiplexer16:multiplexer_fwda10_11|out[9]                                                                                                                                                                                                                                                                                                               ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |processor|multiplexer16:multiplexer_fwdb10_11|out[6]                                                                                                                                                                                                                                                                                                               ;
+; 9:1                ; 14 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |processor|clockCounter:inst10|SEG_X[2]                                                                                                                                                                                                                                                                                                                             ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |processor|clockCounter:inst10|counter[19]                                                                                                                                                                                                                                                                                                                          ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |processor|register16:AR|q[12]                                                                                                                                                                                                                                                                                                                                      ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |processor|register16:BR|q[2]                                                                                                                                                                                                                                                                                                                                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |processor|IDEXRegister:inst20|ALUOp_EX[0]                                                                                                                                                                                                                                                                                                                          ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |processor|IDEXRegister:inst20|ALUOp_EX[2]                                                                                                                                                                                                                                                                                                                          ;
+; 32:1               ; 56 bits   ; 1176 LEs      ; 280 LEs              ; 896 LEs                ; Yes        ; |processor|externalOutput:exOUT|SEG_A[7]                                                                                                                                                                                                                                                                                                                            ;
+; 32:1               ; 8 bits    ; 168 LEs       ; 48 LEs               ; 120 LEs                ; Yes        ; |processor|externalOutput:exOUT|select[0]                                                                                                                                                                                                                                                                                                                           ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |processor|control:inst114|counter[1]                                                                                                                                                                                                                                                                                                                               ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |processor|instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]                                                                                                                                                              ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |processor|mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]                                                                                                                                                                             ;
+; 32:1               ; 14 bits   ; 294 LEs       ; 98 LEs               ; 196 LEs                ; Yes        ; |processor|register16:DR_EXMEM|q[3]                                                                                                                                                                                                                                                                                                                                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |processor|multiplexer16:multiplexer_fwda10_11|out[14]                                                                                                                                                                                                                                                                                                              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |processor|multiplexer16:multiplexer_fwdb10_11|out[12]                                                                                                                                                                                                                                                                                                              ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |processor|shifter:shifter_inst|ShiftRight1                                                                                                                                                                                                                                                                                                                         ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][6]                    ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][2]                    ;
@@ -447,13 +463,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[3]              ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[0] ;
 ; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[5]                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]                      ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 52 LEs               ; 36 LEs                 ; Yes        ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]                      ;
 ; 28:1               ; 4 bits    ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |processor|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[0]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|altsyncram_14b2:altsyncram1 ;
+; Source assignments for instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|altsyncram_n3b2:altsyncram1 ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                                       ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------------------------------+
@@ -462,7 +478,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|altsyncram_14b2:altsyncram1 ;
+; Source assignments for mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|altsyncram_n3b2:altsyncram1 ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                        ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------+
@@ -513,7 +529,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                               ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                               ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                               ;
-; INIT_FILE                          ; BubbleSort.mif       ; Untyped                                               ;
+; INIT_FILE                          ; kisuuprot4.mif       ; Untyped                                               ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                               ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                               ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                               ;
@@ -526,7 +542,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                               ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                               ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                               ;
-; CBXI_PARAMETER                     ; altsyncram_hqk1      ; Untyped                                               ;
+; CBXI_PARAMETER                     ; altsyncram_7qk1      ; Untyped                                               ;
 +------------------------------------+----------------------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -574,7 +590,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                ;
-; INIT_FILE                          ; BubbleSort.mif       ; Untyped                                ;
+; INIT_FILE                          ; kisuuprot4.mif       ; Untyped                                ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                ;
@@ -587,7 +603,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                ;
-; CBXI_PARAMETER                     ; altsyncram_opk1      ; Untyped                                ;
+; CBXI_PARAMETER                     ; altsyncram_epk1      ; Untyped                                ;
 +------------------------------------+----------------------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -628,8 +644,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------------------------------------+
 ; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                                                  ;
 +----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------------------------------------+
-; 0              ; INST        ; 16    ; 4096  ; Read/Write ; instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated ;
-; 1              ; MAIN        ; 16    ; 4096  ; Read/Write ; mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated                ;
+; 0              ; INST        ; 16    ; 4096  ; Read/Write ; instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated ;
+; 1              ; MAIN        ; 16    ; 4096  ; Read/Write ; mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated                ;
 +----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------------------------------------+
 
 
@@ -638,31 +654,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 145                         ;
-; cycloneiii_ff         ; 756                         ;
+; boundary_port         ; 169                         ;
+; cycloneiii_ff         ; 811                         ;
 ;     CLR               ; 14                          ;
-;     ENA               ; 606                         ;
+;     ENA               ; 622                         ;
 ;     ENA CLR           ; 14                          ;
 ;     ENA CLR SLD       ; 24                          ;
-;     ENA SCLR          ; 30                          ;
+;     ENA SCLR          ; 60                          ;
 ;     ENA SCLR SLD      ; 12                          ;
 ;     ENA SLD           ; 32                          ;
-;     SCLR              ; 2                           ;
-;     plain             ; 22                          ;
-; cycloneiii_lcell_comb ; 2135                        ;
-;     arith             ; 123                         ;
-;         2 data inputs ; 81                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 23                          ;
+; cycloneiii_lcell_comb ; 2332                        ;
+;     arith             ; 183                         ;
+;         2 data inputs ; 141                         ;
 ;         3 data inputs ; 42                          ;
-;     normal            ; 2012                        ;
+;     normal            ; 2149                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 12                          ;
-;         2 data inputs ; 358                         ;
-;         3 data inputs ; 221                         ;
-;         4 data inputs ; 1419                        ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 367                         ;
+;         3 data inputs ; 251                         ;
+;         4 data inputs ; 1514                        ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.20                       ;
-; Average LUT depth     ; 4.87                        ;
+; Average LUT depth     ; 4.75                        ;
 +-----------------------+-----------------------------+
 
 
@@ -681,15 +697,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 9                                        ;
 ;     SCLR              ; 7                                        ;
 ;     plain             ; 16                                       ;
-; cycloneiii_lcell_comb ; 174                                      ;
+; cycloneiii_lcell_comb ; 173                                      ;
 ;     arith             ; 8                                        ;
 ;         2 data inputs ; 8                                        ;
-;     normal            ; 166                                      ;
+;     normal            ; 165                                      ;
 ;         0 data inputs ; 1                                        ;
 ;         1 data inputs ; 6                                        ;
-;         2 data inputs ; 25                                       ;
-;         3 data inputs ; 67                                       ;
-;         4 data inputs ; 67                                       ;
+;         2 data inputs ; 24                                       ;
+;         3 data inputs ; 66                                       ;
+;         4 data inputs ; 68                                       ;
 ;                       ;                                          ;
 ; Max LUT depth         ; 4.00                                     ;
 ; Average LUT depth     ; 1.85                                     ;
@@ -701,7 +717,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------------+
 ; Partition Name   ; Elapsed Time ;
 +------------------+--------------+
-; Top              ; 00:00:05     ;
+; Top              ; 00:00:07     ;
 ; sld_hub:auto_hub ; 00:00:01     ;
 +------------------+--------------+
 
@@ -712,85 +728,86 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri May 20 09:15:06 2022
+    Info: Processing started: Fri May 20 14:32:15 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor -c processor
 Warning (125092): Tcl Script File fastclock.qip not found
     Info (125063): set_global_assignment -name QIP_FILE fastclock.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/hazarddetectionunit/hazarddetectionunit.v
-    Info (12023): Found entity 1: hazardDetectionUnit File: C:/Users/admin/2022-simple-team02/hazardDetectionUnit/hazardDetectionUnit.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/forwardingunit/forwardingunit.v
-    Info (12023): Found entity 1: forwardingUnit File: C:/Users/admin/2022-simple-team02/forwardingUnit/forwardingUnit.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/exmemregister/exmemregister.v
-    Info (12023): Found entity 1: EXMEMRegister File: C:/Users/admin/2022-simple-team02/EXMEMRegister/EXMEMRegister.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/register3/register3.v
-    Info (12023): Found entity 1: register3 File: C:/Users/admin/2022-simple-team02/register3/register3.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/memwbregister/memwbregister.v
-    Info (12023): Found entity 1: MEMWBRegister File: C:/Users/admin/2022-simple-team02/MEMWBRegister/MEMWBRegister.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/idexregister/idexregister.v
-    Info (12023): Found entity 1: IDEXRegister File: C:/Users/admin/2022-simple-team02/IDEXRegister/IDEXRegister.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/szcvjudge16/szcvjudge16.v
-    Info (12023): Found entity 1: SZCVJudge16 File: C:/Users/admin/2022-simple-team02/SZCVJudge16/SZCVJudge16.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/szcvcontrol/szcvcontrol.v
-    Info (12023): Found entity 1: SZCVControl File: C:/Users/admin/2022-simple-team02/SZCVControl/SZCVControl.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/externaloutput/externaloutput.v
-    Info (12023): Found entity 1: externalOutput File: C:/Users/admin/2022-simple-team02/externalOutput/externalOutput.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/signextend/signextend.v
-    Info (12023): Found entity 1: signExtend File: C:/Users/admin/2022-simple-team02/signExtend/signExtend.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/shifter/shifter.v
-    Info (12023): Found entity 1: shifter File: C:/Users/admin/2022-simple-team02/shifter/shifter.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/register16/register16.v
-    Info (12023): Found entity 1: register16 File: C:/Users/admin/2022-simple-team02/register16/register16.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/register4/register4.v
-    Info (12023): Found entity 1: register4 File: C:/Users/admin/2022-simple-team02/register4/register4.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/pc/pc.v
-    Info (12023): Found entity 1: PC File: C:/Users/admin/2022-simple-team02/PC/PC.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/multiplexer4/multiplexer4.v
-    Info (12023): Found entity 1: multiplexer4 File: C:/Users/admin/2022-simple-team02/multiplexer4/multiplexer4.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/multiplexer16/multiplexer16.v
-    Info (12023): Found entity 1: multiplexer16 File: C:/Users/admin/2022-simple-team02/multiplexer16/multiplexer16.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/multiplexer3/multiplexer3.v
-    Info (12023): Found entity 1: multiplexer3 File: C:/Users/admin/2022-simple-team02/multiplexer3/multiplexer3.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/ir/ir.v
-    Info (12023): Found entity 1: IR File: C:/Users/admin/2022-simple-team02/IR/IR.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/alu/alu.v
-    Info (12023): Found entity 1: alu File: C:/Users/admin/2022-simple-team02/alu/alu.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/phasecounter/phasecounter.v
-    Info (12023): Found entity 1: phaseCounter File: C:/Users/admin/2022-simple-team02/phaseCounter/phaseCounter.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/control/control.v
-    Info (12023): Found entity 1: control File: C:/Users/admin/2022-simple-team02/control/control.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/2022-simple-team02/registerfile/registerfile.v
-    Info (12023): Found entity 1: registerFile File: C:/Users/admin/2022-simple-team02/registerFile/registerFile.v Line: 1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/hazarddetectionunit/hazarddetectionunit.v
+    Info (12023): Found entity 1: hazardDetectionUnit File: C:/Users/shun1/2022-simple-team02/hazardDetectionUnit/hazardDetectionUnit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/forwardingunit/forwardingunit.v
+    Info (12023): Found entity 1: forwardingUnit File: C:/Users/shun1/2022-simple-team02/forwardingUnit/forwardingUnit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/exmemregister/exmemregister.v
+    Info (12023): Found entity 1: EXMEMRegister File: C:/Users/shun1/2022-simple-team02/EXMEMRegister/EXMEMRegister.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/register3/register3.v
+    Info (12023): Found entity 1: register3 File: C:/Users/shun1/2022-simple-team02/register3/register3.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/memwbregister/memwbregister.v
+    Info (12023): Found entity 1: MEMWBRegister File: C:/Users/shun1/2022-simple-team02/MEMWBRegister/MEMWBRegister.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/idexregister/idexregister.v
+    Info (12023): Found entity 1: IDEXRegister File: C:/Users/shun1/2022-simple-team02/IDEXRegister/IDEXRegister.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/szcvjudge16/szcvjudge16.v
+    Info (12023): Found entity 1: SZCVJudge16 File: C:/Users/shun1/2022-simple-team02/SZCVJudge16/SZCVJudge16.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/szcvcontrol/szcvcontrol.v
+    Info (12023): Found entity 1: SZCVControl File: C:/Users/shun1/2022-simple-team02/SZCVControl/SZCVControl.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/externaloutput/externaloutput.v
+    Info (12023): Found entity 1: externalOutput File: C:/Users/shun1/2022-simple-team02/externalOutput/externalOutput.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/signextend/signextend.v
+    Info (12023): Found entity 1: signExtend File: C:/Users/shun1/2022-simple-team02/signExtend/signExtend.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/shifter/shifter.v
+    Info (12023): Found entity 1: shifter File: C:/Users/shun1/2022-simple-team02/shifter/shifter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/register16/register16.v
+    Info (12023): Found entity 1: register16 File: C:/Users/shun1/2022-simple-team02/register16/register16.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/register4/register4.v
+    Info (12023): Found entity 1: register4 File: C:/Users/shun1/2022-simple-team02/register4/register4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/pc/pc.v
+    Info (12023): Found entity 1: PC File: C:/Users/shun1/2022-simple-team02/PC/PC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/multiplexer4/multiplexer4.v
+    Info (12023): Found entity 1: multiplexer4 File: C:/Users/shun1/2022-simple-team02/multiplexer4/multiplexer4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/multiplexer16/multiplexer16.v
+    Info (12023): Found entity 1: multiplexer16 File: C:/Users/shun1/2022-simple-team02/multiplexer16/multiplexer16.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/multiplexer3/multiplexer3.v
+    Info (12023): Found entity 1: multiplexer3 File: C:/Users/shun1/2022-simple-team02/multiplexer3/multiplexer3.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/ir/ir.v
+    Info (12023): Found entity 1: IR File: C:/Users/shun1/2022-simple-team02/IR/IR.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/alu/alu.v
+    Info (12023): Found entity 1: alu File: C:/Users/shun1/2022-simple-team02/alu/alu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/phasecounter/phasecounter.v
+    Info (12023): Found entity 1: phaseCounter File: C:/Users/shun1/2022-simple-team02/phaseCounter/phaseCounter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/control/control.v
+    Info (12023): Found entity 1: control File: C:/Users/shun1/2022-simple-team02/control/control.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shun1/2022-simple-team02/registerfile/registerfile.v
+    Info (12023): Found entity 1: registerFile File: C:/Users/shun1/2022-simple-team02/registerFile/registerFile.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor.bdf
     Info (12023): Found entity 1: processor
 Info (12021): Found 1 design units, including 1 entities, in source file incrementer.v
-    Info (12023): Found entity 1: incrementer File: C:/Users/admin/2022-simple-team02/processor/incrementer.v Line: 1
+    Info (12023): Found entity 1: incrementer File: C:/Users/shun1/2022-simple-team02/processor/incrementer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mainmemory.v
-    Info (12023): Found entity 1: mainMemory File: C:/Users/admin/2022-simple-team02/processor/mainMemory.v Line: 39
+    Info (12023): Found entity 1: mainMemory File: C:/Users/shun1/2022-simple-team02/processor/mainMemory.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file instructionmemory.v
-    Info (12023): Found entity 1: instructionMemory File: C:/Users/admin/2022-simple-team02/processor/instructionMemory.v Line: 39
+    Info (12023): Found entity 1: instructionMemory File: C:/Users/shun1/2022-simple-team02/processor/instructionMemory.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file adder16.v
-    Info (12023): Found entity 1: adder16 File: C:/Users/admin/2022-simple-team02/processor/adder16.v Line: 1
+    Info (12023): Found entity 1: adder16 File: C:/Users/shun1/2022-simple-team02/processor/adder16.v Line: 1
+Warning (12019): Can't analyze file -- file output_files/clockCounter.v is missing
 Info (12127): Elaborating entity "processor" for the top level hierarchy
 Info (12128): Elaborating entity "externalOutput" for hierarchy "externalOutput:exOUT"
-Warning (10230): Verilog HDL assignment warning at externalOutput.v(185): truncated value with size 32 to match size of target (5) File: C:/Users/admin/2022-simple-team02/externalOutput/externalOutput.v Line: 185
+Warning (10230): Verilog HDL assignment warning at externalOutput.v(185): truncated value with size 32 to match size of target (5) File: C:/Users/shun1/2022-simple-team02/externalOutput/externalOutput.v Line: 185
 Info (12128): Elaborating entity "IDEXRegister" for hierarchy "IDEXRegister:inst20"
 Info (12128): Elaborating entity "control" for hierarchy "control:inst114"
-Warning (10036): Verilog HDL or VHDL warning at control.v(85): object "C" assigned a value but never read File: C:/Users/admin/2022-simple-team02/control/control.v Line: 85
-Warning (10036): Verilog HDL or VHDL warning at control.v(88): object "cond" assigned a value but never read File: C:/Users/admin/2022-simple-team02/control/control.v Line: 88
-Warning (10036): Verilog HDL or VHDL warning at control.v(91): object "op" assigned a value but never read File: C:/Users/admin/2022-simple-team02/control/control.v Line: 91
+Warning (10036): Verilog HDL or VHDL warning at control.v(85): object "C" assigned a value but never read File: C:/Users/shun1/2022-simple-team02/control/control.v Line: 85
+Warning (10036): Verilog HDL or VHDL warning at control.v(88): object "cond" assigned a value but never read File: C:/Users/shun1/2022-simple-team02/control/control.v Line: 88
+Warning (10036): Verilog HDL or VHDL warning at control.v(91): object "op" assigned a value but never read File: C:/Users/shun1/2022-simple-team02/control/control.v Line: 91
 Info (12128): Elaborating entity "IR" for hierarchy "IR:IR"
 Info (12128): Elaborating entity "hazardDetectionUnit" for hierarchy "hazardDetectionUnit:inst25"
 Info (12128): Elaborating entity "register3" for hierarchy "register3:inst16"
 Info (12128): Elaborating entity "multiplexer3" for hierarchy "multiplexer3:multiplexer_regDst"
 Info (12128): Elaborating entity "instructionMemory" for hierarchy "instructionMemory:instruction_memory"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component" File: C:/Users/admin/2022-simple-team02/processor/instructionMemory.v Line: 85
-Info (12130): Elaborated megafunction instantiation "instructionMemory:instruction_memory|altsyncram:altsyncram_component" File: C:/Users/admin/2022-simple-team02/processor/instructionMemory.v Line: 85
-Info (12133): Instantiated megafunction "instructionMemory:instruction_memory|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/admin/2022-simple-team02/processor/instructionMemory.v Line: 85
+Info (12128): Elaborating entity "altsyncram" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component" File: C:/Users/shun1/2022-simple-team02/processor/instructionMemory.v Line: 85
+Info (12130): Elaborated megafunction instantiation "instructionMemory:instruction_memory|altsyncram:altsyncram_component" File: C:/Users/shun1/2022-simple-team02/processor/instructionMemory.v Line: 85
+Info (12133): Instantiated megafunction "instructionMemory:instruction_memory|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/shun1/2022-simple-team02/processor/instructionMemory.v Line: 85
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "BubbleSort.mif"
+    Info (12134): Parameter "init_file" = "kisuuprot4.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=INST"
     Info (12134): Parameter "lpm_type" = "altsyncram"
@@ -803,15 +820,17 @@ Info (12133): Instantiated megafunction "instructionMemory:instruction_memory|al
     Info (12134): Parameter "widthad_a" = "12"
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hqk1.tdf
-    Info (12023): Found entity 1: altsyncram_hqk1 File: C:/Users/admin/2022-simple-team02/processor/db/altsyncram_hqk1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_hqk1" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_14b2.tdf
-    Info (12023): Found entity 1: altsyncram_14b2 File: C:/Users/admin/2022-simple-team02/processor/db/altsyncram_14b2.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_14b2" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|altsyncram_14b2:altsyncram1" File: C:/Users/admin/2022-simple-team02/processor/db/altsyncram_hqk1.tdf Line: 36
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/admin/2022-simple-team02/processor/db/altsyncram_hqk1.tdf Line: 37
-Info (12130): Elaborated megafunction instantiation "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/admin/2022-simple-team02/processor/db/altsyncram_hqk1.tdf Line: 37
-Info (12133): Instantiated megafunction "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/admin/2022-simple-team02/processor/db/altsyncram_hqk1.tdf Line: 37
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7qk1.tdf
+    Info (12023): Found entity 1: altsyncram_7qk1 File: C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_7qk1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_7qk1" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_n3b2.tdf
+    Info (12023): Found entity 1: altsyncram_n3b2 File: C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_n3b2.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_n3b2" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|altsyncram_n3b2:altsyncram1" File: C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_7qk1.tdf Line: 36
+Warning (113028): 2048 out of 4096 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/shun1/2022-simple-team02/processor/kisuuprot4.mif Line: 1
+    Warning (113027): Addresses ranging from 2048 to 4095 are not initialized File: C:/Users/shun1/2022-simple-team02/processor/kisuuprot4.mif Line: 1
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_7qk1.tdf Line: 37
+Info (12130): Elaborated megafunction instantiation "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_7qk1.tdf Line: 37
+Info (12133): Instantiated megafunction "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_7qk1.tdf Line: 37
     Info (12134): Parameter "CVALUE" = "0000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -820,9 +839,9 @@ Info (12133): Instantiated megafunction "instructionMemory:instruction_memory|al
     Info (12134): Parameter "SHIFT_COUNT_BITS" = "5"
     Info (12134): Parameter "WIDTH_WORD" = "16"
     Info (12134): Parameter "WIDTHAD" = "12"
-Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
-Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_hqk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7qk1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
 Info (12128): Elaborating entity "PC" for hierarchy "PC:PC"
 Info (12128): Elaborating entity "multiplexer16" for hierarchy "multiplexer16:multiplexer_branch"
 Info (12128): Elaborating entity "incrementer" for hierarchy "incrementer:incrementer_inst"
@@ -835,16 +854,16 @@ Info (12128): Elaborating entity "register4" for hierarchy "register4:FwdAFwdB_I
 Info (12128): Elaborating entity "forwardingUnit" for hierarchy "forwardingUnit:inst2"
 Info (12128): Elaborating entity "EXMEMRegister" for hierarchy "EXMEMRegister:inst22"
 Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:inst13"
-Warning (10036): Verilog HDL or VHDL warning at registerFile.v(15): object "r" assigned a value but never read File: C:/Users/admin/2022-simple-team02/registerFile/registerFile.v Line: 15
+Warning (10036): Verilog HDL or VHDL warning at registerFile.v(15): object "r" assigned a value but never read File: C:/Users/shun1/2022-simple-team02/registerFile/registerFile.v Line: 15
 Info (12128): Elaborating entity "MEMWBRegister" for hierarchy "MEMWBRegister:inst21"
 Info (12128): Elaborating entity "shifter" for hierarchy "shifter:shifter_inst"
 Info (12128): Elaborating entity "mainMemory" for hierarchy "mainMemory:dataMemory"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mainMemory:dataMemory|altsyncram:altsyncram_component" File: C:/Users/admin/2022-simple-team02/processor/mainMemory.v Line: 85
-Info (12130): Elaborated megafunction instantiation "mainMemory:dataMemory|altsyncram:altsyncram_component" File: C:/Users/admin/2022-simple-team02/processor/mainMemory.v Line: 85
-Info (12133): Instantiated megafunction "mainMemory:dataMemory|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/admin/2022-simple-team02/processor/mainMemory.v Line: 85
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mainMemory:dataMemory|altsyncram:altsyncram_component" File: C:/Users/shun1/2022-simple-team02/processor/mainMemory.v Line: 85
+Info (12130): Elaborated megafunction instantiation "mainMemory:dataMemory|altsyncram:altsyncram_component" File: C:/Users/shun1/2022-simple-team02/processor/mainMemory.v Line: 85
+Info (12133): Instantiated megafunction "mainMemory:dataMemory|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/shun1/2022-simple-team02/processor/mainMemory.v Line: 85
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "BubbleSort.mif"
+    Info (12134): Parameter "init_file" = "kisuuprot4.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=MAIN"
     Info (12134): Parameter "lpm_type" = "altsyncram"
@@ -857,12 +876,12 @@ Info (12133): Instantiated megafunction "mainMemory:dataMemory|altsyncram:altsyn
     Info (12134): Parameter "widthad_a" = "12"
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_opk1.tdf
-    Info (12023): Found entity 1: altsyncram_opk1 File: C:/Users/admin/2022-simple-team02/processor/db/altsyncram_opk1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_opk1" for hierarchy "mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/admin/2022-simple-team02/processor/db/altsyncram_opk1.tdf Line: 37
-Info (12130): Elaborated megafunction instantiation "mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/admin/2022-simple-team02/processor/db/altsyncram_opk1.tdf Line: 37
-Info (12133): Instantiated megafunction "mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_opk1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/admin/2022-simple-team02/processor/db/altsyncram_opk1.tdf Line: 37
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_epk1.tdf
+    Info (12023): Found entity 1: altsyncram_epk1 File: C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_epk1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_epk1" for hierarchy "mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_epk1.tdf Line: 37
+Info (12130): Elaborated megafunction instantiation "mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_epk1.tdf Line: 37
+Info (12133): Instantiated megafunction "mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_epk1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/shun1/2022-simple-team02/processor/db/altsyncram_epk1.tdf Line: 37
     Info (12134): Parameter "CVALUE" = "0000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -872,8 +891,27 @@ Info (12133): Instantiated megafunction "mainMemory:dataMemory|altsyncram:altsyn
     Info (12134): Parameter "WIDTH_WORD" = "16"
     Info (12134): Parameter "WIDTHAD" = "12"
 Info (12128): Elaborating entity "SZCVJudge16" for hierarchy "SZCVJudge16:inst1"
+Warning (12125): Using design file clockcounter.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clockCounter File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 1
+Info (12128): Elaborating entity "clockCounter" for hierarchy "clockCounter:inst10"
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(36): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 36
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(40): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 40
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(43): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 43
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(47): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 47
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(50): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 50
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(54): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 54
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(57): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 57
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(61): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 61
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(70): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 70
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(74): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 74
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(77): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 77
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(81): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 81
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(84): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 84
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(88): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 88
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(91): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 91
+Warning (10230): Verilog HDL assignment warning at clockcounter.v(95): truncated value with size 32 to match size of target (3) File: C:/Users/shun1/2022-simple-team02/processor/clockcounter.v Line: 95
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.05.20.09:15:38 Progress: Loading sldcbc818cf/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.05.20.14:32:39 Progress: Loading sldcbc818cf/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -884,18 +922,18 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldcbc818cf/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 142
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 142
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/admin/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/shun1/2022-simple-team02/processor/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SEG_A[0]" is stuck at GND
     Warning (13410): Pin "SEG_B[0]" is stuck at GND
@@ -905,29 +943,31 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SEG_F[0]" is stuck at GND
     Warning (13410): Pin "SEG_G[0]" is stuck at GND
     Warning (13410): Pin "SEG_H[0]" is stuck at VCC
+    Warning (13410): Pin "SEG_X[0]" is stuck at GND
+    Warning (13410): Pin "SEG_Y[0]" is stuck at GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (13000): Registers with preset signals will power-up high File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd Line: 386
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
-Info (144001): Generated suppressed messages file C:/Users/admin/2022-simple-team02/processor/output_files/processor.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/shun1/2022-simple-team02/processor/output_files/processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2647 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2867 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
-    Info (21059): Implemented 73 output pins
-    Info (21061): Implemented 2519 logic cells
+    Info (21059): Implemented 97 output pins
+    Info (21061): Implemented 2715 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
     Info: Peak virtual memory: 4840 megabytes
-    Info: Processing ended: Fri May 20 09:16:00 2022
-    Info: Elapsed time: 00:00:54
-    Info: Total CPU time (on all processors): 00:01:34
+    Info: Processing ended: Fri May 20 14:33:05 2022
+    Info: Elapsed time: 00:00:50
+    Info: Total CPU time (on all processors): 00:01:25
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/admin/2022-simple-team02/processor/output_files/processor.map.smsg.
+The suppressed messages can be found in C:/Users/shun1/2022-simple-team02/processor/output_files/processor.map.smsg.
 
 

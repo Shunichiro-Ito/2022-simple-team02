@@ -228,6 +228,62 @@
 					"strict" : false
 				},
 				{
+					"name" : "SEG_X[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_X[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_X[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_X[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_X[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_X[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_X[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_Y[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_Y[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_Y[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_Y[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_Y[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_Y[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_Y[1]",
+					"strict" : false
+				},
+				{
 					"name" : "select[7]",
 					"strict" : false
 				},
@@ -257,6 +313,38 @@
 				},
 				{
 					"name" : "select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "selectX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "selectX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "selectX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "selectX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "selectY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "selectY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "selectY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "selectY[0]",
 					"strict" : false
 				},
 				{
