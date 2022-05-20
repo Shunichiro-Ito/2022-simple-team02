@@ -348,10 +348,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock",
-					"strict" : false
-				},
-				{
 					"name" : "externalInput[12]",
 					"strict" : false
 				},

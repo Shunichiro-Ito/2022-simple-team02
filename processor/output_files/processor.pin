@@ -145,7 +145,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : B9        :        :                   :         : 8         :                
 externalInput[14]            : B10       : input  : 2.5 V             :         : 8         : Y              
 GND+                         : B11       :        :                   :         : 8         :                
-clock                        : B12       : input  : 2.5 V             :         : 7         : Y              
+CLK                          : B12       : input  : 2.5 V             :         : 7         : Y              
 externalInput[4]             : B13       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B15       :        :                   :         : 7         :                
