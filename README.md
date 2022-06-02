@@ -1,5 +1,19 @@
 # プロセッサ設計演習
 
-詳細は下記を参照のこと．  
-http://isle3hw.kuis.kyoto-u.ac.jp/#processor  
-本ファイルは自由に編集して構わない（READMEはきちんと整備すべきである）
+assembly program
+作成したアセンブリプログラムをまとめたフォルダ
+
+processor_final
+最終報告で作成したプロセッサのフォルダ
+
+processor_middle
+中間報告時点で作成していたプロセッサ(SIMPLE/B)のフォルダ
+
+report_final
+最終報告で提出するレポートをまとめたフォルダ
+
+report_middle
+中間報告で提出したレポートをまとめたフォルダ
+
+simple_sample-1.7
+命令をテストするmifファイルをまとめたフォルダ
