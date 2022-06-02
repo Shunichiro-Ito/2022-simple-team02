@@ -1,0 +1,35 @@
+|forwardingUnit
+IDEX_RegRd[0] => Equal0.IN2
+IDEX_RegRd[0] => Equal2.IN2
+IDEX_RegRd[1] => Equal0.IN1
+IDEX_RegRd[1] => Equal2.IN1
+IDEX_RegRd[2] => Equal0.IN0
+IDEX_RegRd[2] => Equal2.IN0
+EXMEM_RegRd[0] => Equal1.IN2
+EXMEM_RegRd[0] => Equal3.IN2
+EXMEM_RegRd[1] => Equal1.IN1
+EXMEM_RegRd[1] => Equal3.IN1
+EXMEM_RegRd[2] => Equal1.IN0
+EXMEM_RegRd[2] => Equal3.IN0
+IFID_RegRs[0] => Equal0.IN5
+IFID_RegRs[0] => Equal1.IN5
+IFID_RegRs[1] => Equal0.IN4
+IFID_RegRs[1] => Equal1.IN4
+IFID_RegRs[2] => Equal0.IN3
+IFID_RegRs[2] => Equal1.IN3
+IFID_RegRd[0] => Equal2.IN5
+IFID_RegRd[0] => Equal3.IN5
+IFID_RegRd[1] => Equal2.IN4
+IFID_RegRd[1] => Equal3.IN4
+IFID_RegRd[2] => Equal2.IN3
+IFID_RegRd[2] => Equal3.IN3
+IDEX_RegWrite => FwdA.IN1
+IDEX_RegWrite => FwdB.IN1
+EXMEM_RegWrite => FwdA.IN1
+EXMEM_RegWrite => FwdB.IN1
+FwdA[0] << FwdA.DB_MAX_OUTPUT_PORT_TYPE
+FwdA[1] << FwdA.DB_MAX_OUTPUT_PORT_TYPE
+FwdB[0] << FwdB.DB_MAX_OUTPUT_PORT_TYPE
+FwdB[1] << FwdB.DB_MAX_OUTPUT_PORT_TYPE
+
+

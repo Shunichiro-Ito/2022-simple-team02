@@ -1,0 +1,114 @@
+LI 0, 1
+SLL 0, 10
+LI 5, 1
+SLL 5, 9
+LI 6, 1
+SLL 6, 11
+LI 7, -1
+SRL 7, 8
+LD 1, 0, 0
+MOV 2, 7
+AND 2, 1
+SRL 1, 8
+LD 3, 0, 2
+ADD 1, 5
+LD 4, 0, 1
+ADDI 3, 1
+ADDI 4, 1
+ST 3, 0, 2
+ST 4, 0, 1
+ADDI 0, 1
+CMP 0, 6
+BNE -14
+LI 0, 0
+SRL 5, 1
+MOV 1, 5 
+MOV 2, 6
+LI 7, 3
+SLL 7, 10
+LD 4, 0, 0
+ADDI 0, 1
+ADD 2, 4
+ST 2, 0, 1
+ADDI 1, 1
+CMP 2, 7
+BNE -7
+LI 0, 1
+SLL 0, 10
+LI 7, -1
+SRL 7, 8
+LD 3, 0, 0
+MOV 1, 7
+AND 1, 3
+LD 4, 0, 1
+MOV 2, 1
+ADD 2, 5
+LD 2, 0, 2
+ADDI 0, 1
+SUB 2, 4
+ADDI 4, -1
+ST 3, 0, 2
+ST 4, 0, 1
+CMP 0, 6
+BNE -14
+LI 0, 5
+SLL 0, 7
+LI 2, -1
+SRL 2, 6 
+LI 1, 7
+SLL 1, 7
+LI 4, 3
+SLL 4, 8
+LD 3, 0, 0
+ADDI 0, 1
+ADD 2, 3
+ST 2, 0, 1
+ADDI 1, 1
+CMP 0, 4
+BNE -7
+LI 0, 1
+SLL 0, 9
+MOV 5, 0
+MOV 1, 4
+ADDI 6, -1
+LD 3, 0, 0
+ADDI 0, 1
+ADD 2, 3
+ST 2, 0, 1
+ADDI 1, 1
+CMP 2, 6
+BNE -7
+LI 0, 1
+SLL 0, 11
+LI 7, 3
+SLL 7, 10
+LD 3, 0, 0 
+ADDI 0, 1
+MOV 1, 3
+SRL 1, 8
+MOV 2, 1
+ADD 2, 5
+ADD 1, 4
+LD 6, 0, 2
+LD 1, 0, 1
+ADDI 6, -1
+SUB 1, 6
+ST 6, 0, 2
+ST 3, 0, 1
+CMP 0, 7
+BNE -15
+LI 0, 1
+SLL 0, 10
+SLL 5, 2
+LD 1, 0, 0
+ADDI 0, 1
+OUT 1
+CMP 0, 5
+BNE -5
+HLT
+HLT
+HLT
+HLT
+HLT
+HLT
+HLT
