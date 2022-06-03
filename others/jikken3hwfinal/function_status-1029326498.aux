@@ -1,0 +1,80 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {1}全体のコンポーネント分割方法}{1}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces コンポーネント分割の方法の図}}{1}{}\protected@file@percent }
+\newlabel{moduleSplit0422}{{1}{1}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces 役割分担（最終報告時点）}}{2}{}\protected@file@percent }
+\newlabel{rolesDivision0422}{{1}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}変更を加えたコンポーネント}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}レジスタファイル(registerFile.v)}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}外部仕様　入力}{3}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces レジスタファイル(registerFile.v)の入力(=input)}}{3}{}\protected@file@percent }
+\newlabel{registerFileI}{{2}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}外部仕様　出力}{3}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces レジスタファイル(registerFile.v)の出力(=output)}}{3}{}\protected@file@percent }
+\newlabel{registerFileO}{{3}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}内部仕様}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}制御部(control.v)}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}外部仕様　入力}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces 制御部(control.v)の入力(=input)}}{5}{}\protected@file@percent }
+\newlabel{controlI}{{4}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}外部仕様　出力}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces 制御部(control.v)の出力(=output)}}{6}{}\protected@file@percent }
+\newlabel{controlO}{{5}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}内部仕様}{6}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces execとexec\_preとcnt(=counter)の値に応じて、更新するcnt(=counter)とsystemRunningの値}}{7}{}\protected@file@percent }
+\newlabel{execexecprecntsystemRunningRelation}{{6}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces HLT命令が呼ばれたときの制御}}{8}{}\protected@file@percent }
+\newlabel{haltsiyuo}{{2}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces 制御信号の仕様}}{9}{}\protected@file@percent }
+\newlabel{controlsignal}{{7}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}追加したコンポーネント}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}ハザード検出ユニット(hazardDetectionUnit.v)}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}外部仕様　入力}{10}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces ハザード検出ユニット(hazardDetectionUnit.v)の入力(=input)}}{10}{}\protected@file@percent }
+\newlabel{hazardDetectionUnitI}{{8}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}外部仕様　出力}{10}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces ハザード検出ユニット(hazardDetectionUnit.v)の出力(=output)}}{10}{}\protected@file@percent }
+\newlabel{hazardDetectionUnitO}{{9}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}内部仕様}{11}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 分岐命令の制御ハザードと、LD,IN命令で読み込んだ命令を直後の命令で参照する際におこるデータハザードへの対処}}{12}{}\protected@file@percent }
+\newlabel{bunkide-ta}{{3}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}命令メモリ(instructionMemory.v)}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}外部仕様　入力}{13}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces 命令メモリ(instructionMemory.v)の入力(=input)}}{13}{}\protected@file@percent }
+\newlabel{instructionMemoryI}{{10}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}外部仕様　出力}{13}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces 命令メモリ(instructionMemory.v)の出力(=output)}}{13}{}\protected@file@percent }
+\newlabel{instructionMemoryO}{{11}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}内部仕様}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}パイプラインレジスタ(IDEXRegister.v,EXMEMRegister.v,MEMWBRegister.v)}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}外部仕様　入力}{14}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces パイプラインレジスタ(IDEXRegister.v,EXMEMRegister.v,MEMWBRegister.v)の入力(=input)}}{14}{}\protected@file@percent }
+\newlabel{pipelineRegisterI}{{12}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}外部仕様　出力}{14}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces パイプラインレジスタ(IDEXRegister.v,EXMEMRegister.v,MEMWBRegister.v)の出力(=output)}}{14}{}\protected@file@percent }
+\newlabel{pipelineRegisterO}{{13}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}内部仕様}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}全体(processor.bdf)}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}外部仕様　入力}{15}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces 全体(processor.bdf)の入力(=input)}}{15}{}\protected@file@percent }
+\newlabel{zentaiprocessorI}{{14}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}外部仕様　出力}{15}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces 全体(processor.bdf)の出力(=output)}}{15}{}\protected@file@percent }
+\newlabel{zentaiprocessorO}{{15}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}内部仕様}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}単体での性能評価(制御部、ハザード検出ユニット)}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}制御部}{17}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Resource Utilization by Entity}}{17}{}\protected@file@percent }
+\newlabel{controltotallogicelement0603}{{4}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Report Path...の結果}}{17}{}\protected@file@percent }
+\newlabel{controlreportpath}{{5}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}ハザード検出ユニット}{17}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Resource Utilization by Entityの結果}}{17}{}\protected@file@percent }
+\newlabel{hazardtotallogicelement0603}{{6}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Report Path...の結果}}{18}{}\protected@file@percent }
+\newlabel{hazardreportpath}{{7}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}考察・感想}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}考察}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}感想}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}実験環境}{18}{}\protected@file@percent }
+\gdef \@abspage@last{20}

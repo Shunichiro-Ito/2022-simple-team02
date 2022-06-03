@@ -2,6 +2,8 @@
 
 assembly program:作成したアセンブリプログラムをまとめたフォルダ
 
+others:設計やレポート作成に用いたファイルをまとめたフォルダ
+
 processor_final:最終報告で作成したプロセッサのフォルダ
 
 processor_middle:中間報告時点で作成していたプロセッサ(SIMPLE/B)のフォルダ

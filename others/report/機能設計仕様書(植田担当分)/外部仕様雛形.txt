@@ -1,0 +1,31 @@
+\subsection{bbb}
+
+\subsubsection{外部仕様　入力}
+ファイルの入力は以下の表\ref{aaaI}のようになる。
+\begin{table}[H]
+    \caption{bbbの入力(=input)}
+    \label{aaaI}
+    \begin{center}
+    \begin {tabularx}{150mm}{|c|X|} \hline
+         input & inputの説明 \\ \hline \hline
+
+    \end{tabularx}
+    \end{center}
+\end{table}
+
+\subsubsection{外部仕様　出力}
+ファイルの出力は以下の表\ref{aaaO}のようになる。
+\begin{table}[H]
+    \caption{bbbの出力(=output)}
+    \label{aaaO}
+    \begin{center}
+    \begin {tabularx}{150mm}{|c|X|} \hline
+         output & outputの説明 \\ \hline \hline
+
+    \end {tabularx}
+    \end{center}
+\end{table}
+
+\subsubsection{内部仕様}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%

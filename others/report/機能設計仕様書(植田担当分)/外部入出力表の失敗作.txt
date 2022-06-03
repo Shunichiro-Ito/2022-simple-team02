@@ -1,0 +1,115 @@
+\subsection{回路の外部仕様}
+ファイルの入出力は以下の表\ref{registerFileIO}のようになる。
+
+
+\begin{table}[H]
+    \caption{各コンポーネントの入力(=input)}
+    \label{aとoutの論理関係}
+    \begin{center}
+        \begin {tabularx}{150mm}{|X|c|X|} \hline
+        名前(ファイル名)& input & input説明  \\ \hline \hline
+        
+            プログラムカウンタ(PC.v) & d[15:0] & \\ \cline{2-3}
+                                                     & clock & \\ \cline{2-3} %%%%%
+                                                     & changeEnable & \\ \cline{2-3}
+                                                     & reset & \\ \hline
+            インストラクションレジスタ(IR.v) & d[15:0] & \\ \cline{2-3}
+                                                     & clock & \\ \cline{2-3} %%%%%
+                                                     & changeEnable & \\ \cline{2-3}
+                                                     & reset & \\ \hline
+            レジスタファイル(registerFile.v) & Rs[2:0] & 命令中のRs・Raをあたえる。\\ \cline{2-3}
+                                                     & Rd[2:0] & 命令中のRd・Rbをあたえる。\\ \cline{2-3}
+                                                     & regWrite & 内部のレジスタが書き換え可能かを表す信号 regWriteとchangeEnableがともに1のときのみ書き換え可能\\ \cline{2-3}
+                                                     & writeData[15:0] & レジスタに書き込むデータ\\ \cline{2-3}
+                                                     & writeRegister[2:0] & writeData[15:0]を書きこむレジスタの番号\\ \cline{2-3}
+                                                     & clock & クロック信号。clock立ち上がりで、レジスタ書きこみが可能な場合、書きこみが行われる。\\ \cline{2-3}
+                                                     & reset & 初期化信号。resetが1のときにクロックが立ち上がると、レジスタの中身を0で初期化する。\\ \cline{2-3}
+                                                     & changeEnable & 内部のレジスタが書き換え可能かを表す信号。regWriteとchangeEnableがともに1のときのみ書き換え可能\\ \hline
+            フェーズカウンタ(phaseCounter.v) & clock & \\ \cline{2-3}
+                                                     & reset & \\ \cline{2-3} %%%%%
+                                                     & changeEnable & \\ \hline
+            制御部(control.v) & clock & \\ \cline{2-3} 
+                                                     & instruction[15:0] & \\ \cline{2-3} %%%%%
+                                                     & reset & \\ \cline{2-3}
+                                                     & exec & \\ \cline{2-3}
+                                                     & p1 & \\ \cline{2-3}
+                                                     & p2 & \\ \cline{2-3}
+                                                     & p3 & \\ \cline{2-3}
+                                                     & p3to4 & \\ \cline{2-3}
+                                                     & p4 & \\ \cline{2-3}
+                                                     & p5 & \\ \cline{2-3}
+                                                     & SZCV[3:0] & \\ \hline
+            PCをインクリメントする組み合わせ回路(incrementer.v) & pc\_pre[15:0] & \\ \hline %%%%%
+            主記憶(mainMemory.v) & address[11:0] & \\ \cline{2-3}
+                                                     & clock & \\ \cline{2-3} %%%%%
+                                                     & data[15:0] & \\ \cline{2-3}
+                                                     & wren & \\ \hline
+            SZCV選択回路(SZCVJudge16.v) & data[15:0] & \\ \hline
+            SZCV選択回路(SZCVControl.v) & instruction[15:0] & \\ \hline %%%%%
+            符号拡張(signExtend.v) & in[7:0] & \\ \hline
+            各マルチプレクサー(multiplexer16.v,multiplexer4.v,multiplexer3.v) & in0[15:0 or 3:0 or 2:0] & \\ \cline{2-3}
+                                                     & in1[15:0 or 3:0 or 2:0] & \\ \cline{2-3} %%%%%
+                                                     & selector & \\ \hline
+            イネーブル・レジスタ(register16.v,register4.v,register3.v) & d[15:0 or 3:0 or 2:0] & \\ \cline{2-3}
+                                                     & changeEnable & \\ \cline{2-3} %%%%%
+                                                     & reset & \\ \cline{2-3}
+                                                     & clock & \\ \hline
+            全体(processor.bdf) & clock & \\ \cline{2-3}
+                                                     & reset & \\ \cline{2-3} %%%%%
+                                                     & exec & \\ \cline{2-3}
+                                                     & externalInput[15:0] & \\ \hline
+    
+    \end {tabularx}
+    \end{center}
+\end{table}
+
+
+\begin{table}[H]
+    \caption{各コンポーネントの出力(=output)}
+    \label{aとoutの論理関係}
+    \begin{center}
+    \begin {tabularx}{150mm}{|X|c|X|} \hline
+        名前(ファイル名)& output & outputの説明 \\ \hline \hline
+            プログラムカウンタ(PC.v) & q[15:0] & プログラムカウンタに格納されている値で、命令を読みだすアドレスである。\\ \hline %%%%%
+            インストラクションレジスタ(IR.v) & q[15:0] & IRに格納されている値で、主記憶から読みだされた命令である。\\ \hline %%%%%
+            レジスタファイル(registerFile.v) & AR[15:0] & Rs(Ra)フィールドで指定したレジスタの値を読み込む。 \\ \cline{2-3}
+                                                     & BR[15:0] & Rd(Rb)フィールドで指定したレジスタの値を読み込む。 \\ \hline
+            フェーズカウンタ(phaseCounter.v) & p1 & p1フェーズを表す信号。IRのイネーブル信号に使われる。\\ \cline{2-3}
+                                                     & p2 & p2フェーズを表す信号。AR,BRのイネーブル信号に使われる。\\ \cline{2-3} %%%%%
+                                                     & p3 & p3フェーズを表す信号。外部出力、SZCV,DRのイネーブル信号に使われる。\\ \cline{2-3}
+                                                     & p3to4 & p3とp4の間で立ち上がる信号。メモリのイネーブル信号に使われる。\\ \cline{2-3}
+                                                     & p4 & p4フェーズを表す信号。MDRのイネーブル信号に使われる。\\ \cline{2-3}
+                                                     & p5 & p5フェーズを表す信号。SZCV選択回路を通過した後のSZCV,レジスタファイル,PCのイネーブル信号に使われる。\\ \hline
+            制御部(control.v) & addressSrc & \\ \cline{2-3}
+                                                     & regDst & \\ \cline{2-3} %%%%%
+                                                     & ALUSrcAR & \\ \cline{2-3}
+                                                     & ALUSrcBR & \\ \cline{2-3}
+                                                     & ALUOp[3:0] & \\ \cline{2-3}
+                                                     & DRSrc & \\ \cline{2-3}
+                                                     & outputEnable & \\ \cline{2-3}
+                                                     & inputEnable & \\ \cline{2-3}
+                                                     & memWrite & \\ \cline{2-3}
+                                                     & branch & \\ \cline{2-3}
+                                                     & regWrite & \\ \cline{2-3}
+                                                     & memToReg & \\ \cline{2-3}
+                                                     & systemRunning & \\ \hline
+            PCをインクリメントする組み合わせ回路(incrementer.v) & pc\_post[15:0] & \\ \hline %%%%%
+            主記憶(mainMemory.v) & q[15:0] & \\ \hline
+            SZCV選択回路(SZCVJudge16.v) & SZCV[3:0] & \\ \hline
+            SZCV選択回路(SZCVControl.v) & SZCVSrc[1:0] & \\ \hline
+            符号拡張(signExtend.v) & out[15:0] & \\ \hline
+            各マルチプレクサー(multiplexer16.v,multiplexer4.v,multiplexer3.v) & out[15:0] & \\ \hline
+            各レジスタ(register16.v,register4.v,register3.v) & q[15:0] & \\ \hline
+            全体(processor.bdf) & SEG\_A[7:0] & \\ \cline{2-3}
+                                                     & SEG\_B[7:0] & \\ \cline{2-3} %%%%%
+                                                     & SEG\_C[7:0] & \\ \cline{2-3}
+                                                     & SEG\_D[7:0] & \\ \cline{2-3}
+                                                     & SEG\_E[7:0] & \\ \cline{2-3}
+                                                     & SEG\_F[7:0] & \\ \cline{2-3}
+                                                     & SEG\_G[7:0] & \\ \cline{2-3}
+                                                     & SEG\_H[7:0] & \\ \cline{2-3}
+                                                     & select[7:0] & \\ \hline
+
+    \end {tabularx}
+    \end{center}
+\end{table}

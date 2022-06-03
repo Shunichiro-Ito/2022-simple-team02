@@ -1,0 +1,441 @@
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.4.8)  3 JUN 2022 11:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**function_design_spec-1029326498.tex
+(./function_design_spec-1029326498.tex
+pLaTeX2e <2021-11-15> (based on LaTeX2e <2021-11-15> patch level 1)
+L3 programming layer <2022-02-24>
+(c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
+Document Class: jarticle 2020/09/30 v1.8f Standard pLaTeX class
+\c@@paper=\count184
+(c:/texlive/2022/texmf-dist/tex/platex/base/jsize10.clo
+File: jsize10.clo 2020/09/30 v1.8f Standard pLaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 615.
+\toclineskip=\dimen154
+\@lnumwidth=\dimen155
+\bibindent=\dimen156
+\heisei=\count193
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 107.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2021/03/18 v5.0j Graphics/color driver for dvipdfmx
+))
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+)
+(c:/texlive/2022/texmf-dist/tex/latex/ascmac/ascmac.sty
+Package: ascmac 2020/01/15 v2.1 ascmac wrapper (community edition) 
+
+(c:/texlive/2022/texmf-dist/tex/latex/ascmac/tascmac.sty
+Package: tascmac 2020/01/15 v2.1 ascmac package (community edition) 
+\@savetbaselineshift=\dimen159
+\@saveybaselineshift=\dimen160
+\scb@x=\box67
+\scscb@x=\box68
+\@bw=\dimen161
+\@nbox=\box69
+\@nbody=\box70
+\@scw=\dimen162
+\ascmac@hoboxa=\box71
+\ascmac@hoboxb=\box72
+\@itemh=\dimen163
+\@iboxpos=\toks18
+\@iboxstr=\box73
+\@bwsp=\box74
+\@@bwsp=\box75
+\@bcal=\count194
+\shaderule=\dimen164
+))
+(c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count195
+\float@exts=\toks19
+\float@box=\box76
+\@float@everytoks=\toks20
+\@floatcapt=\box77
+)
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip49
+\multirow@cntb=\count196
+\multirow@dima=\skip50
+\bigstrutjot=\dimen165
+)
+(c:/texlive/2022/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+\c@tracingmulticols=\count197
+\mult@box=\box78
+\multicol@leftmargin=\dimen166
+\c@unbalance=\count198
+\c@collectmore=\count199
+\doublecol@number=\count266
+\multicoltolerance=\count267
+\multicolpretolerance=\count268
+\full@width=\dimen167
+\page@free=\dimen168
+\premulticols=\dimen169
+\postmulticols=\dimen170
+\multicolsep=\skip51
+\multicolbaselineskip=\skip52
+\partial@page=\box79
+\last@line=\box80
+\maxbalancingoverflow=\dimen171
+\mult@rightbox=\box81
+\mult@grightbox=\box82
+\mult@firstbox=\box83
+\mult@gfirstbox=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\c@minrows=\count269
+\c@columnbadness=\count270
+\c@finalcolumnbadness=\count271
+\last@try=\dimen172
+\multicolovershoot=\dimen173
+\multicolundershoot=\dimen174
+\mult@nat@firstbox=\box121
+\colbreak@box=\box122
+\mc@col@check@num=\count272
+)
+(c:/texlive/2022/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(c:/texlive/2022/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen175
+\ar@mcellbox=\box123
+\extrarowheight=\dimen176
+\NC@list=\toks22
+\extratabsurround=\skip53
+\backup@length=\skip54
+\ar@cellbox=\box124
+)
+\TX@col@width=\dimen177
+\TX@old@table=\dimen178
+\TX@old@col=\dimen179
+\TX@target=\dimen180
+\TX@delta=\dimen181
+\TX@cols=\count273
+\TX@ftn=\toks23
+)
+(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2022-02-07 L3 backend support: dvips
+\l__pdf_internal_box=\box125
+\g__pdf_backend_object_int=\count274
+\l__pdf_backend_content_box=\box126
+\l__pdf_backend_model_box=\box127
+\g__pdf_backend_annotation_int=\count275
+\g__pdf_backend_link_int=\count276
+\g__pdf_backend_link_sf_int=\count277
+)
+(./function_design_spec-1029326498.aux)
+\openout1 = `function_design_spec-1029326498.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
+
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 22.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 22.
+File: structure0506.jpg Graphic file (type bmp)
+<structure0506.jpg>
+File: rolesDivision0506.png Graphic file (type bmp)
+<rolesDivision0506.png>
+
+Overfull \hbox (1.46529pt too wide) in paragraph at lines 44--45
+ [] 
+ []
+
+[1] [2]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 73.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 73.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 75.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 75.
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 87--88
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 100--101
+ [] 
+ []
+
+[3]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 127--128
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 140--141
+ [] 
+ []
+
+
+Overfull \hbox (57.40419pt too wide) in paragraph at lines 145--147
+[]\JY1/mc/m/n/10 モジ ュ ール \OT1/cmr/m/n/10 reg-is-ter16.v \JY1/mc/m/n/10 と
+ほとんどおなじ仕様である 。 \OT1/cmr/m/n/10 re-set \JY1/mc/m/n/10 のときに格納
+する値を \OT1/cmr/m/n/10 16'b 1100000011100000(NOP
+ []
+
+[4]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 171--172
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 185--186
+ [] 
+ []
+
+[5] [6]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 230--231
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 248--249
+ [] 
+ []
+
+File: phaseCounterWaveShape.jpg Graphic file (type bmp)
+<phaseCounterWaveShape.jpg>
+[7] [8]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 298--299
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 325--326
+ [] 
+ []
+
+[9] (c:/texlive/2022/texmf-dist/tex/latex/base/omlcmr.fd)
+Underfull \hbox (badness 1147) in paragraph at lines 351--351
+[]|\OT1/cmr/m/n/10 cnt\OML/cmm/m/it/10 <\OT1/cmr/m/n/10 =0, \JY1/mc/m/n/10 　　
+　　　　　　　　　　
+ []
+
+[10] (c:/texlive/2022/texmf-dist/tex/latex/base/omscmr.fd)
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 393--394
+ [] 
+ []
+
+[11] [12]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 413--414
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 426--427
+ [] 
+ []
+
+[13]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 452--453
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 465--466
+ [] 
+ []
+
+[14]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 489--490
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 502--503
+ [] 
+ []
+
+[15]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 526--527
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 542--543
+ [] 
+ []
+
+[16]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 581--582
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 594--595
+ [] 
+ []
+
+[17]
+Overfull \hbox (0.44978pt too wide) in paragraph at lines 608--608
+[]\JY1/gt/m/n/12 各マルチプレクサ ー \OT1/cmr/bx/n/12 (mul-ti-plexer16.v,multip
+lexer4.v,multiplexer3.v) 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 621--622
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 634--635
+ [] 
+ []
+
+[18]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 660--661
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 673--674
+ [] 
+ []
+
+[19]
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 702--703
+ [] 
+ []
+
+
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 723--724
+ [] 
+ []
+
+
+Overfull \hbox (72.97403pt too wide) in paragraph at lines 728--735
+[]\JY1/mc/m/n/10 全体の配線は図 \OT1/cmr/m/n/10 1 \JY1/mc/m/n/10 のように行 っ 
+た 。 コントロ ールからの制御信号のうち 、 \OT1/cmr/m/n/10 ad-dressSrc,regDst,A
+LUSrcAR,ALUSrcBR,
+ []
+
+[20] [21] (./function_design_spec-1029326498.aux) ) 
+Here is how much of TeX's memory you used:
+ 2096 strings out of 478724
+ 32664 string characters out of 5861577
+ 336000 words of memory out of 5000000
+ 20528 multiletter control sequences out of 15000+600000
+ 480651 words of font info for 76 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 55i,12n,62p,250b,419s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on function_design_spec-1029326498.dvi (22 pages, 52352 bytes).
