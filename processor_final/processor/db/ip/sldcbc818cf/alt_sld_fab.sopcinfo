@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="alt_sld_fab" kind="alt_sld_fab" version="1.0" fabric="QSYS">
  <!-- Format version 17.1 590 (Future versions may contain additional information.) -->
- <!-- 2022.06.02.16:05:07 -->
+ <!-- 2022.06.02.18:03:18 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_DEVICE_FAMILY">
   <type>java.lang.String</type>
@@ -56,7 +56,7 @@
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>ec9757cc1d6f006e44e1</value>
+   <value>cf930798b3d78bec18db</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -104,7 +104,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="EP_INFOS">
    <type>java.lang.String</type>
-   <value>{hpath {instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_7hl1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_egl1:auto_generated|sld_mod_ram_rom:mgl_prim2} } </value>
+   <value>{hpath {instructionMemory:instruction_memory|altsyncram:altsyncram_component|altsyncram_0lk1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {mainMemory:dataMemory|altsyncram:altsyncram_component|altsyncram_6jk1:auto_generated|sld_mod_ram_rom:mgl_prim2} } </value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2181,7 +2181,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>ec9757cc1d6f006e44e1</value>
+   <value>cf930798b3d78bec18db</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

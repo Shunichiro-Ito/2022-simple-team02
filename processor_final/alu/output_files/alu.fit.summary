@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Apr 22 10:15:23 2022
+Fitter Status : Successful - Thu Jun 02 16:58:03 2022
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : alu
 Top-level Entity Name : alu
 Family : Cyclone IV E
 Device : EP4CE30F23I7
 Timing Models : Final
-Total logic elements : 188 / 28,848 ( < 1 % )
-    Total combinational functions : 188 / 28,848 ( < 1 % )
+Total logic elements : 171 / 28,848 ( < 1 % )
+    Total combinational functions : 171 / 28,848 ( < 1 % )
     Dedicated logic registers : 0 / 28,848 ( 0 % )
 Total registers : 0
 Total pins : 56 / 329 ( 17 % )

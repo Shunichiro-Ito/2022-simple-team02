@@ -1,5 +1,5 @@
 Flow report for shifter
-Thu Apr 28 16:56:05 2022
+Thu Jun 02 17:11:29 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 28 16:56:05 2022       ;
+; Flow Status                        ; Successful - Thu Jun 02 17:11:29 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; shifter                                     ;
 ; Top-level Entity Name              ; shifter                                     ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/28/2022 16:55:37 ;
+; Start date & time ; 06/02/2022 17:10:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; shifter             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 91758732266.165113253613812            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 220128052153001.165415745817672        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; test1          ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; test1                                  ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -102,12 +102,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4748 MB             ; 00:00:29                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 5545 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4675 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4779 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:41                           ;
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4750 MB             ; 00:00:30                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 5542 MB             ; 00:00:09                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4675 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4781 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4643 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:45                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

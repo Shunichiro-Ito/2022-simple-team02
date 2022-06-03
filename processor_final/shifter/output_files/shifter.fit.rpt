@@ -1,5 +1,5 @@
 Fitter report for shifter
-Thu Apr 28 16:55:57 2022
+Thu Jun 02 17:11:20 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Apr 28 16:55:57 2022       ;
+; Fitter Status                      ; Successful - Thu Jun 02 17:11:20 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; shifter                                     ;
 ; Top-level Entity Name              ; shifter                                     ;
@@ -196,7 +196,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/shun1/2022-simple-team02/shifter/output_files/shifter.pin.
+The pin-out file can be found in C:/Users/shun1/2022-simple-team02/processor_final/shifter/output_files/shifter.pin.
 
 
 +----------------------------------------------------------------------+
@@ -1939,23 +1939,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.07 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Info (144001): Generated suppressed messages file C:/Users/shun1/2022-simple-team02/shifter/output_files/shifter.fit.smsg
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (144001): Generated suppressed messages file C:/Users/shun1/2022-simple-team02/processor_final/shifter/output_files/shifter.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5545 megabytes
-    Info: Processing ended: Thu Apr 28 16:55:57 2022
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 5542 megabytes
+    Info: Processing ended: Thu Jun 02 17:11:21 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/shun1/2022-simple-team02/shifter/output_files/shifter.fit.smsg.
+The suppressed messages can be found in C:/Users/shun1/2022-simple-team02/processor_final/shifter/output_files/shifter.fit.smsg.
 
 

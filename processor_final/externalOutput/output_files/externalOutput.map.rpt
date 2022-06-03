@@ -1,5 +1,5 @@
 Analysis & Synthesis report for externalOutput
-Thu Apr 28 14:13:53 2022
+Thu Jun 02 17:31:05 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -44,15 +44,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 28 14:13:53 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 02 17:31:05 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; externalOutput                              ;
 ; Top-level Entity Name              ; externalOutput                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 996                                         ;
-;     Total combinational functions  ; 996                                         ;
-;     Dedicated logic registers      ; 323                                         ;
-; Total registers                    ; 323                                         ;
+; Total logic elements               ; 999                                         ;
+;     Total combinational functions  ; 999                                         ;
+;     Dedicated logic registers      ; 325                                         ;
+; Total registers                    ; 325                                         ;
 ; Total pins                         ; 92                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -166,13 +166,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                          ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path            ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
-; externalOutput.v                 ; yes             ; User Verilog HDL File  ; C:/home/externalOutput/externalOutput.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+; externalOutput.v                 ; yes             ; User Verilog HDL File  ; C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -180,20 +180,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 996         ;
+; Estimated Total logic elements              ; 999         ;
 ;                                             ;             ;
-; Total combinational functions               ; 996         ;
+; Total combinational functions               ; 999         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 672         ;
-;     -- 3 input functions                    ; 66          ;
-;     -- <=2 input functions                  ; 258         ;
+;     -- 4 input functions                    ; 680         ;
+;     -- 3 input functions                    ; 58          ;
+;     -- <=2 input functions                  ; 261         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
 ;     -- normal mode                          ; 996         ;
-;     -- arithmetic mode                      ; 0           ;
+;     -- arithmetic mode                      ; 3           ;
 ;                                             ;             ;
-; Total registers                             ; 323         ;
-;     -- Dedicated logic registers            ; 323         ;
+; Total registers                             ; 325         ;
+;     -- Dedicated logic registers            ; 325         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 92          ;
@@ -201,9 +201,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 323         ;
-; Total fan-out                               ; 4459        ;
-; Average fan-out                             ; 2.97        ;
+; Maximum fan-out                             ; 325         ;
+; Total fan-out                               ; 4540        ;
+; Average fan-out                             ; 3.01        ;
 +---------------------------------------------+-------------+
 
 
@@ -212,7 +212,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
-; |externalOutput            ; 996 (996)           ; 323 (323)                 ; 0           ; 0            ; 0       ; 0         ; 92   ; 0            ; |externalOutput     ; externalOutput ; work         ;
+; |externalOutput            ; 999 (999)           ; 325 (325)                 ; 0           ; 0            ; 0       ; 0         ; 92   ; 0            ; |externalOutput     ; externalOutput ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -222,14 +222,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; SEG_D[0]~reg0                         ; Merged with SEG_H[0]~reg0              ;
-; SEG_C[0]~reg0                         ; Merged with SEG_G[0]~reg0              ;
-; SEG_F[0]~reg0                         ; Merged with SEG_G[0]~reg0              ;
-; SEG_B[0]~reg0                         ; Merged with SEG_G[0]~reg0              ;
-; SEG_A[0]~reg0                         ; Merged with SEG_G[0]~reg0              ;
-; SEG_E[0]~reg0                         ; Merged with SEG_G[0]~reg0              ;
-; SEG_G[0]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; SEG_H[0]~reg0                         ; Stuck at VCC due to stuck port data_in ;
+; SEG_B[0]~reg0                         ; Merged with SEG_A[0]~reg0              ;
+; SEG_C[0]~reg0                         ; Merged with SEG_A[0]~reg0              ;
+; SEG_E[0]~reg0                         ; Merged with SEG_A[0]~reg0              ;
+; SEG_F[0]~reg0                         ; Merged with SEG_A[0]~reg0              ;
+; SEG_G[0]~reg0                         ; Merged with SEG_A[0]~reg0              ;
+; SEG_H[0]~reg0                         ; Merged with SEG_D[0]~reg0              ;
+; SEG_A[0]~reg0                         ; Stuck at GND due to stuck port data_in ;
+; SEG_D[0]~reg0                         ; Stuck at VCC due to stuck port data_in ;
 ; Total Number of Removed Registers = 8 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
@@ -239,24 +239,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 323   ;
+; Total registers                              ; 325   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 256   ;
+; Number of registers using Clock Enable       ; 320   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 3:1                ; 256 bits  ; 512 LEs       ; 256 LEs              ; 256 LEs                ; Yes        ; |externalOutput|regJ[13]      ;
-; 8:1                ; 56 bits   ; 280 LEs       ; 280 LEs              ; 0 LEs                  ; Yes        ; |externalOutput|SEG_A[2]~reg0 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 3:1                ; 256 bits  ; 512 LEs       ; 256 LEs              ; 256 LEs                ; Yes        ; |externalOutput|regI[15]       ;
+; 32:1               ; 56 bits   ; 1176 LEs      ; 280 LEs              ; 896 LEs                ; Yes        ; |externalOutput|SEG_A[2]~reg0  ;
+; 32:1               ; 8 bits    ; 168 LEs       ; 48 LEs               ; 120 LEs                ; Yes        ; |externalOutput|select[2]~reg0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 
 
 +-----------------------------------------------------+
@@ -265,19 +266,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 92                          ;
-; cycloneiii_ff         ; 323                         ;
-;     ENA               ; 256                         ;
-;     plain             ; 67                          ;
-; cycloneiii_lcell_comb ; 998                         ;
+; cycloneiii_ff         ; 325                         ;
+;     ENA               ; 320                         ;
+;     plain             ; 5                           ;
+; cycloneiii_lcell_comb ; 1001                        ;
+;     arith             ; 3                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 1                           ;
 ;     normal            ; 998                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 257                         ;
-;         3 data inputs ; 66                          ;
-;         4 data inputs ; 672                         ;
+;         3 data inputs ; 57                          ;
+;         4 data inputs ; 680                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.89                        ;
+; Average LUT depth     ; 2.88                        ;
 +-----------------------+-----------------------------+
 
 
@@ -296,34 +300,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Apr 28 14:13:32 2022
+    Info: Processing started: Thu Jun 02 17:30:49 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off externalOutput -c externalOutput
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file externaloutput.v
-    Info (12023): Found entity 1: externalOutput File: C:/home/externalOutput/externalOutput.v Line: 1
+    Info (12023): Found entity 1: externalOutput File: C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v Line: 1
 Info (12127): Elaborating entity "externalOutput" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at externalOutput.v(160): truncated value with size 32 to match size of target (3) File: C:/home/externalOutput/externalOutput.v Line: 160
+Warning (10230): Verilog HDL assignment warning at externalOutput.v(185): truncated value with size 32 to match size of target (5) File: C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v Line: 185
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SEG_A[0]" is stuck at GND File: C:/home/externalOutput/externalOutput.v Line: 78
-    Warning (13410): Pin "SEG_B[0]" is stuck at GND File: C:/home/externalOutput/externalOutput.v Line: 78
-    Warning (13410): Pin "SEG_C[0]" is stuck at GND File: C:/home/externalOutput/externalOutput.v Line: 78
-    Warning (13410): Pin "SEG_D[0]" is stuck at VCC File: C:/home/externalOutput/externalOutput.v Line: 78
-    Warning (13410): Pin "SEG_E[0]" is stuck at GND File: C:/home/externalOutput/externalOutput.v Line: 78
-    Warning (13410): Pin "SEG_F[0]" is stuck at GND File: C:/home/externalOutput/externalOutput.v Line: 78
-    Warning (13410): Pin "SEG_G[0]" is stuck at GND File: C:/home/externalOutput/externalOutput.v Line: 78
-    Warning (13410): Pin "SEG_H[0]" is stuck at VCC File: C:/home/externalOutput/externalOutput.v Line: 78
+    Warning (13410): Pin "SEG_A[0]" is stuck at GND File: C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v Line: 78
+    Warning (13410): Pin "SEG_B[0]" is stuck at GND File: C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v Line: 78
+    Warning (13410): Pin "SEG_C[0]" is stuck at GND File: C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v Line: 78
+    Warning (13410): Pin "SEG_D[0]" is stuck at VCC File: C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v Line: 78
+    Warning (13410): Pin "SEG_E[0]" is stuck at GND File: C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v Line: 78
+    Warning (13410): Pin "SEG_F[0]" is stuck at GND File: C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v Line: 78
+    Warning (13410): Pin "SEG_G[0]" is stuck at GND File: C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v Line: 78
+    Warning (13410): Pin "SEG_H[0]" is stuck at VCC File: C:/Users/shun1/2022-simple-team02/processor_final/externalOutput/externalOutput.v Line: 78
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1088 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1091 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 72 output pins
-    Info (21061): Implemented 996 logic cells
+    Info (21061): Implemented 999 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4768 megabytes
-    Info: Processing ended: Thu Apr 28 14:13:53 2022
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 4778 megabytes
+    Info: Processing ended: Thu Jun 02 17:31:05 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:33
 
 

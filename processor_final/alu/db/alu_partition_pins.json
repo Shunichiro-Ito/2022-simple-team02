@@ -84,18 +84,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "op[1]",
-					"strict" : false
-				},
-				{
-					"name" : "op[3]",
-					"strict" : false
-				},
-				{
-					"name" : "op[0]",
-					"strict" : false
-				},
-				{
 					"name" : "inA[0]",
 					"strict" : false
 				},
@@ -104,11 +92,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "op[0]",
+					"strict" : false
+				},
+				{
+					"name" : "op[1]",
+					"strict" : false
+				},
+				{
 					"name" : "op[2]",
 					"strict" : false
 				},
 				{
-					"name" : "inA[1]",
+					"name" : "op[3]",
 					"strict" : false
 				},
 				{
@@ -116,7 +112,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[2]",
+					"name" : "inA[1]",
 					"strict" : false
 				},
 				{
@@ -124,7 +120,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[3]",
+					"name" : "inA[2]",
 					"strict" : false
 				},
 				{
@@ -132,7 +128,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[4]",
+					"name" : "inA[3]",
 					"strict" : false
 				},
 				{
@@ -140,7 +136,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[5]",
+					"name" : "inA[4]",
 					"strict" : false
 				},
 				{
@@ -148,7 +144,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[6]",
+					"name" : "inA[5]",
 					"strict" : false
 				},
 				{
@@ -156,7 +152,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[7]",
+					"name" : "inA[6]",
 					"strict" : false
 				},
 				{
@@ -164,7 +160,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[8]",
+					"name" : "inA[7]",
 					"strict" : false
 				},
 				{
@@ -172,7 +168,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[9]",
+					"name" : "inA[8]",
 					"strict" : false
 				},
 				{
@@ -180,7 +176,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[10]",
+					"name" : "inA[9]",
 					"strict" : false
 				},
 				{
@@ -188,7 +184,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[11]",
+					"name" : "inA[10]",
 					"strict" : false
 				},
 				{
@@ -196,7 +192,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[12]",
+					"name" : "inA[11]",
 					"strict" : false
 				},
 				{
@@ -204,7 +200,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[13]",
+					"name" : "inA[12]",
 					"strict" : false
 				},
 				{
@@ -212,7 +208,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[14]",
+					"name" : "inA[13]",
 					"strict" : false
 				},
 				{
@@ -220,11 +216,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "inA[15]",
+					"name" : "inA[14]",
 					"strict" : false
 				},
 				{
 					"name" : "inB[15]",
+					"strict" : false
+				},
+				{
+					"name" : "inA[15]",
 					"strict" : false
 				}
 			]

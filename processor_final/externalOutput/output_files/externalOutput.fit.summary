@@ -1,4 +1,4 @@
-Fitter Status : Successful - Thu Apr 28 14:14:11 2022
+Fitter Status : Successful - Thu Jun 02 17:31:15 2022
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : externalOutput
 Top-level Entity Name : externalOutput
@@ -6,9 +6,9 @@ Family : Cyclone IV E
 Device : EP4CE30F23I7
 Timing Models : Final
 Total logic elements : 999 / 28,848 ( 3 % )
-    Total combinational functions : 996 / 28,848 ( 3 % )
-    Dedicated logic registers : 323 / 28,848 ( 1 % )
-Total registers : 323
+    Total combinational functions : 999 / 28,848 ( 3 % )
+    Dedicated logic registers : 325 / 28,848 ( 1 % )
+Total registers : 325
 Total pins : 92 / 329 ( 28 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )
